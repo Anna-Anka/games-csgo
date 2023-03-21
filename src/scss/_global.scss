@@ -96,12 +96,20 @@ body {
 	}
 
 	&--medium {
+		font-size: 39px;
+	}
+
+    &--small {
 		font-size: 26px;
 	}
 
 	&--accent {
 		color: $blue-400;
 	}
+
+    &__accent {
+        color: $blue-400;
+    }
 }
 
 .subtitle {
@@ -117,4 +125,8 @@ body {
 	&--small {
 		@include adaptiv-value('font-size', 20, 16, 1);
 	}
+
+    &__accent {
+        color: $blue-400;
+    }
 }

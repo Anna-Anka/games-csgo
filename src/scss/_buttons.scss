@@ -7,11 +7,12 @@
 
 .button {
 	padding-top: 12px;
-    padding-bottom: 12px;
-    @include adaptiv-value('padding-right', 65, 35, 1);
-    @include adaptiv-value('padding-left', 65, 35, 1);
+	padding-bottom: 12px;
 	color: $white;
+	font-weight: $fw-700;
 	background-color: $blue-400;
+	@include adaptiv-value('padding-right', 65, 35, 1);
+	@include adaptiv-value('padding-left', 65, 35, 1);
 
 	&--border {
 		color: $blue-400;
@@ -34,7 +35,7 @@
 			height: 18px;
 			transform: translateY(-50%);
 			content: '';
-            @include bg-contain;
+			@include bg-contain;
 		}
 	}
 }

@@ -11,10 +11,11 @@
     }
 }
 
-//Arimo
-//@include font-face(Arimo, Arimo-Regular, 400);
-//@include font-face(Arimo, Arimo-Medium, 500);
-//@include font-face(Arimo, Arimo-SemiBold, 700);
-//@include font-face(Arimo, Arimo-Bold, 700);
-//@include font-face(Arimo, Arimo-ExtraBold, 800);
-//@include font-face(Arimo, Arimo-Black, 800);
+//* Russo
+@include font-face(Russo-One, RussoOne-Regular, 400);
+
+//* Nexa
+@include font-face(Nexa, Nexa-Regular, 400);
+@include font-face(Nexa, Nexa-Book, 400);
+@include font-face(Nexa, Nexa-Bold, 700);
+@include font-face(Nexa, Nexa-Black, 800);

@@ -1,0 +1,111 @@
+.hero {
+	position: relative;
+	padding: 40px 0 70px;
+	background-color: $blue-100;
+
+	&__decor {
+		position: relative;
+
+		&::before,
+		&::after {
+			position: absolute;
+			width: 100%;
+			content: '';
+			@include bg-contain;
+		}
+
+		&::before {
+			top: -180px;
+			right: -205px;
+			//z-index: 1;
+			max-width: 630px;
+			height: 900px;
+			background-image: url('../img/hero/decor-right.png');
+
+			@include mq(lg) {
+				top: -70px;
+				right: -50px;
+				max-width: 190px;
+				height: 150px;
+				background-image: url('../img/hero/decor-right-mobile.png');
+			}
+		}
+
+		&::after {
+			bottom: -150px;
+			left: 0;
+			max-width: 244px;
+			height: 340px;
+			background-image: url('../img/hero/decor-left.png');
+
+			@include mq(lg) {
+				left: -100px;
+			}
+		}
+	}
+
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+        z-index: 5;
+		z-index: 2;
+		width: 100%;
+		height: 100%;
+		background-image: url('../img/hero/hero-bg.png');
+		background-repeat: repeat;
+		background-position: center;
+		background-size: 200px;
+		opacity: 0.7;
+		content: '';
+	}
+
+	&::after {
+		position: absolute;
+		top: -50px;
+		right: -50px;
+		z-index: 3;
+		width: 100%;
+		max-width: 560px;
+		height: 760px;
+		background-image: url('../img/hero/person.png');
+		content: '';
+		@include bg-contain;
+
+		@include mq(xl) {
+			display: none;
+		}
+	}
+
+	&__items {
+		position: relative;
+		z-index: 4;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 30px;
+		width: 100%;
+		max-width: 790px;
+
+		@include mq(xl) {
+			max-width: 100%;
+		}
+
+		@include mq(md) {
+			display: flex;
+			flex-direction: column;
+			gap: 0;
+		}
+	}
+
+	&__item {
+		&--large {
+			grid-column: 1 / 3;
+		}
+
+		&:not(:last-child) {
+			@include mq(md) {
+				margin-bottom: 15px;
+			}
+		}
+	}
+}

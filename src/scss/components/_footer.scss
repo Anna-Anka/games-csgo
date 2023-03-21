@@ -1,3 +1,62 @@
 .footer {
-    
+	padding: 40px 0 35px;
+	color: $white;
+	background-color: $blue-400;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+
+		@include mq(lg) {
+			flex-direction: column;
+		}
+	}
+
+	&__logo {
+		@include adaptiv-value('margin-right', 85, 10, 1);
+
+		@include mq(lg) {
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+	}
+
+	.menu {
+		margin-right: 30px;
+		color: $white;
+
+		@include mq(lg) {
+			flex-wrap: wrap;
+			align-items: center;
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+
+		&__item {
+			@include mq(lg) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		margin-left: auto;
+		font-size: 14px;
+		font-style: italic;
+		line-height: 1.1;
+		text-align: right;
+
+		@include mq(lg) {
+			align-items: center;
+			margin-right: auto;
+			text-align: center;
+		}
+
+		*:not(:last-child) {
+			margin-bottom: 9px;
+		}
+	}
 }

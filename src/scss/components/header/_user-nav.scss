@@ -1,0 +1,67 @@
+.user-nav {
+	display: flex;
+	align-items: center;
+	@include adaptiv-value('margin-right', 30, 10, 1);
+
+	@include mq(xl) {
+		margin-right: 0;
+        margin-bottom: 35px;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			@include adaptiv-value('margin-right', 25, 10, 1);
+		}
+	}
+
+	&__link {
+		display: block;
+		width: 24px;
+		height: 24px;
+		@include bg-contain;
+
+		&--applications {
+			background-image: url('../img/icons/applications.svg');
+		}
+
+		&--applications-true {
+			position: relative;
+
+			&::before {
+				position: absolute;
+				top: 8%;
+				right: 15%;
+				width: 8px;
+				height: 8px;
+				background-color: $blue-400;
+				border: 2px solid $yellow-300;
+				border-radius: 50%;
+				content: '';
+			}
+		}
+
+		&--favorite {
+			background-image: url('../img/icons/favorite.svg');
+		}
+
+		&--wallet {
+			position: relative;
+			width: auto;
+			padding-left: 28px;
+			color: $blue-400;
+			font-weight: $fw-700;
+
+			&::before {
+				position: absolute;
+				top: 0;
+				top: 0;
+				left: 0;
+				width: 24px;
+				height: 24px;
+				background-image: url('../img/icons/wallet.svg');
+				content: '';
+				@include bg-contain;
+			}
+		}
+	}
+}

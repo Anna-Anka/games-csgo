@@ -1,0 +1,119 @@
+.header {
+	padding: 40px 0 50px;
+	background-color: $blue-100;
+
+	&__nav,
+	&__wrapper,
+	&__account {
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		@include adaptiv-value('margin-right', 70, 10, 1);
+
+		@include mq(xl) {
+			z-index: 5;
+		}
+	}
+
+	&__wrapper {
+		width: 100%;
+
+		@include mq(xl) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			flex-direction: column;
+			width: 100%;
+			max-height: 100%;
+			padding: 115px 20px 40px;
+			overflow-y: auto;
+			background-color: $blue-100;
+			border-radius: 0 0 10px 10px;
+			box-shadow: 2px 10px 10px rgba($blue-400, 0.04);
+			visibility: hidden;
+		}
+
+		&--active {
+			visibility: visible;
+		}
+	}
+
+	&__menu {
+		@include adaptiv-value('margin-right', 50, 10, 1);
+
+		@include mq(xl) {
+			flex-direction: column;
+			margin-right: 0;
+		}
+	}
+
+	&__language {
+		@include adaptiv-value('margin-right', 70, 10, 1);
+
+		@include mq(xl) {
+			order: 1;
+			margin-right: 0;
+		}
+	}
+
+	&__account {
+		margin-left: auto;
+
+		@include mq(xl) {
+			order: -1;
+			margin-right: auto;
+			margin-bottom: 25px;
+		}
+	}
+
+	&__login {
+		position: relative;
+		padding-right: 30px;
+		font-weight: $fw-700;
+		line-height: 1;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 24px;
+			height: 24px;
+			background-image: url('../img/icons/login.svg');
+			content: '';
+			@include bg-contain;
+		}
+	}
+
+	&__profile {
+		&:not(:last-child) {
+			@include adaptiv-value('margin-right', 15, 10, 1);
+		}
+	}
+
+	&__ava {
+		width: 35px;
+		height: 35px;
+		margin-right: 8px;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+
+	&__logout {
+		width: 20px;
+		height: 20px;
+		background-image: url('../img/icons/logout.svg');
+		@include bg-contain;
+	}
+
+	.burger {
+		@include burger;
+		display: none;
+		margin-left: auto;
+
+		@include mq(xl) {
+			display: flex;
+		}
+	}
+}

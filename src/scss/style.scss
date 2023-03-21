@@ -1,0 +1,26 @@
+/* stylelint-disable */
+
+// * standart
+@import 'fonts';
+@import 'vars';
+@import 'reset';
+@import 'mixins';
+@import 'libs';
+@import 'global';
+@import 'buttons';
+
+// * components
+@import './components/header/header';
+@import './components/header/user-nav';
+@import './components/language';
+@import './components/menu';
+// @import './components/breadcrumbs';
+@import './components/footer';
+
+// * templates
+//@import './templates/stepper';
+//@import './templates/accordion';
+//@import './templates/modal';
+//@import './templates/marquee';
+
+// * home-page

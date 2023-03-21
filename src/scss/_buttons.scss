@@ -1,0 +1,51 @@
+.button,
+.button-medium {
+	@include flex-all-center;
+	line-height: 1.1;
+	border-radius: 5px;
+}
+
+.button {
+	padding-top: 12px;
+    padding-bottom: 12px;
+    @include adaptiv-value('padding-right', 65, 35, 1);
+    @include adaptiv-value('padding-left', 65, 35, 1);
+	color: $white;
+	background-color: $blue-400;
+
+	&--border {
+		color: $blue-400;
+		background-color: transparent;
+		border: 2px solid $blue-400;
+	}
+
+	&--small {
+		padding: 4px 8px;
+	}
+
+	&--icon {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 15px;
+			width: 18px;
+			height: 18px;
+			transform: translateY(-50%);
+			content: '';
+            @include bg-contain;
+		}
+	}
+}
+
+.button-medium {
+	padding: 12px 35px;
+	background-color: $dark-800;
+
+	&--border {
+		color: $dark-800;
+		background-color: transparent;
+		border: 2px solid $dark-800;
+	}
+}

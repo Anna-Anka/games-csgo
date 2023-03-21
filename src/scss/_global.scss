@@ -1,0 +1,120 @@
+body {
+	color: $dark-800;
+	font-weight: $fw-400;
+	font-size: 16px;
+	font-family: $nexa, Arial, sans-serif;
+	line-height: 1.6;
+	background-color: $white;
+}
+
+.container {
+	width: 100%;
+	max-width: 1210px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+.lock {
+	overflow: hidden;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: 1px;
+	padding: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	border: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(100%);
+}
+
+.disable-scroll {
+	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.logo {
+	display: inline-block;
+	width: 100%;
+    @include adaptiv-value('max-width', 102, 83, 1);
+    @include adaptiv-value('height', 44, 36, 1);
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+.swiper-slide {
+	box-sizing: border-box;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background-color: rgba($black, 0.5);
+	opacity: 0;
+
+	&--active {
+		z-index: 4;
+		opacity: 1;
+	}
+}
+
+.title {
+	font-family: $russo;
+	line-height: 1.1;
+	text-transform: uppercase;
+	@include adaptiv-value('font-size', 56, 40, 1);
+
+	&--large {
+		@include adaptiv-value('font-size', 78, 60, 1);
+	}
+
+	&--medium {
+		font-size: 26px;
+	}
+
+	&--accent {
+		color: $blue-400;
+	}
+}
+
+.subtitle {
+	font-weight: $fw-900;
+	font-size: 26px;
+	line-height: 1.1;
+	text-transform: none;
+
+	&--medium {
+        @include adaptiv-value('font-size', 22, 16, 1);
+	}
+
+	&--small {
+		@include adaptiv-value('font-size', 20, 16, 1);
+	}
+}

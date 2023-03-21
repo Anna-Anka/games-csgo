@@ -1,0 +1,20 @@
+.menu {
+	display: flex;
+	align-items: center;
+	font-weight: $fw-700;
+
+    @include mq(xl) {
+        margin-bottom: 35px;
+    }
+
+	&__item {
+		&:not(:last-child) {
+			@include adaptiv-value('margin-right', 25, 15, 1);
+
+			@include mq(xl) {
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}

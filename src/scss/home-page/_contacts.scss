@@ -1,0 +1,137 @@
+.contacts {
+	padding: 63px 0 105px;
+
+	&__title {
+		margin-bottom: 45px;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+
+		@include mq(lg) {
+			flex-direction: column;
+		}
+	}
+
+	&__emails {
+		width: 100%;
+		max-width: 380px;
+		margin-right: 24px;
+
+		@include mq(lg) {
+			max-width: 100%;
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__emails,
+	&__form {
+		padding: 40px 30px;
+		background-color: $white;
+		border-radius: 10px;
+		box-shadow: 2px 10px 10px rgba($blue-400, 0.04);
+
+		@include mq(lg) {
+			padding: 30px 20px;
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 10px;
+	}
+
+	&__item {
+		color: $blue-400;
+		font-weight: 700;
+		line-height: 1.2;
+
+		&:not(:last-child) {
+			margin-bottom: 9px;
+		}
+	}
+
+	&__form {
+		width: 100%;
+		max-width: 750px;
+
+        @include mq(lg) {
+			max-width: 100%;
+		}
+	}
+}
+
+.form {
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+
+        @include mq(md) {
+			flex-direction: column;
+		}
+	}
+
+	&__inner {
+		width: 100%;
+		max-width: 300px;
+		margin-right: 30px;
+
+        @include mq(md) {
+			max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 30px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 16px;
+	}
+
+	&__subtitle {
+		font-weight: $fw-700;
+		line-height: 1.4;
+	}
+
+	&__content {
+		width: 100%;
+		max-width: 350px;
+
+        @include mq(sm) {
+			max-width: 100%;
+		}
+	}
+
+	&__item {
+		width: 100%;
+		margin-bottom: 15px;
+
+		&:last-child {
+			margin-bottom: 23px;
+		}
+	}
+
+	&__field {
+		width: 100%;
+		padding: 12px 20px;
+		font-weight: $fw-700;
+		font-size: 16px;
+		line-height: 1.1;
+		background-color: $blue-100;
+		border: 2px solid $blue-400;
+		border-radius: 5px;
+
+		&::placeholder {
+			color: $blue-400;
+		}
+
+		&--message {
+			min-height: 78px;
+			resize: vertical;
+		}
+	}
+
+    &__button {
+        width: 100%;
+    }
+}

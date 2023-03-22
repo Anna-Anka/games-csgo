@@ -1,7 +1,7 @@
 .about {
 	position: relative;
-	padding-top: 170px;
-	padding-bottom: 300px;
+    @include adaptiv-value('padding-bottom', 300, 90, 1);
+    @include adaptiv-value('padding-top', 170, 120, 1);
 
 	&::before,
 	&::after {

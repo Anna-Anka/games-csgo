@@ -87,7 +87,7 @@ body {
 
 .title {
 	font-family: $russo;
-	line-height: 1.1;
+	line-height: 1.2;
 	text-transform: uppercase;
 	@include adaptiv-value('font-size', 56, 40, 1);
 
@@ -115,8 +115,7 @@ body {
 .subtitle {
 	font-weight: $fw-900;
 	font-size: 26px;
-	line-height: 1.1;
-	text-transform: none;
+	line-height: 1.2;
 
 	&--medium {
         @include adaptiv-value('font-size', 22, 16, 1);

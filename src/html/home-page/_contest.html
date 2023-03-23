@@ -4,17 +4,18 @@
             Конкурс
         </h2>
 
-        <div class="contest__timer">
-            <div class="contest__item">
-                <span class="contest__number title title--accent title--large">10</span>
+        <!-- Для изменения даты отсчета нужно указать эту дату в атрибуте daa-timer. Строго в указанном формате! -->
+        <div class="contest__timer" data-timer="Jan 1 2024 00:00:00">
+            <div class="contest__item contest__item--day">
+                <span class="contest__number title title--accent title--large">00</span>
                 <span class="contest__name subtitle subtitle--medium">Дней</span>
             </div>
-            <div class="contest__item">
-                <span class="contest__number title title--accent title--large">12</span>
+            <div class="contest__item contest__item--hours">
+                <span class="contest__number title title--accent title--large">00</span>
                 <span class="contest__name subtitle subtitle--medium">Часов</span>
             </div>
-            <div class="contest__item">
-                <span class="contest__number title title--accent title--large">10</span>
+            <div class="contest__item contest__item--minutes">
+                <span class="contest__number title title--accent title--large">00</span>
                 <span class="contest__name subtitle subtitle--medium">Минут</span>
             </div>
         </div>

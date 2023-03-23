@@ -45,9 +45,10 @@
 	&__item {
 		display: flex;
 		flex-direction: column;
+        align-items: center;
 
 		&:not(:last-child) {
-			margin-right: 24px;
+            @include adaptiv-value('margin-right', 64, 40, 1);
 		}
 
 		&:last-child {
@@ -63,12 +64,11 @@
 
 	&__number {
 		position: relative;
-		padding-right: 44px;
 
 		&::before {
 			position: absolute;
 			top: 50%;
-			right: 0;
+            @include adaptiv-value('right', -40, -30, 1);
 			height: 100%;
 			color: inherit;
 			font-size: inherit;
@@ -78,7 +78,6 @@
 	}
 
 	&__name {
-		padding-left: 12px;
 		font-weight: $fw-700;
 		font-size: 22px;
 	}

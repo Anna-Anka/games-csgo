@@ -1,5 +1,6 @@
 .contacts {
-	padding: 63px 0 105px;
+	padding-top: 65px;
+    @include adaptiv-value('padding-bottom', 105, 55, 1);
 
 	&__title {
 		margin-bottom: 45px;

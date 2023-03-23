@@ -142,8 +142,8 @@ if (document.querySelector('.language__select')) {
 // ]);
 
 // * Подключение marquee
-//import { handleMarquee } from "./templates/marquee";
-//handleMarquee();
+import { handleMarquee } from "./templates/marquee";
+handleMarquee();
 
 // * Подключение липкой шапки
 //import { headerSticky } from "./templates/header-sticky";

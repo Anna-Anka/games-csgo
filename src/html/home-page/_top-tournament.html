@@ -1,0 +1,49 @@
+<section class="top-tournament section">
+    <h2 class="sr-only">
+        Предстоящие и текущие турниры
+    </h2>
+
+    <div class="marquee">
+        <ul class="marquee__items">
+            <li class="marquee__item">
+                @include('./../components/cards/_marquee-team.html')
+            </li>
+            <li class="marquee__item">
+                @include('./../components/cards/_marquee-team.html')
+            </li>
+            <li class="marquee__item">
+                @include('./../components/cards/_marquee-team.html')
+            </li>
+            <li class="marquee__item">
+                @include('./../components/cards/_marquee-team.html')
+            </li>
+            <li class="marquee__item">
+                @include('./../components/cards/_marquee-team.html')
+            </li>
+            <li class="marquee__item">
+                @include('./../components/cards/_marquee-team.html')
+            </li>
+            <li class="marquee__item">
+                @include('./../components/cards/_marquee-team.html')
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="top-tournament__tabs tabs" data-tabs="top-tournament">
+            <ul class="tabs__nav">
+                <li class="tabs__nav-item">
+                    <a class="tabs__nav-btn" href="#">Ближайшие матчи</a>
+                </li>
+                <li class="tabs__nav-item">
+                    <a class="tabs__nav-btn" href="#">Live</a>
+                </li>
+            </ul>
+            <div class="tabs__content">
+                <div class="tabs__panel"></div>
+                <div class="tabs__panel"></div>
+            </div>
+        </div>
+        <button class="top-tournament__more button button--border" type="button">Загрузить ещё</button>
+    </div>
+</section>

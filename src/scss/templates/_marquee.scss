@@ -1,20 +1,24 @@
 .marquee {
-    padding: 20px 0;
-	background-color: $white;
-
-	&__wrapper {
-		position: relative;
-		display: flex;
-		width: 100%;
-	}
+	display: flex;
 
 	&__items {
 		display: flex;
+		margin-top: 20px;
+		animation: ticker 40s infinite linear;
 	}
 
 	&__item {
-		flex-shrink: 0;
-		padding: 0 80px;
+        margin-right: 8px;
 		white-space: nowrap;
 	}
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(-100%)
+    }
 }

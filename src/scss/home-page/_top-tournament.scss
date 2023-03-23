@@ -1,0 +1,10 @@
+.top-tournament {
+    padding-top: 140px;
+    @include adaptiv-value('padding-bottom', 140, 70, 1);
+
+   // @include flex-center-sb;
+
+    &__marquee {
+        //@include adaptiv-value('margin-bottom', 60, 55, 1);
+    }
+}

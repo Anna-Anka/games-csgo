@@ -17,11 +17,14 @@
 // @import './components/breadcrumbs';
 @import './components/footer';
 
+// * cards
+@import './components/cards/marquee-team';
+
 // * templates
 //@import './templates/stepper';
 //@import './templates/accordion';
 //@import './templates/modal';
-//@import './templates/marquee';
+@import './templates/marquee';
 
 // * home-page
 
@@ -30,6 +33,7 @@
 @import './home-page/hero/search';
 @import './home-page/hero/hero-card';
 
+@import './home-page/top-tournament';
 @import './home-page/about';
 @import './home-page/contacts';
 @import './home-page/contest';

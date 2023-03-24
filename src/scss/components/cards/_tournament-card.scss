@@ -1,0 +1,313 @@
+.tournament-card {
+	@include flex-center-sb;
+	width: 100%;
+	padding: 22px 20px;
+	background-color: $white;
+	border-radius: 10px;
+	@include adaptiv-value('font-size', 16, 14, 1);
+
+	@include mq(lg) {
+		padding: 17px 15px;
+	}
+
+	@include mq(md) {
+		flex-direction: column;
+	}
+
+	&__info,
+	&__teams,
+	&__team,
+	&__links,
+	&__descr,
+	&__content {
+		display: flex;
+		align-items: center;
+	}
+
+	&__content {
+		width: 100%;
+		max-width: 1100px;
+		margin-right: 30px;
+
+		@include mq(md) {
+			justify-content: space-between;
+			margin-right: 0;
+			margin-bottom: 16px;
+		}
+	}
+
+	&__info {
+		width: 100%;
+		max-width: 260px;
+		margin-right: 40px;
+
+		@include mq(xl) {
+			margin-right: 20px;
+		}
+
+		@include mq(lg) {
+			width: auto;
+			max-width: unset;
+		}
+
+		@include mq(md) {
+			flex-direction: row-reverse;
+			margin-right: 10px;
+		}
+	}
+
+	&__type {
+        @include adaptiv-value('width', 62, 46, 1);
+		@include adaptiv-value('height', 55, 40, 1);
+		margin-right: 15px;
+		@include bg-contain;
+
+		@include mq(md) {
+			margin-right: 0;
+		}
+	}
+
+	&__descr {
+		white-space: nowrap;
+
+		@include mq(lg) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		@include mq(md) {
+			margin-right: 10px;
+		}
+	}
+
+	&__score,
+	&__start {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__score {
+		margin-right: 30px;
+		font-weight: $fw-700;
+
+		*:not(:last-child) {
+			@include mq(lg) {
+				margin-right: 10px;
+			}
+		}
+
+		@include mq(lg) {
+			flex-direction: row;
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+
+		&::before {
+			background-image: url('../img/icons/score.svg');
+		}
+	}
+
+	&__score,
+	&__timer,
+	&__cost {
+		@include mq(lg) {
+			position: relative;
+			padding-left: 26px;
+		}
+
+		&::before {
+			position: absolute;
+			top: 2px;
+			left: 0;
+			display: none;
+
+			@include mq(lg) {
+				display: block;
+			}
+		}
+	}
+
+	&__score,
+	&__timer {
+		&::before {
+			width: 16px;
+			height: 16px;
+			content: '';
+			@include bg-contain;
+		}
+	}
+
+	&__start {
+		@include mq(lg) {
+			display: none;
+		}
+	}
+
+	&__timer {
+		color: $blue-400;
+		font-weight: $fw-700;
+
+		&::before {
+			background-image: url('../img/icons/timer.svg');
+		}
+	}
+
+	&__cost {
+		display: none;
+		color: $blue-400;
+		font-weight: $fw-700;
+
+		@include mq(lg) {
+			display: inline-block;
+		}
+
+		&::before {
+			color: $grey-400;
+			opacity: 0.4;
+			content: '₽';
+		}
+	}
+
+	&__teams {
+		justify-content: center;
+		width: 100%;
+		max-width: 610px;
+
+		@include mq(lg) {
+			justify-content: center;
+		}
+
+		@include mq(md) {
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: flex-end;
+
+			width: auto;
+			max-width: unset;
+			margin-right: 0;
+		}
+	}
+
+	&__team {
+		&:not(:last-child) {
+			margin-right: 30px;
+
+			@include mq(md) {
+				margin-right: 0;
+				margin-bottom: 8px;
+			}
+		}
+
+		&--reverse {
+			flex-direction: row-reverse;
+
+			@include mq(md) {
+				flex-direction: row;
+			}
+
+			.tournament-card__name {
+				margin-right: 0;
+
+				@include mq(md) {
+					margin-right: 12px;
+				}
+			}
+
+			.tournament-card__img {
+				@include adaptiv-value('margin-right', 25, 10, 1);
+
+				@include mq(md) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	&__name {
+		@include adaptiv-value('font-size', 24, 13, 1);
+		@include adaptiv-value('margin-right', 25, 10, 1);
+		font-weight: $fw-700;
+		line-height: 1.1;
+
+		@include mq(md) {
+			margin-right: 12px;
+			font-size: 13px;
+		}
+	}
+
+	&__img {
+		@include adaptiv-value('width', 50, 30, 1);
+		@include adaptiv-value('height', 50, 30, 1);
+		object-fit: contain;
+
+		@include mq(md) {
+			width: 30px;
+			height: 30px;
+		}
+	}
+
+	&__price {
+		margin-right: 30px;
+		padding: 19px 24px;
+		color: $white;
+		font-weight: $fw-800;
+		line-height: 1.2;
+		white-space: nowrap;
+		background-color: $blue-400;
+		border-radius: 5px;
+
+		@include mq(lg) {
+			display: none;
+		}
+	}
+
+	&__vs {
+		display: none;
+		width: 20px;
+		height: 13px;
+		margin-right: 20px;
+		background-image: url('../img/icons/vs-arrow.svg');
+		@include bg-contain;
+		transform: rotate(90deg);
+
+		@include mq(lg) {
+			display: block;
+		}
+
+		@include mq(md) {
+			margin-right: 0;
+			margin-bottom: 8px;
+			transform: rotate(0);
+		}
+	}
+
+	&__links {
+		margin-left: auto;
+
+		@include mq(lg) {
+			margin-left: 0;
+		}
+
+		@include mq(md) {
+			margin-left: auto;
+		}
+	}
+
+	&__link {
+		width: 24px;
+		height: 24px;
+		@include bg-contain;
+
+		&:not(:last-child) {
+			@include adaptiv-value('margin-right', 30, 20, 1);
+		}
+
+		&--play {
+			background-image: url('../img/icons/play-icon.svg');
+		}
+
+		&--edit {
+			background-image: url('../img/icons/edit.svg');
+		}
+	}
+}

@@ -1,10 +1,75 @@
 .top-tournament {
-    padding-top: 140px;
-    @include adaptiv-value('padding-bottom', 140, 70, 1);
+	padding-top: 140px;
+	@include adaptiv-value('padding-bottom', 140, 70, 1);
 
-   // @include flex-center-sb;
+	&__tabs {
+		@include adaptiv-value('margin-bottom', 60, 24, 1);
+	}
 
     &__marquee {
-        //@include adaptiv-value('margin-bottom', 60, 55, 1);
+        @include adaptiv-value('margin-bottom', 70, 55, 1);
     }
+
+	&__more {
+		margin: 0 auto;
+
+		@include mq(sm) {
+			width: 100%;
+		}
+	}
+}
+
+.top-tournament {
+	.tabs {
+		&__nav {
+			display: flex;
+            margin-bottom: 30px;
+		}
+
+		&__nav-item {
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
+
+		&__nav-btn {
+			@include adaptiv-value('font-size', 26, 16, 1);
+            transition: color 0.3s ease-in-out;
+
+			&--live {
+				position: relative;
+
+                &::before {
+                    position: absolute;
+                    top: 6px;
+                    right: -10px;
+                    width: 6px;
+                    height: 6px;
+                    background-color: $red-500;
+                    border-radius: 50%;
+                    content: "";
+                }
+			}
+
+            &--active {
+                color: $blue-400;
+            }
+		}
+
+        &__panel {
+            display: none;
+
+            &--active {
+                display: block;
+            }
+        }
+
+        &__item {
+            box-shadow: 2px 10px 10px rgba($blue-400, 0.04);
+
+            &:not(:last-child) {
+               margin-bottom: 10px;
+            }
+        }
+	}
 }

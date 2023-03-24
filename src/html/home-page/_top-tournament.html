@@ -3,7 +3,7 @@
         Предстоящие и текущие турниры
     </h2>
 
-    <div class="marquee">
+    <div class="top-tournament__marquee marquee">
         <ul class="marquee__items">
             <li class="marquee__item">
                 @include('./../components/cards/_marquee-team.html')
@@ -33,17 +33,44 @@
         <div class="top-tournament__tabs tabs" data-tabs="top-tournament">
             <ul class="tabs__nav">
                 <li class="tabs__nav-item">
-                    <a class="tabs__nav-btn" href="#">Ближайшие матчи</a>
+                    <button class="tabs__nav-btn subtitle" type="button">
+                        Ближайшие матчи
+                    </button>
                 </li>
                 <li class="tabs__nav-item">
-                    <a class="tabs__nav-btn" href="#">Live</a>
+                    <button class="tabs__nav-btn tabs__nav-btn--live subtitle" type="button">
+                        Live
+                    </button>
                 </li>
             </ul>
             <div class="tabs__content">
-                <div class="tabs__panel"></div>
-                <div class="tabs__panel"></div>
+                <ul class="tabs__panel">
+                    <li class="tabs__item">
+                        @include('./../components/cards/_tournament-card.html')
+                    </li>
+                    <li class="tabs__item">
+                        @include('./../components/cards/_tournament-card.html')
+                    </li>
+                    <li class="tabs__item">
+                        @include('./../components/cards/_tournament-card.html')
+                    </li>
+                    <li class="tabs__item">
+                        @include('./../components/cards/_tournament-card.html')
+                    </li>
+                    <li class="tabs__item">
+                        @include('./../components/cards/_tournament-card.html')
+                    </li>
+                </ul>
+                <ul class="tabs__panel">
+                    <li class="tabs__item">
+                        @include('./../components/cards/_tournament-card.html')
+                    </li>
+                </ul>
             </div>
         </div>
-        <button class="top-tournament__more button button--border" type="button">Загрузить ещё</button>
+        <button class="top-tournament__more button button--border" type="button">
+            Загрузить ещё
+        </button>
     </div>
+    
 </section>

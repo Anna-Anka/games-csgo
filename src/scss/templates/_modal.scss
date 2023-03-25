@@ -40,20 +40,20 @@
 		border-radius: 10px;
 		cursor: default;
 
-        @include mq(md) {
-            vertical-align: top;
-        }
+		@include mq(md) {
+			vertical-align: top;
+		}
 
-        &--registration {
-            .form {
-                &__field {
-                    &::placeholder {
-                        font-weight: $fw-400;
-                        color: rgba($dark-800, 0.5);
-                    }
-                }
-            }
-        }
+		&--registration {
+			.form {
+				&__field {
+					&::placeholder {
+						color: rgba($dark-800, 0.5);
+						font-weight: $fw-400;
+					}
+				}
+			}
+		}
 	}
 
 	&__close {

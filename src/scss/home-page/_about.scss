@@ -1,7 +1,12 @@
 .about {
 	position: relative;
-    @include adaptiv-value('padding-bottom', 300, 90, 1);
-    @include adaptiv-value('padding-top', 170, 120, 1);
+	z-index: 1;
+	padding-bottom: 192px;
+	@include adaptiv-value('padding-top', 170, 120, 1);
+
+	@include mq(xl) {
+		padding-bottom: 30px;
+	}
 
 	&::before,
 	&::after {
@@ -32,7 +37,7 @@
 		background-image: url('../img/about/decor.png');
 
 		@include mq(xl) {
-			top: -20px;
+			top: -80px;
 			right: -100px;
 			max-width: 250px;
 			height: 300px;
@@ -70,18 +75,17 @@
 		}
 	}
 
-    &__right,
-    &__text {
-        width: 49%;
+	&__right,
+	&__text {
+		width: 49%;
 
-        @include mq(md) {
-            width: 100%;
-        }
-    }
+		@include mq(md) {
+			width: 100%;
+		}
+	}
 
 	&__right,
 	&__subtext {
-
 		p {
 			&:not(:last-child) {
 				margin-bottom: 12px;
@@ -95,5 +99,9 @@
 
 	&__subtext {
 		margin-bottom: 30px;
+	}
+
+	&__line {
+		bottom: 0;
 	}
 }

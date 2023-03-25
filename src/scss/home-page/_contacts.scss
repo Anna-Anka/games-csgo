@@ -1,6 +1,17 @@
 .contacts {
+	position: relative;
 	padding-top: 65px;
-    @include adaptiv-value('padding-bottom', 105, 55, 1);
+	@include adaptiv-value('padding-bottom', 105, 55, 1);
+
+	&__line-double {
+		top: -195px;
+		height: calc(100% + 394px);
+	}
+
+	&__container {
+		position: relative;
+		z-index: 1;
+	}
 
 	&__title {
 		margin-bottom: 45px;
@@ -57,7 +68,7 @@
 		width: 100%;
 		max-width: 750px;
 
-        @include mq(lg) {
+		@include mq(lg) {
 			max-width: 100%;
 		}
 	}

@@ -1,0 +1,44 @@
+.title {
+	font-family: $russo;
+	line-height: 1.2;
+	text-transform: uppercase;
+	@include adaptiv-value('font-size', 56, 40, 1);
+
+	&--large {
+		@include adaptiv-value('font-size', 78, 60, 1);
+	}
+
+	&--medium {
+		font-size: 39px;
+	}
+
+	&--small {
+		font-size: 26px;
+	}
+
+	&--accent {
+		color: $blue-400;
+	}
+
+	&__accent {
+		color: $blue-400;
+	}
+}
+
+.subtitle {
+	font-weight: $fw-900;
+	font-size: 26px;
+	line-height: 1.2;
+
+	&--medium {
+		@include adaptiv-value('font-size', 22, 16, 1);
+	}
+
+	&--small {
+		@include adaptiv-value('font-size', 20, 16, 1);
+	}
+
+	&__accent {
+		color: $blue-400;
+	}
+}

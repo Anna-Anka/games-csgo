@@ -3,7 +3,7 @@ export const timer = () => {
     if (document.querySelector('.contest__timer')) {
         const date = document.querySelector('.contest__timer')
         const dateValue = date.getAttribute('data-timer')
-        const newYear = new Date(dateValue);
+        const event = new Date(dateValue);
 
         const daysVal = document.querySelector('.contest__item--day .contest__number');
         const hoursVal = document.querySelector('.contest__item--hours .contest__number');
@@ -20,7 +20,7 @@ export const timer = () => {
 
         const timeCount = () => {
             let now = new Date();
-            let leftUntil = newYear - now;
+            let leftUntil = event - now;
 
             let days = Math.floor(leftUntil / 1000 / 60 / 60 / 24);
             let hours = Math.floor(leftUntil / 1000 / 60 / 60) % 24;

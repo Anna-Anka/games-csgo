@@ -1,0 +1,127 @@
+.form {
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+
+		@include mq(md) {
+			flex-direction: column;
+		}
+	}
+
+	&__inner {
+		width: 100%;
+		max-width: 300px;
+		margin-right: 30px;
+
+		@include mq(md) {
+			max-width: 100%;
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__logo {
+		display: flex;
+		margin: 0 auto 25px;
+	}
+
+	&__title {
+		margin-bottom: 16px;
+	}
+
+	&__subtitle {
+		font-weight: $fw-700;
+		line-height: 1.4;
+	}
+
+	&__steam {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 15px;
+		font-weight: $fw-700;
+	}
+
+	&__icon {
+		position: relative;
+		padding-left: 27px;
+
+		&::before {
+			position: absolute;
+			top: 2px;
+			left: 0;
+			width: 20px;
+			height: 20px;
+			background-image: url('../img/icons/steam.svg');
+			content: '';
+			@include bg-contain;
+		}
+	}
+
+	&__links {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__link {
+		font-weight: $fw-700;
+		line-height: 1.2;
+
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+
+		&--accent {
+			color: $blue-400;
+		}
+	}
+
+	&__content {
+		width: 100%;
+		max-width: 350px;
+
+		@include mq(sm) {
+			max-width: 100%;
+		}
+	}
+
+	&__item {
+		width: 100%;
+		margin-bottom: 15px;
+
+		&:last-child {
+			margin-bottom: 23px;
+		}
+	}
+
+	&__label {
+		display: block;
+		margin-bottom: 7px;
+		color: $blue-400;
+		font-weight: $fw-700;
+		line-height: 1.2;
+	}
+
+	&__field {
+		width: 100%;
+		padding: 12px 20px;
+		font-weight: $fw-700;
+		font-size: 16px;
+		line-height: 1.1;
+		background-color: $blue-100;
+		border: 2px solid $blue-400;
+		border-radius: 5px;
+
+		&::placeholder {
+			color: $blue-400;
+		}
+
+		&--message {
+			min-height: 78px;
+			resize: vertical;
+		}
+	}
+
+	&__button {
+		width: 100%;
+	}
+}

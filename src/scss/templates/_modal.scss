@@ -6,62 +6,58 @@
 	bottom: 0;
 	left: 0;
 	z-index: 1000;
-	display: flex;
 	overflow-x: hidden;
 	overflow-y: auto;
-	vertical-align: middle;
-	background-color: rgba($black, 0.8);
+	text-align: center;
+	background-color: $blue-600;
 	visibility: hidden;
 	cursor: pointer;
 	opacity: 0;
 	transition: opacity var(--transition-time), visibility var(--transition-time);
 
-	&__container {
-		display: flex;
-		align-items: center;
-		align-self: center;
-		width: 100%;
-		max-width: 1360px;
-		margin: 0 auto;
-		padding: 20px 10px;
-		cursor: default;
+	@include mq(md) {
+		background-color: rgba($blue-600, 0.7);
 	}
 
-	&__box {
+	&::before {
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+		content: '';
+	}
+
+	&__container {
 		position: relative;
-		width: 100%;
-		max-width: 100%;
-		padding: 40px 60px;
-		overflow-y: hidden;
+		display: inline-block;
+		display: none;
+		width: 98%;
+		max-width: 348px;
+		margin: 40px auto;
+		padding: 25px;
+		text-align: left;
+		vertical-align: middle;
 		background-color: $white;
-		@include flex-center-sb;
+		border-radius: 10px;
+		cursor: default;
+
+        @include mq(md) {
+            vertical-align: top;
+        }
+
+        &--registration {
+            .form {
+                &__field {
+                    &::placeholder {
+                        font-weight: $fw-400;
+                        color: rgba($dark-800, 0.5);
+                    }
+                }
+            }
+        }
 	}
 
 	&__close {
-		position: absolute;
-        top: 20px;
-        right: 20px;
-        width: 40px;
-        height: 40px;
-		background-color: $black;
-		border-radius: 50%;
-
-		&::before {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: 20px;
-            height: 20px;
-			background-image: url('../img/icons/close.svg');
-			transform: translate(-50%, -50%);
-			content: '';
-			@include bg-conatin;
-		}
-	}
-
-	&__content {
-		@include flex-center-sb;
-		width: 100%;
+		display: none;
 	}
 
 	&.is-open {
@@ -70,25 +66,42 @@
 		transition: opacity var(--transition-time),
 			visibility var(--transition-time);
 	}
-}
 
-.fade {
-	transition: opacity var(--transition-time);
-
-	&.animate-open {
-		width: 100%;
-		max-width: 1360px;
+	&__container.graph-modal-open {
+		display: inline-block;
 	}
-}
 
-.fadeInUp {
-	transform: translateY(-100px);
-	opacity: 0;
-	transition: transform var(--transition-time), opacity var(--transition-time);
+	.form {
+		&__button {
+			margin-bottom: 15px;
+		}
+	}
 
-	&.animate-open {
+	.fade {
+		opacity: 0;
+	}
+
+	.fade,
+	.fade.animate-open {
+		transition: opacity var(--transition-time);
+	}
+
+	.fade.animate-open {
+		opacity: 1;
+	}
+
+	.fadeInUp {
+		transform: translateY(-100px);
+		opacity: 0;
+	}
+
+	.fadeInUp,
+	.fadeInUp.animate-open {
+		transition: transform var(--transition-time), opacity var(--transition-time);
+	}
+
+	.fadeInUp.animate-open {
 		transform: translateY(0);
 		opacity: 1;
-		transition: transform var(--transition-time), opacity var(--transition-time);
 	}
 }

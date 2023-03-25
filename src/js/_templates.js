@@ -38,15 +38,14 @@ import { burger } from './templates/burger';
 burger();
 
 // * Реализация остановки скролла (не забудьте вызвать функцию)
-import { disableScroll } from './templates/disable-scroll';
+//import { disableScroll } from './templates/disable-scroll';
 
 // * Реализация включения скролла (не забудьте вызвать функцию)
-import { enableScroll } from './templates/enable-scroll';
+//import { enableScroll } from './templates/enable-scroll';
 
 // * Реализация модального окна
-//import GraphModal from 'graph-modal';
-
-//const modal = new GraphModal('modal');
+import GraphModal from 'graph-modal';
+const modal = new GraphModal('modal');
 
 // * Реализация табов
 import GraphTabs from 'graph-tabs';

@@ -17,12 +17,16 @@
 @import './components/form';
 @import './components/lines';
 @import './components/titles';
+@import './components/private-menu';
 // @import './components/breadcrumbs';
 @import './components/footer';
 
 // * cards
 @import './components/cards/marquee-team';
 @import './components/cards/tournament-card';
+
+// * ables 
+@import './components/tables/table-1';
 
 // * templates
 //@import './templates/stepper';

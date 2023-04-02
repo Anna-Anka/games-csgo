@@ -42,3 +42,20 @@
 		color: $blue-400;
 	}
 }
+
+.title-filter {
+	position: relative;
+	margin-bottom: 15px;
+	@include adaptiv-value('padding-left', 40, 32, 1);
+
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 24px;
+		height: 24px;
+		background-image: url('../img/icons/filter.svg');
+		content: '';
+		@include bg-contain;
+	}
+}

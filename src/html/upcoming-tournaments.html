@@ -3,22 +3,21 @@
 )
 <!--  -->
 @include('./components/_header.html', {
-    'isLogin' : 'true'
+'isLogin' : 'true'
 })
 
 @include('./components/_modals.html')
 
-<main class="main">
-    <div class="container">
-        <div class="page-wrapper">
-            <!-- @include('./upcoming-tournaments-page/_private-menu.html') -->
+<div class="container">
+    <div class="page-wrapper">
+        @include('./upcoming-tournaments-page/_private-menu.html')
 
-            <div class="page-content">
-                @include('./components/tables/_table-1.html')
-            </div>
-        </div>
+        <main class="page-content">
+            @include('./upcoming-tournaments-page/_upcoming-tournaments-management.html')
+            @include('./upcoming-tournaments-page/_upcoming-tournaments-table.html')
+        </main>
     </div>
-</main>
+</div>
 
 <!--  -->
 @include('./components/links/_bottom.html')

@@ -6,11 +6,12 @@
 	transition: max-width 0.3s ease-in-out;
 
 	&--open {
+		flex-shrink: 0;
 		max-width: 350px;
 
-        .private-menu__link {
-            font-size: 20px;
-        }
+		.private-menu__link {
+			font-size: 20px;
+		}
 	}
 
 	&__content {
@@ -59,19 +60,27 @@
 		display: flex;
 		align-items: center;
 		font-weight: $fw-700;
-        font-size: 0;
+		font-size: 0;
 		line-height: 1.2;
 		transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
 	}
 
 	&__icon {
-        min-width: 20px;
-        max-width: 20px;
+		min-width: 20px;
+		max-width: 20px;
 		height: 20px;
 		@include bg-contain;
 
 		&:not(:last-child) {
 			margin-right: 22px;
+		}
+	}
+}
+
+.private-menu--open + .page-content {
+	.table {
+		&__wrapper {
+			width: 1082px;
 		}
 	}
 }

@@ -12,7 +12,8 @@
 // * components
 @import './components/header/header';
 @import './components/header/user-nav';
-@import './components/language';
+@import './components/header/language';
+
 @import './components/menu';
 @import './components/form';
 @import './components/lines';
@@ -25,8 +26,9 @@
 @import './components/cards/marquee-team';
 @import './components/cards/tournament-card';
 
-// * ables 
-@import './components/tables/table-1';
+// * tables 
+@import './components/tables/table';
+@import './components/tables/table-mobile';
 
 // * templates
 //@import './templates/stepper';
@@ -45,3 +47,6 @@
 @import './home-page/about';
 @import './home-page/contacts';
 @import './home-page/contest';
+
+@import './upcoming-tournaments-page/upcoming-tournaments-table';
+@import './upcoming-tournaments-page/upcoming-tournaments-management';

@@ -97,16 +97,13 @@ if (document.querySelector('.top-tournament__tabs')) {
 
 // * Подключение choices.js
 import Choices from "choices.js";
-
-if (document.querySelector('.language__select')) {
-    const defaultSelect = () => {
-        const element = document.querySelector('.language__select');
-        const choices = new Choices(element, {
+if (document.querySelector('[data-select="true"]')) {
+    const selects = document.querySelectorAll('[data-select="true"]')
+    selects.forEach(select => {
+        const choices = new Choices(select, {
             searchEnabled: false
         });
-    }
-
-    defaultSelect()
+    })
 }
 
 // * Подключение just-validate

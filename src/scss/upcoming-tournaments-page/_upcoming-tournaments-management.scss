@@ -3,10 +3,8 @@
 	margin-bottom: 35px;
 	@include adaptiv-value('font-size', 18, 13, 1);
 
-	&__list {
-		&:not(:last-child) {
-			@include adaptiv-value('margin-bottom', 16, 12, 1);
-		}
+	& > :not(:last-child) {
+		@include adaptiv-value('margin-bottom', 16, 12, 1);
 	}
 
 	&__fieldes {
@@ -43,6 +41,12 @@
 			}
 		}
 
+		&--second {
+			.management-form__field {
+				border-radius: 0 10px 10px 0;
+			}
+		}
+
 		&:last-child {
 			border-radius: 10px;
 		}
@@ -54,15 +58,29 @@
 		color: $black;
 		background-color: $white;
 		border-radius: inherit;
+
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			margin: 0;
+			-webkit-appearance: none;
+		}
+
+		&[type='number'] {
+			-moz-appearance: textfield;
+		}
 	}
 
 	&__items {
 		display: flex;
+
+        .management-form__item {
+            width: 50%;
+        }
 	}
 
 	&__item {
 		display: flex;
-		width: 50%;
+		width: 100%;
 		border-top-right-radius: 10px;
 		border-bottom-right-radius: 10px;
 		box-shadow: 2px 10px 10px rgba($blue-600, 0.04);
@@ -75,6 +93,12 @@
 			width: 100%;
 		}
 	}
+
+    &__type {
+        width: 40px;
+        height: 40px;
+        @include bg-contain;
+    }
 }
 
 .management-form {
@@ -108,10 +132,7 @@
 				margin-top: 0;
 				background-color: $white;
 				border: none;
-				border-radius: 5px;
 				border-radius: 10px;
-				border-bottom-right-radius: 0;
-				border-bottom-left-radius: 0;
 				box-shadow: 2px 10px 15px rgba($blue-600, 0.24);
 			}
 		}

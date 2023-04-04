@@ -18,7 +18,10 @@
 @import './components/form';
 @import './components/lines';
 @import './components/titles';
-@import './components/private-menu';
+
+@import './components/private-menu/private-menu';
+@import './components/private-menu/menu-slide';
+@import './components/play';
 // @import './components/breadcrumbs';
 @import './components/footer';
 
@@ -31,7 +34,7 @@
 @import './components/tables/table-mobile';
 
 // * templates
-//@import './templates/stepper';
+// @import './templates/stepper';
 //@import './templates/accordion';
 @import './templates/modal';
 @import './templates/marquee';

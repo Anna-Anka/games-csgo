@@ -101,7 +101,7 @@ if (document.querySelector('[data-select="true"]')) {
     const selects = document.querySelectorAll('[data-select="true"]')
     selects.forEach(select => {
         const choices = new Choices(select, {
-            searchEnabled: false
+            searchEnabled: false,
         });
     })
 }

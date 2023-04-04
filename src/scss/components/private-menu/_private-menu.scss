@@ -12,6 +12,17 @@
 		.private-menu__link {
 			font-size: 20px;
 		}
+
+		.private-menu__wrapper {
+			width: 100%;
+			visibility: visible;
+		}
+
+		.private-menu__slider {
+			width: 0;
+            height: 0;
+			visibility: hidden;
+		}
 	}
 
 	&__content {
@@ -74,6 +85,50 @@
 		&:not(:last-child) {
 			margin-right: 22px;
 		}
+	}
+
+	&__wrapper {
+		position: relative;
+		width: 0;
+		visibility: hidden;
+		transition: width 0.3s ease-in-out, visibility 0.3s ease-in-out;
+	}
+
+	&__swiper {
+		position: static;
+	}
+
+	&__slider {
+		@include flex-all-center;
+		width: 100%;
+		width: 100%;
+		padding: 15px;
+		background-color: $white;
+		border-radius: 10px;
+		box-shadow: 2px 10px 10px rgba($dark-800, 0.04);
+		visibility: visible;
+		transition: width 0.3s ease-in-out, visibility 0.3s ease-in-out, height 0.3s ease-in-out;
+        height: 100%;
+	}
+
+	&__slide {
+		box-shadow: 1.6px 8.5px 8.4px rgba($blue-600, 0.04);
+	}
+
+	.swiper-pagination {
+		top: unset;
+		bottom: -17px;
+	}
+
+	.swiper-pagination-bullet {
+		width: 12px;
+		height: 2px;
+		background-color: $dark-800;
+		border-radius: 0;
+	}
+
+	.swiper-pagination-bullet-active {
+		background-color: $blue-400;
 	}
 }
 

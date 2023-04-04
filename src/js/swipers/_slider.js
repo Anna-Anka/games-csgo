@@ -1,39 +1,16 @@
 import './../_libs'
 
-export const topSlider = () => {
-    if (document.querySelector('__swiper')) {
-        return new Swiper('__swiper', {
+export const privateMenuSwiper = () => {
+    if (document.querySelector('.private-menu__swiper')) {
+        return new Swiper('.private-menu__swiper', {
             loop: true, 
             speed: 800,
             slidesPerGroup: 1,
-            centeredSlides: true,
-
-            autoplay: {
-                delay: 2000,
-                disableOnInteraction: false,
-                stopOnlastSlide: false,
-            },
-
-            navigation: {
-                nextEl: '.__button--next',
-                prevEl: '.__button--prev',
-            },
+            spaceBetween: 10,
 
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
-            },
-
-            breakpoints: {
-                1400: {
-                    spaceBetween: -35,
-                    slidesPerView: 1.5,
-                },
-
-                1200: {
-                    spaceBetween: -25,
-                    slidesPerView: 1.5,
-                },
             },
         });
     }

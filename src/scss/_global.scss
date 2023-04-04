@@ -87,6 +87,10 @@ body {
 
 .page-wrapper {
 	display: flex;
+
+    @include mq(lg) {
+        flex-direction: column;
+    }
 }
 
 .page-content {

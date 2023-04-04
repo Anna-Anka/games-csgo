@@ -1,6 +1,12 @@
-<div class="upcoming-tournaments__top">
-    <h1 class="title-filter subtitle subtitle--medium">Предстоящие турниры</h1>
-    <form class="upcoming-tournaments__form management-form" action="#">
+<form class="management-form" action="#">
+    <div class="management-form__top">
+        <h1 class="management-form__title subtitle subtitle--medium">
+            Предстоящие турниры
+        </h1>
+        <button class="management-form__open" type="button" aria-expanded="false" aria-label="Открыть фильтры">Фильтры</button>
+    </div>
+
+    <div class="upcoming-tournaments__form management-form__form">
         <fieldset class="management-form__fieldes">
             <span>
                 <legend class="management-form__subtitle">Ставка от до</legend>
@@ -56,5 +62,5 @@
                 </option>
             </select>
         </div>
-    </form>
-</div>
+    </div>
+</form>

@@ -22,6 +22,10 @@
 @import './components/private-menu/private-menu';
 @import './components/private-menu/menu-slide';
 @import './components/play';
+
+// * management-form
+@import './components/management-form/management-form';
+@import './components/management-form/choices';
 // @import './components/breadcrumbs';
 @import './components/footer';
 
@@ -52,4 +56,3 @@
 @import './home-page/contest';
 
 @import './upcoming-tournaments-page/upcoming-tournaments-table';
-@import './upcoming-tournaments-page/upcoming-tournaments-management';

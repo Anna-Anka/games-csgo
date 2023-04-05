@@ -224,4 +224,14 @@
 		height: 20px;
 		margin-right: 12px;
 	}
+
+    &__button {
+        display: none;
+
+        @include mq(md) {
+            display: flex;
+            width: 100%;
+            margin-top: 25px;
+        }
+    }
 }

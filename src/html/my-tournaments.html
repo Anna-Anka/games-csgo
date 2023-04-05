@@ -1,0 +1,24 @@
+@include('./components/links/_head.html',
+{ 'title' : 'CS:GO — Ставки на спорт | Мои турниры' }
+)
+<!--  -->
+@include('./components/_header.html', {
+'isLogin' : 'true'
+})
+
+@include('./components/_modals.html')
+
+<div class="overlay"></div>
+<div class="container">
+    <div class="page-wrapper">
+        @include('./my-tournaments-page/_private-menu.html')
+
+        <main class="page-content">
+            @include('./my-tournaments-page/_my-tournaments-management.html')
+            @include('./my-tournaments-page/_my-tournaments-table.html')
+        </main>
+    </div>
+</div>
+
+<!--  -->
+@include('./components/links/_bottom.html')

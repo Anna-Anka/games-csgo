@@ -1,0 +1,97 @@
+<form class="management-form" action="#">
+    <div class="management-form__top">
+        <h1 class="management-form__title subtitle subtitle--medium">
+            Мои турниры
+        </h1>
+        <button class="management-form__open" type="button" aria-expanded="false" aria-label="Открыть фильтры">Фильтры</button>
+    </div>
+
+    <div class="upcoming-tournaments__form management-form__form">
+        <div class="management-form__items">
+            <div class="management-form__item">
+                <label class="management-form__subtitle" for="my-tournaments-players">Игроки</label>
+                <select class="management-form__select" name="players" id="my-tournaments-players" data-select="true">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                </select>
+            </div>
+
+            <div class="management-form__item">
+                <label class="management-form__subtitle" for="my-tournaments-map">Карта</label>
+                <select class="management-form__select" name="map" id="my-tournaments-map" data-select="true">
+                    <option value="Dast 1">Dast 1</option>
+                    <option value="Dast 2">Dast 2</option>
+                    <option value="Dast 3">Dast 3</option>
+                    <option value="Dast 4">Dast 4</option>
+                </select>
+            </div>
+        </div>
+
+        <fieldset class="management-form__fieldes">
+            <span>
+                <legend class="management-form__subtitle">Ставка от до</legend>
+            </span>
+            <div class="management-form__input management-form__input--first">
+                <label class="sr-only" for="my-tournaments-bet-from">
+                    Ставка от
+                </label>
+                <input class="management-form__field" name="bet-from" type="number" placeholder="100" id="my-tournaments-bet-from">
+            </div>
+            <div class="management-form__input management-form__input--second">
+                <label class="sr-only" for="my-tournaments-bet-to">
+                    Ставка до
+                </label>
+                <input class="management-form__field" name="bet-to" type="number" placeholder="100" id="my-tournaments-bet-to">
+            </div>
+        </fieldset>
+
+        <div class="management-form__items">
+            <div class="management-form__item">
+                <label class="management-form__subtitle" for="my-tournaments-players">Игроки</label>
+                <select class="management-form__select" name="players" id="my-tournaments-players" data-select="true">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                </select>
+            </div>
+        
+            <div class="management-form__item">
+                <label class="management-form__subtitle" for="my-tournaments-map">Карта</label>
+                <select class="management-form__select" name="map" id="my-tournaments-map" data-select="true">
+                    <option value="Dast 1">Dast 1</option>
+                    <option value="Dast 2">Dast 2</option>
+                    <option value="Dast 3">Dast 3</option>
+                    <option value="Dast 4">Dast 4</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="management-form__items">
+            <div class="management-form__item">
+                <label class="management-form__subtitle" for="my-tournaments-date">Дата</label>
+                <input class="management-form__field" name="datetime" type="datetime" placeholder="10.10.2022" id="my-tournaments-date" required>
+            </div>
+
+            <div class="management-form__item">
+                <label class="management-form__subtitle" for="my-tournaments-gun">Оружие</label>
+                <select class="management-form__select" name="gun" id="my-tournaments-gun" data-select="true">
+                    <option value="AVP">AVP</option>
+                    <option value="AIR">AIR</option>
+                    <option value="DM">DM</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="management-form__item management-form__item--checkbox management-form__item--no-shadow">
+            <input class="management-form__checkbox" name="claim" type="checkbox" id="history-bet-claim" required>
+            <label for="history-bet-claim">Претензия</label>
+        </div>
+
+        <button class="management-form__button button" type="submit">
+            Применить
+        </button>
+    </div>
+</form>

@@ -1,7 +1,6 @@
 .private-menu {
 	width: 100%;
 	max-width: 58px;
-	min-height: 600px;
 	margin-right: 30px;
 	transition: max-width 0.3s ease-in-out;
 
@@ -41,6 +40,7 @@
 
 	&__content {
 		width: 100%;
+		min-height: 600px;
 		padding: 30px 18px;
 		background-color: $white;
 		border-radius: 10px;
@@ -55,13 +55,13 @@
 		}
 
 		@include mq(lg) {
+			display: flex;
+			justify-content: center;
 			margin-bottom: 0;
 			padding: 0;
 			background-color: transparent;
 			border-radius: 0;
 			box-shadow: none;
-            display: flex;
-            justify-content: center;
 		}
 	}
 
@@ -85,10 +85,9 @@
 	&__items {
 		@include mq(lg) {
 			display: flex;
-			// justify-content: center;
+			align-self: flex-start;
 			margin: 0 auto;
 			overflow-x: auto;
-			align-self: flex-start;
 		}
 	}
 

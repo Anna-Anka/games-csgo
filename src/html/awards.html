@@ -1,0 +1,24 @@
+@include('./components/links/_head.html',
+{ 'title' : 'CS:GO — Ставки на спорт | Мои награды' }
+)
+<!--  -->
+@include('./components/_header.html', {
+'isLogin' : 'true'
+})
+
+@include('./components/_modals.html')
+
+<div class="overlay"></div>
+<div class="container">
+    <div class="page-wrapper">
+        @include('./awards-page/_private-menu.html')
+
+        <main class="page-content">
+            @include('./awards-page/_awards-management.html')
+            @include('./awards-page/_awards-table.html')
+        </main>
+    </div>
+</div>
+
+<!--  -->
+@include('./components/links/_bottom.html')

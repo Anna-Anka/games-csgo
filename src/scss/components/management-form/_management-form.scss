@@ -46,7 +46,7 @@
 	}
 
 	&__title {
-		margin-bottom: 15px;
+		margin-bottom: 20px;
 		@include adaptiv-value('padding-left', 40, 32, 1);
 
 		&::before {

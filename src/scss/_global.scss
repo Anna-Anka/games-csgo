@@ -87,13 +87,14 @@ body {
 
 .page-wrapper {
 	display: flex;
+	padding-bottom: 60px;
 
-    @include mq(lg) {
-        flex-direction: column;
-    }
+	@include mq(lg) {
+		flex-direction: column;
+	}
 }
 
 .page-content {
-    width: 100%;
-    overflow: hidden;
+	width: 100%;
+	overflow: hidden;
 }

@@ -18,6 +18,10 @@
 			border: none;
 			border-top-right-radius: 10px;
 			border-bottom-right-radius: 10px;
+
+            @include mq(md) {
+                padding: 12px 30px 12px 20px;
+            }
 		}
 
 		&__list {
@@ -37,10 +41,22 @@
 
 		&__item {
 			font-size: 18px;
+
+            @include mq(md) {
+                font-size: 14px;
+            }
 		}
 
 		&[data-type*='select-one'] .choices__inner {
 			padding-bottom: 19px;
+
+            @include mq(md) {
+                padding-bottom: 12px;
+            }
+
+            @include mq(md) {
+                padding-bottom: 12px;
+            }
 		}
 
 		&[data-type*='select-one'] {
@@ -66,6 +82,11 @@
 		.choices__list[aria-expanded] .choices__item {
 			padding: 10px 30px;
 			font-size: 18px;
+
+            @include mq(md) {
+                font-size: 14px;
+                padding: 8px 20px;
+            }
 		}
 	}
 }

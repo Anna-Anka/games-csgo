@@ -1,0 +1,50 @@
+<form class="management-form" action="#">
+    <div class="management-form__top">
+        <h1 class="management-form__title subtitle subtitle--medium">
+            История ставок
+        </h1>
+        <button class="management-form__open" type="button" aria-expanded="false" aria-label="Открыть фильтры">Фильтры</button>
+    </div>
+
+    <div class="upcoming-tournaments__form management-form__form">
+        <fieldset class="management-form__fieldes">
+            <span>
+                <legend class="management-form__subtitle">Результат от до</legend>
+            </span>
+            <div class="management-form__input management-form__input--first">
+                <label class="sr-only" for="history-ber-result-from">
+                    Результат от
+                </label>
+                <input class="management-form__field" name="bet-from" type="number" placeholder="100" id="history-ber-result-from">
+            </div>
+            <div class="management-form__input management-form__input--second">
+                <label class="sr-only" for="history-ber-result-to">
+                    Результат до
+                </label>
+                <input class="management-form__field" name="bet-to" type="number" placeholder="100" id="history-ber-result-to">
+            </div>
+        </fieldset>
+
+        <div class="management-form__items">
+            <div class="management-form__item">
+                <label class="management-form__subtitle" for="history-bet-map">Карта</label>
+                <select class="management-form__select" name="map" id="history-bet-map" data-select="true">
+                    <option value="Dast 1">Dast 1</option>
+                    <option value="Dast 2">Dast 2</option>
+                    <option value="Dast 3">Dast 3</option>
+                    <option value="Dast 4">Dast 4</option>
+                </select>
+            </div>
+
+            <div class="management-form__item">
+                <label class="management-form__subtitle" for="history-bet-date">Дата</label>
+                <input class="management-form__field" name="datetime" type="datetime" placeholder="10.10.2022" id="history-bet-date" required>
+            </div>
+        </div>
+
+        <div class="management-form__item management-form__item--checkbox management-form__item--no-shadow">
+            <input class="management-form__checkbox" name="claim" type="checkbox" id="history-bet-claim" required>
+            <label for="history-bet-claim">Претензия</label>
+        </div>
+    </div>
+</form>

@@ -4,28 +4,12 @@
 	@include adaptiv-value('font-size', 18, 13, 1);
 
 	&--active {
-		position: absolute;
-        left: 0;
-		z-index: 11;
-		max-height: 100%;
-		margin: 20px 0 20px;
-		padding: 22px 20px 50px;
-		overflow-y: auto;
-		background-color: $blue-100;
-		border-radius: 10px;
-		box-shadow: 2px 10px 10px rgba($blue-600, 0.04);
-
 		.management-form__form {
-			display: block;
-			min-height: 100%;
-		}
-
-		.management-form__title {
-			padding-left: 30px;
-
-			&::before {
-				display: block;
-			}
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 1;
+			transition: left 0.5s ease-in-out;
 		}
 
 		.management-form__open {
@@ -43,10 +27,6 @@
 
 	&__top {
 		@include flex-center-sb;
-
-		@include mq(md) {
-			margin-bottom: 17px;
-		}
 	}
 
 	&__open,
@@ -107,7 +87,13 @@
 		}
 
 		@include mq(md) {
-			display: none;
+			position: relative;
+			left: -100%;
+			width: 0;
+			height: 0;
+			margin-top: 17px;
+			opacity: 0;
+			transition: left 0.5s ease-in-out;
 		}
 	}
 
@@ -124,6 +110,10 @@
 		background-color: $blue-400;
 		border-radius: 10px 0 0 10px;
 		@include flex-all-center;
+
+		@include mq(md) {
+			padding: 12px 20px;
+		}
 	}
 
 	&__input {
@@ -163,6 +153,10 @@
 		background-color: $white;
 		border-radius: inherit;
 
+		@include mq(md) {
+			padding: 12px 20px;
+		}
+
 		&::-webkit-outer-spin-button,
 		&::-webkit-inner-spin-button {
 			margin: 0;
@@ -197,6 +191,14 @@
 		border-bottom-right-radius: 10px;
 		box-shadow: 2px 10px 10px rgba($blue-600, 0.04);
 
+		&--no-shadow {
+			box-shadow: none;
+		}
+
+		&--checkbox {
+			align-items: center;
+		}
+
 		&:not(:last-child) {
 			margin-right: 20px;
 
@@ -215,5 +217,11 @@
 		width: 40px;
 		height: 40px;
 		@include bg-contain;
+	}
+
+	&__checkbox {
+		width: 20px;
+		height: 20px;
+		margin-right: 12px;
 	}
 }

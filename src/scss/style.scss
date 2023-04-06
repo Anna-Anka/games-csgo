@@ -22,6 +22,7 @@
 @import './components/private-menu/private-menu';
 @import './components/private-menu/menu-slide';
 @import './components/play';
+@import './components/copy';
 
 // * management-form
 @import './components/management-form/management-form';
@@ -30,8 +31,11 @@
 @import './components/footer';
 
 // * cards
-@import './components/cards/marquee-team';
 @import './components/cards/tournament-card';
+
+// * marquee
+@import './components/marquee/marquee-team';
+@import './components/marquee/marquee-earned';
 
 // * tables 
 @import './components/tables/table';
@@ -56,3 +60,6 @@
 @import './home-page/contest';
 
 @import './upcoming-tournaments-page/upcoming-tournaments-table';
+
+// * referral-programm
+@import './referral-program-page/referral-program'

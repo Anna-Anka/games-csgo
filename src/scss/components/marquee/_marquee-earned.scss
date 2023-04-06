@@ -1,0 +1,50 @@
+.marquee-earned {
+	display: flex;
+	align-items: center;
+	padding: 5px 12px;
+	font-weight: $fw-700;
+	background-color: $white;
+	border-radius: 5px;
+
+	&__item {
+		display: flex;
+
+		&--player {
+			position: relative;
+			margin-right: 10px;
+			padding-right: 10px;
+			padding-left: 30px;
+
+			&::after,
+			&::before {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				content: '';
+			}
+
+			&::before {
+				left: 0;
+				width: 20px;
+				height: 20px;
+				background-image: url('../img/icons/coins.svg');
+				@include bg-contain;
+			}
+
+			&::after {
+				right: 0;
+				width: 1px;
+				height: 100%;
+				background-color: $blue-100;
+			}
+		}
+	}
+
+	&__name {
+		margin-right: 4px;
+	}
+
+	&__meaning {
+		color: $blue-400;
+	}
+}

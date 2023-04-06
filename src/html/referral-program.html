@@ -1,5 +1,5 @@
 @include('./components/links/_head.html',
-{ 'title' : 'CS:GO — Ставки на спорт | Мои турниры' }
+{ 'title' : 'CS:GO — Ставки на спорт | Рефиральная программа' }
 )
 <!--  -->
 @include('./components/_header.html', {
@@ -10,11 +10,10 @@
 
 <div class="container">
     <div class="page-wrapper">
-        @include('./my-tournaments-page/_private-menu.html')
+        @include('./referral-program-page/_private-menu.html')
 
         <main class="page-content">
-            @include('./my-tournaments-page/_my-tournaments-management.html')
-            @include('./my-tournaments-page/_my-tournaments-table.html')
+            @include('./referral-program-page/_referral-program.html')
         </main>
     </div>
 </div>

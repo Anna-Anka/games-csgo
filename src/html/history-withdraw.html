@@ -1,0 +1,22 @@
+@include('./components/links/_head.html',
+{ 'title' : 'CS:GO — Ставки на спорт | Мои турниры' }
+)
+<!--  -->
+@include('./components/_header.html', {
+'isLogin' : 'true'
+})
+
+@include('./components/_modals.html')
+
+<div class="container">
+    <div class="page-wrapper">
+        @include('./history-withdraw-page/_private-menu.html')
+
+        <main class="page-content main">
+            @include('./history-withdraw-page/_history-withdraw.html')
+        </main>
+    </div>
+</div>
+
+<!--  -->
+@include('./components/links/_bottom.html')

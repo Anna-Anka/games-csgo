@@ -98,3 +98,7 @@ body {
 	width: 100%;
 	overflow: hidden;
 }
+
+.page-title {
+    @include adaptiv-value('margin-bottom', 25, 20, 1);
+}

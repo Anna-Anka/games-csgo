@@ -11,7 +11,7 @@
 
 		&::before {
 			position: absolute;
-			top: 2px;
+			top: 5px;
 			left: 0;
 			width: 20px;
 			height: 20px;
@@ -40,17 +40,29 @@
 		}
 	}
 
+	&__file {
+		display: none;
+
+		&--active {
+			display: block;
+		}
+	}
+
+	&__box {
+		margin-bottom: 30px;
+	}
+
 	&__button {
 		width: 100%;
 	}
 
 	.management-form {
 		&__item {
-			margin-bottom: 30px;
+			margin-bottom: 20px;
 
 			@include mq(sm) {
 				flex-direction: column;
-                box-shadow: none;
+				box-shadow: none;
 			}
 		}
 
@@ -74,7 +86,7 @@
 
 				@include mq(sm) {
 					border-radius: 7px;
-                    box-shadow: 1px 7px 7px rgba($blue-600, 0.04);
+					box-shadow: 1px 7px 7px rgba($blue-600, 0.04);
 				}
 			}
 		}

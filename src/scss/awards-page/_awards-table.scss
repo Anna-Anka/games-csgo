@@ -1,0 +1,33 @@
+.awards-table {
+	&__result {
+		display: flex;
+		align-items: center;
+
+		&--loose {
+			.awards-table__score {
+				color: $red-500;
+			}
+
+			.awards-table__icon {
+				transform: rotate(45deg);
+			}
+		}
+
+		&--win {
+			.awards-table__score {
+				color: $blue-400;
+			}
+		}
+	}
+
+	&__icon {
+		width: 20px;
+		height: 20px;
+		@include bg-contain;
+	}
+
+	&__icon,
+	&__status {
+		margin-right: 10px;
+	}
+}

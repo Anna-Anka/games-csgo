@@ -1,0 +1,82 @@
+.claim-page {
+	color: $black;
+
+	&__back {
+		position: relative;
+		display: inline-block;
+		margin-bottom: 32px;
+		padding-left: 24px;
+		font-weight: $fw-700;
+		@include adaptiv-value('font-size', 20, 16, 1);
+
+		&::before {
+			position: absolute;
+			top: 2px;
+			left: 0;
+			width: 20px;
+			height: 20px;
+			background-image: url('../img/icons/arrow.svg');
+			transform: rotate(180deg);
+			content: '';
+			@include bg-contain;
+		}
+	}
+
+	&__subtitle {
+		@include adaptiv-value('margin-bottom', 22, 12, 1);
+		display: inline-block;
+		font-weight: $fw-700;
+	}
+
+	&__text {
+		line-height: 1.8;
+		@include adaptiv-value('font-size', 16, 14, 1);
+		@include adaptiv-value('margin-bottom', 58, 46, 1);
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
+		}
+	}
+
+	&__button {
+		width: 100%;
+	}
+
+	.management-form {
+		&__item {
+			margin-bottom: 30px;
+
+			@include mq(sm) {
+				flex-direction: column;
+                box-shadow: none;
+			}
+		}
+
+		&__subtitle {
+			border-radius: 0 10px 10px 0;
+
+			@include mq(sm) {
+				border-radius: 5px;
+			}
+		}
+
+		.choices {
+			margin-bottom: 0;
+
+			@include mq(sm) {
+				margin-bottom: 12px;
+			}
+
+			&__inner {
+				border-radius: 10px 0 0 10px;
+
+				@include mq(sm) {
+					border-radius: 7px;
+                    box-shadow: 1px 7px 7px rgba($blue-600, 0.04);
+				}
+			}
+		}
+	}
+}

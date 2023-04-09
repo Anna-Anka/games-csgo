@@ -1,0 +1,32 @@
+.wallet-top {
+	&__title {
+		@include adaptiv-value('margin-bottom', 20, 15, 1);
+	}
+
+	&__items {
+		@include adaptiv-value('margin-bottom', 50, 40, 1);
+	}
+
+	&__item {
+		display: flex;
+        align-items: center;
+		font-weight: $fw-700;
+
+		&:not(:last-child) {
+			margin-bottom: 2px;
+		}
+	}
+
+	&__name {
+		@include adaptiv-value('font-size', 26, 18, 1);
+        margin-right: 8px;
+
+		&--accent {
+			color: $blue-400;
+		}
+	}
+
+	&__meaning {
+		@include adaptiv-value('font-size', 22, 15, 1);
+	}
+}

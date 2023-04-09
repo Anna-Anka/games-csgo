@@ -50,9 +50,14 @@ const modal = new GraphModal('modal');
 // * Реализация табов
 import GraphTabs from 'graph-tabs';
 
-if (document.querySelector('.top-tournament__tabs')) {
-    const tabs = new GraphTabs('top-tournament');
+const callTabs = (selector, tabSelector) => {
+    if (document.querySelector(selector)) {
+        const tabs = new GraphTabs(tabSelector);
+    }
 }
+
+callTabs('.top-tournament__tabs', 'top-tournament')
+callTabs('.wallet-tabs', 'wallet-tabs')
 
 // * Получение высоты шапки сайта (не забудьте вызвать функцию)
 // import { getHeaderHeight } from './functions/header-height';

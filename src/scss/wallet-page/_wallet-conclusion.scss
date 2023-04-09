@@ -1,0 +1,8 @@
+.wallet-conclusion {
+    @include adaptiv-value('margin-bottom', 50, 40, 1);
+
+    &__title {
+        display: inline-block;
+        @include adaptiv-value('margin-bottom', 30, 20, 1);
+    }
+}

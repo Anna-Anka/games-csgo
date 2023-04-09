@@ -1,0 +1,24 @@
+@include('./components/links/_head.html',
+{ 'title' : 'CS:GO — Ставки на спорт | Кошелёк' }
+)
+<!--  -->
+@include('./components/_header.html', {
+'isLogin' : 'true'
+})
+
+@include('./components/_modals.html')
+
+<div class="container">
+    <div class="page-wrapper">
+        @include('./wallet-page/_private-menu.html')
+
+        <main class="page-content main">
+            @include('./wallet-page/_wallet-top.html')
+            @include('./wallet-page/_wallet-conclusion.html')
+            @include('./wallet-page/_wallet-tabs.html')
+        </main>
+    </div>
+</div>
+
+<!--  -->
+@include('./components/links/_bottom.html')

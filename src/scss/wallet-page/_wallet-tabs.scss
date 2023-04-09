@@ -1,0 +1,34 @@
+.wallet-tabs {
+	.tabs {
+		&__nav {
+			display: flex;
+			@include adaptiv-value('margin-bottom', 30, 20, 1);
+			overflow-x: auto;
+		}
+
+		&__nav-item {
+			&:not(:last-child) {
+				@include adaptiv-value('margin-right', 50, 20, 1);
+			}
+		}
+
+		&__nav-btn {
+			font-weight: $fw-700;
+			white-space: nowrap;
+			transition: color 0.3s ease-in-out;
+			@include adaptiv-value('font-size', 26, 16, 1);
+
+			&--active {
+				color: $blue-400;
+			}
+		}
+
+		&__panel {
+			display: none;
+
+			&--active {
+				display: block;
+			}
+		}
+	}
+}

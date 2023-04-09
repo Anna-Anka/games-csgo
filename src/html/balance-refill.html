@@ -1,0 +1,27 @@
+@include('./components/links/_head.html',
+{ 'title' : 'CS:GO — Ставки на спорт | Пополнение баланса' }
+)
+<!--  -->
+@include('./components/_header.html', {
+'isLogin' : 'true'
+})
+
+@include('./components/_modals.html')
+
+<div class="container">
+    <div class="page-wrapper">
+        @include('./balance-refill-page/_private-menu.html')
+
+        <main class="page-content main">
+            @include('./components/_balance-management.html', {
+                'title' : 'Пополнение баланса',
+                'items-subtitle' : 'Выберите способ пополнения',
+                'sum-subtitle' : 'Сумма пополнения',
+                'btn' : 'Пополнить'
+            })
+        </main>
+    </div>
+</div>
+
+<!--  -->
+@include('./components/links/_bottom.html')

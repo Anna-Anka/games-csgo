@@ -1,0 +1,155 @@
+.balance-management {
+	&__title {
+		@include adaptiv-value('font-size', 22, 20, 1);
+		@include adaptiv-value('margin-bottom', 32, 28, 1);
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+
+        @include mq(lg) {
+            flex-direction: column;
+        }
+	}
+
+	&__items {
+		width: 50%;
+		margin-right: 30px;
+
+		@include mq(lg) {
+			display: none;
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 28px;
+		}
+
+		&--mobile {
+			display: none;
+
+			@include mq(lg) {
+				display: block;
+			}
+		}
+	}
+
+	&__subtitle {
+		display: inline-block;
+		margin-bottom: 15px;
+		color: $black;
+		font-size: 18px;
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		width: 100%;
+		height: 70px;
+		box-shadow: 2px 10px 10px rgba($blue-600, 0.04);
+
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__box {
+		@include flex-center-sb;
+		width: 100%;
+		padding: 10px 20px;
+		background-color: $white;
+		border-radius: 10px 0 0 10px;
+	}
+
+	&__name {
+		margin-right: 10px;
+		color: $black;
+		font-size: 18px;
+	}
+
+	&__img {
+		max-height: 49px;
+		object-fit: contain;
+	}
+
+	&__hidden {
+		@include hidden;
+
+		&:checked + .balance-management__visible {
+			&::before {
+				background-color: transparent;
+			}
+		}
+	}
+
+	&__visible {
+		position: relative;
+		display: flex;
+		width: 100%;
+		max-width: 65px;
+		background-color: $blue-400;
+		border-radius: 0 10px 10px 0;
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 24px;
+			height: 24px;
+			background-color: $white;
+			border: 4px solid $white;
+			border-radius: 50%;
+			transform: translate(-50%, -50%);
+			transition: background-color 0.3s ease-in-out;
+			content: '';
+		}
+	}
+
+	&__sum {
+		width: 50%;
+
+        @include mq(lg) {
+            width: 100%;
+		}
+
+		.balance-management__item {
+			margin-bottom: 37px;
+		}
+	}
+
+	&__decor,
+	&__rest {
+		width: 100%;
+		max-width: 65px;
+		background-color: $blue-400;
+	}
+
+	&__decor {
+		position: relative;
+		border-radius: 10px 0 0 10px;
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 20px;
+			height: 20px;
+			background-image: url('../img/icons/plus-double.svg');
+			transform: translate(-50%, -50%);
+			content: '';
+			@include bg-contain;
+		}
+	}
+
+	&__field {
+		width: 100%;
+		background-color: $white;
+	}
+
+	&__rest {
+		color: $white;
+		font-size: 18px;
+		line-height: 3.7;
+		text-align: center;
+		border-radius: 0 10px 10px 0;
+	}
+}

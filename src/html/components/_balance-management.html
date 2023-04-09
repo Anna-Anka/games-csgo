@@ -1,0 +1,91 @@
+<div class="balance-management">
+    <h1 class="balance-management__title subtitle subtitle--medium">
+        @title
+    </h1>
+
+    <form class="balance-management__wrapper management-form" action="#">
+        <fieldset class="balance-management__items">
+            <legend class="balance-management__subtitle">@items-subtitle</legend>
+            <label class="balance-management__item">
+                <span class="balance-management__box">
+                    <span class="balance-management__name">Юмани</span>
+                    <picture aria-hidden="true">
+                        <source srcset="img/balance-management/youmoney.avif" type="image/avif">
+                        <source srcset="img/balance-management/youmoney.webp" type="image/webp">
+                        <img class="balance-management__img" src="img/balance-management/youmoney.png" alt="Юмани" loading="lazy">
+                    </picture>
+                </span>
+                <input class="balance-management__hidden" type="radio" name="way-get" value="Юмани">
+                <span class="balance-management__visible" aria-hidden="true"></span>
+            </label>
+
+            <label class="balance-management__item">
+                <span class="balance-management__box">
+                    <span class="balance-management__name">Банковская карта</span>
+                    <picture aria-hidden="true">
+                        <source srcset="img/balance-management/cards.avif" type="image/avif">
+                        <source srcset="img/balance-management/cards.webp" type="image/webp">
+                        <img class="balance-management__img" src="img/balance-management/cards.png" alt="Банковская карта" loading="lazy">
+                    </picture>
+                </span>
+                <input class="balance-management__hidden" type="radio" name="way-get" value="Банковская карта">
+                <span class="balance-management__visible" aria-hidden="true"></span>
+            </label>
+
+            <label class="balance-management__item">
+                <span class="balance-management__box">
+                    <span class="balance-management__name">Яндекс Касса</span>
+                    <picture aria-hidden="true">
+                        <source srcset="img/balance-management/yandex.avif" type="image/avif">
+                        <source srcset="img/balance-management/yandex.webp" type="image/webp">
+                        <img class="balance-management__img" src="img/balance-management/yandex.png" alt="Яндекс Касса" loading="lazy">
+                    </picture>
+                </span>
+                <input class="balance-management__hidden" type="radio" name="way-get" value="Яндекс Касса">
+                <span class="balance-management__visible" aria-hidden="true"></span>
+            </label>
+
+            <label class="balance-management__item">
+                <span class="balance-management__box">
+                    <span class="balance-management__name">Qiwi</span>
+                    <picture>
+                        <source srcset="img/balance-management/qiwi.avif" type="image/avif">
+                        <source srcset="img/balance-management/qiwi.webp" type="image/webp">
+                        <img class="balance-management__img" src="img/balance-management/qiwi.png" alt="Qiwi" loading="lazy">
+                    </picture>
+                </span>
+                <input class="balance-management__hidden" type="radio" name="way-get" value="Qiwi">
+                <span class="balance-management__visible" aria-hidden="true"></span>
+            </label>
+        </fieldset>
+
+        <fieldset class="balance-management__items balance-management__items--mobile">
+            <legend class="balance-management__subtitle">@items-subtitle</legend>
+            <label class="sr-only" for="way-get">
+               Выберите @items-subtitle
+            </label>
+            <select class="management-form__select" name="way-get" id="way-get" data-select="true">
+                <option value="Юмани">Юмани</option>
+                <option value="Банковская карта">Банковская карта</option>
+                <option value="Яндекс Касса">Яндекс Касса</option>
+                <option value="Qiwi">Qiwi</option> 
+            </select>
+        </fieldset>
+
+        <fieldset class="balance-management__sum">
+            <legend class="balance-management__subtitle">@sum-subtitle</legend>
+            <label class="sr-only" for="balance-management-sum">
+                Введите сумму
+            </label>
+            <div class="balance-management__item balance-management__item--sum">
+                <span class="balance-management__decor" aria-hidden="true"></span>
+                <input class="balance-management__field" name="sum" type="number" id="balance-management-sum" required>
+                <span class="balance-management__rest">.00</span>
+            </div>
+
+            <button class="balance-management__button button" type="submit">
+                @btn
+            </button>
+        </fieldset>
+    </form>
+</div>

@@ -10,7 +10,9 @@
 
 <div class="container">
     <div class="page-wrapper">
-        @include('./upcoming-tournaments-page/_private-menu.html')
+        @include('./components/_private-menu.html', {
+            'additionally' : 'true'
+        })
 
         <main class="page-content main">
             @include('./upcoming-tournaments-page/_upcoming-tournaments-management.html')

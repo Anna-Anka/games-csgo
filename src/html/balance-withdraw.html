@@ -1,5 +1,5 @@
 @include('./components/links/_head.html',
-{ 'title' : 'CS:GO — Ставки на спорт | История ставок' }
+{ 'title' : 'CS:GO — Ставки на спорт | Пополнение баланса' }
 )
 <!--  -->
 @include('./components/_header.html', {
@@ -15,8 +15,12 @@
         })
 
         <main class="page-content main">
-            @include('./history-bet-page/_history-bet-management.html')
-            @include('./history-bet-page/_history-bet-table.html')
+            @include('./components/_balance-management.html', {
+                'title' : 'Запросить',
+                'items-subtitle' : 'Выберите способ вывода',
+                'sum-subtitle' : 'Сумма вывода',
+                'btn' : 'Вывести'
+            })
         </main>
     </div>
 </div>

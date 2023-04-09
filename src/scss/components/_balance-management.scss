@@ -8,9 +8,9 @@
 		display: flex;
 		justify-content: space-between;
 
-        @include mq(lg) {
-            flex-direction: column;
-        }
+		@include mq(lg) {
+			flex-direction: column;
+		}
 	}
 
 	&__items {
@@ -19,9 +19,9 @@
 
 		@include mq(lg) {
 			display: none;
-            width: 100%;
-            margin-right: 0;
-            margin-bottom: 28px;
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 28px;
 		}
 
 		&--mobile {
@@ -96,7 +96,7 @@
 			width: 24px;
 			height: 24px;
 			background-color: $white;
-			border: 4px solid $white;
+			border: 6px solid $white;
 			border-radius: 50%;
 			transform: translate(-50%, -50%);
 			transition: background-color 0.3s ease-in-out;
@@ -107,8 +107,8 @@
 	&__sum {
 		width: 50%;
 
-        @include mq(lg) {
-            width: 100%;
+		@include mq(lg) {
+			width: 100%;
 		}
 
 		.balance-management__item {
@@ -142,6 +142,7 @@
 
 	&__field {
 		width: 100%;
+		padding: 10px 20px;
 		background-color: $white;
 	}
 

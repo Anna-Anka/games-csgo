@@ -10,7 +10,9 @@
 
 <div class="container">
     <div class="page-wrapper">
-        @include('./history-refill-page/_private-menu.html')
+        @include('./components/_private-menu.html', {
+            'additionally' : 'false'
+        })
 
         <main class="page-content main">
             @include('./history-refill-page/_history-refill.html')

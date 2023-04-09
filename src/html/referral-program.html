@@ -10,7 +10,9 @@
 
 <div class="container">
     <div class="page-wrapper">
-        @include('./referral-program-page/_private-menu.html')
+        @include('./components/_private-menu.html', {
+            'additionally' : 'false'
+        })
 
         <main class="page-content main">
             @include('./referral-program-page/_referral-program.html')

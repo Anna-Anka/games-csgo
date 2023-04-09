@@ -1,0 +1,150 @@
+<nav class="private-menu">
+    <div class="private-menu__content">
+        <button class="private-menu__control" type="button" aria-label="Открыть" aria-expanded="false">
+            <span class="private-menu__icon" style="background-image: url('img/private-menu/control.svg');" aria-hidden></span>
+        </button>
+        <ul class="private-menu__items">
+            <li class="private-menu__item">
+                <a class="private-menu__link" href="#">
+                    <span class="private-menu__icon" style="background-image: url('img/private-menu/create-bet.svg');" aria-hidden></span>
+                    <span>Создать ставку</span>
+                </a>
+            </li>
+            <li class="private-menu__item">
+                <a class="private-menu__link" href="#">
+                    <span class="private-menu__icon" style="background-image: url('img/private-menu/history-bet.svg');" aria-hidden></span>
+                    <span>История ставок</span>
+                </a>
+            </li>
+            <li class="private-menu__item private-menu__item--active">
+                <a class="private-menu__link" href="#">
+                    <span class="private-menu__icon" style="background-image: url('img/private-menu/upcoming-tournaments.svg');" aria-hidden></span>
+                    <span>Предстоящие турниры</span>
+                </a>
+            </li>
+            <li class="private-menu__item">
+                <a class="private-menu__link" href="#">
+                    <span class="private-menu__icon" style="background-image: url('img/private-menu/my-tournaments.svg');" aria-hidden></span>
+                    <span>Мои турниры</span>
+                </a>
+            </li>
+            <li class="private-menu__item">
+                <a class="private-menu__link" href="#">
+                    <span class="private-menu__icon" style="background-image: url('img/private-menu/favorite-tournaments.svg');" aria-hidden></span>
+                    <span>Турниры с избранными</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    @if(context.additionally === 'true') {
+        <div class="private-menu__additionally">
+            <div class="private-menu__slider" aria-hidden>
+                <span class="private-menu__icon" style="background-image: url('img/private-menu/slider.svg');"></span>
+            </div>
+            <div class="private-menu__wrapper" aria-hidden="true">
+                <div class="private-menu__swiper swiper">
+                    <ul class="private-menu__list swiper-wrapper">
+                        <li class="private-menu__slide swiper-slide">
+                            <article class="menu-slide">
+                                <div class="menu-slide__content">
+                                    <div class="menu-slide__play play">
+                                        <div class="play__type" style="background-image: url('img/tournament-types/pvp-normal.svg');">
+                                            <span class="sr-only">pvp</span>
+                                        </div>
+                                        <div class="play__score">
+                                            <span>1:1</span>
+                                            <span>Dust 2</span>
+                                        </div>
+                                    </div>
+                                    <div class="menu-slide__teams">
+                                        <span>NAVI</span>
+                                        <span class="menu-slide__vs">vs</span>
+                                        <span>Virtus.pro</span>
+                                    </div>
+                                    <div class="menu-slide__info">
+                                        <div class="menu-slide__item">
+                                            <span class="menu-slide__name">Дата:</span>
+                                            <time class="menu-slide__meaning" datetime="2023-10-10">10.10.2023</time>
+                                        </div>
+                                        <div class="menu-slide__item">
+                                            <span class="menu-slide__name">Выигрыш:</span>
+                                            <span class="menu-slide__meaning menu-slide__meaning--win">1000 р.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-slide__bg" aria-hidden></div>
+                                <span class="menu-slide__logo" aria-hidden></span>
+                            </article>
+                        </li>
+                        <li class="private-menu__slide swiper-slide">
+                            <article class="menu-slide">
+                                <div class="menu-slide__content">
+                                    <div class="menu-slide__play play">
+                                        <div class="play__type" style="background-image: url('img/tournament-types/pvp-normal.svg');">
+                                            <span class="sr-only">pvp</span>
+                                        </div>
+                                        <div class="play__score">
+                                            <span>1:1</span>
+                                            <span>Dust 2</span>
+                                        </div>
+                                    </div>
+                                    <div class="menu-slide__teams">
+                                        <span>NAVI</span>
+                                        <span class="menu-slide__vs">vs</span>
+                                        <span>Virtus.pro</span>
+                                    </div>
+                                    <div class="menu-slide__info">
+                                        <div class="menu-slide__item">
+                                            <span class="menu-slide__name">Дата:</span>
+                                            <time class="menu-slide__meaning" datetime="2023-10-10">10.10.2023</time>
+                                        </div>
+                                        <div class="menu-slide__item">
+                                            <span class="menu-slide__name">Выигрыш:</span>
+                                            <span class="menu-slide__meaning menu-slide__meaning--win">1000 р.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-slide__bg" aria-hidden></div>
+                                <span class="menu-slide__logo" aria-hidden></span>
+                            </article>
+                        </li>
+                        <li class="private-menu__slide swiper-slide">
+                            <article class="menu-slide">
+                                <div class="menu-slide__content">
+                                    <div class="menu-slide__play play">
+                                        <div class="play__type" style="background-image: url('img/tournament-types/pvp-normal.svg');">
+                                            <span class="sr-only">pvp</span>
+                                        </div>
+                                        <div class="play__score">
+                                            <span>1:1</span>
+                                            <span>Dust 2</span>
+                                        </div>
+                                    </div>
+                                    <div class="menu-slide__teams">
+                                        <span>NAVI</span>
+                                        <span class="menu-slide__vs">vs</span>
+                                        <span>Virtus.pro</span>
+                                    </div>
+                                    <div class="menu-slide__info">
+                                        <div class="menu-slide__item">
+                                            <span class="menu-slide__name">Дата:</span>
+                                            <time class="menu-slide__meaning" datetime="2023-10-10">10.10.2023</time>
+                                        </div>
+                                        <div class="menu-slide__item">
+                                            <span class="menu-slide__name">Выигрыш:</span>
+                                            <span class="menu-slide__meaning menu-slide__meaning--win">1000 р.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-slide__bg" aria-hidden></div>
+                                <span class="menu-slide__logo" aria-hidden></span>
+                            </article>
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    }
+</nav>

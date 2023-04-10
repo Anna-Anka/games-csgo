@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script defer src="js/main.js"></script>
+
+  <title>CS: GO — Ставки на спорт | Главная страница</title>
+</head>
+
+<body class="body">
+  <div class="wrapper">
+
+<!--  -->
+<header class="header">
+
+        <span class="header__line line" aria-hidden></span>
+        <span class="header__line-double line-double" aria-hidden></span>
+
+    <div class="overlay" data-menu-overlay></div>
+    <div class="container">
+        <nav class="header__nav">
+            <a class="header__logo logo" href="#">
+                <img class="logo__img" src="img/logos/logo-blue.svg" alt="логотип" width="102" height="45" loading="lazy">
+            </a>
+            <div class="header__wrapper" data-menu>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">О сервисе</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">FAQ</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Ставки</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Рефералка</a>
+                    </li>
+                </ul>
+
+                <div class="header__language language">
+                    <label class="sr-only" for="language">выберите язык</label>
+                    <select class="language__select" name="language" id="language" data-select="true">
+                        <option value="ru">ru</option>
+                        <option value="en">en</option>
+                        <option value="fr">fr</option>
+                        <option value="jp">jp</option>
+                    </select>
+                </div>
+
+                <ul class="user-nav">
+                    <li class="user-nav__item">
+                        <a class="user-nav__link user-nav__link--applications user-nav__link--applications-true" href="#">
+                            <span class="sr-only">Заявки</span>
+                        </a>
+                    </li>
+                    <li class="user-nav__item">
+                        <a class="user-nav__link user-nav__link--favorite" href="#">
+                            <span class="sr-only">Избранное</span>
+                        </a>
+                    </li>
+                    <li class="user-nav__item">
+                        <a class="user-nav__link user-nav__link--wallet" href="#">
+                            <span class="sr-only">Баланс</span>
+                            1.000$
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="header__account">
+
+                        <picture>
+                            <source srcset="img/ava.avif" type="image/avif">
+                            <source srcset="img/ava.webp" type="image/webp">
+                            <img class="header__ava" src="img/ava.png" alt=" Алексей Плеханов" width="37" height="37" loading="lazy">
+                        </picture>
+                        <a class="header__profile" href="#">
+                            Алексей Плеханов
+                        </a>
+                        <button class="header__logout" type="button">
+                            <span class="sr-only">Выйти</span>
+                        </button>
+
+                </div>
+            </div>
+
+            <button class="burger" type="button" data-burger>
+               <span class="burger__line"></span>
+               <span class="sr-only">Меню</span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<div class="graph-modal">
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="login">
+        <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+        <form class="graph-modal__content form" action="#">
+            <a class="form__logo logo" href="#">
+                <img class="logo__img" src="img/logos/logo-blue.svg" alt="логотип" width="102" height="45" loading="lazy">
+            </a>
+
+            <div class="form__item">
+                <label class="sr-only" for="login-email">Введите логин</label>
+                <input class="form__field" name="email" type="email" placeholder="Логин" id="login-email" required>
+            </div>
+            <div class="form__item">
+                <label class="sr-only" for="login-passwors">Введите ваш пароль</label>
+                <input class="form__field" name="password" type="password" placeholder="Пароль" id="login-passwors" required>
+            </div>
+
+            <div class="form__steam">
+                <a class="form__icon" href="#">Войти через Steam</a>
+            </div>
+
+            <button class="form__button button" type="submit">Войти</button>
+
+            <div class="form__links">
+                <a class="form__link form__link--accent" href="#">Забыл пароль</a>
+                <a class="form__link" href="#">Регистрация</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="graph-modal__container graph-modal__container--registration" role="dialog" aria-modal="true" data-graph-target="registration">
+        <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+        <form class="graph-modal__content form" action="#">
+            <a class="form__logo logo" href="#">
+                <img class="logo__img" src="img/logos/logo-blue.svg" alt="логотип" width="102" height="45" loading="lazy">
+            </a>
+
+            <div class="form__item">
+                <label class="form__label" for="registration-email">Логин</label>
+                <input class="form__field" name="email" type="email" placeholder="Email" id="registration-email" required>
+            </div>
+            <div class="form__item">
+                <label class="form__label" for="registration-passwors">Пароль</label>
+                <input class="form__field" name="password" type="password" placeholder="Введите пароль" id="registration-passwors" required>
+            </div>
+            <div class="form__item">
+                <label class="form__label" for="registration-name">Имя</label>
+                <input class="form__field" name="name" type="text" placeholder="Введите ваше имя/nick" id="registration-name" required>
+            </div>
+            <div class="form__item">
+                <label class="form__label" for="registration-tel">Имя</label>
+                <input class="form__field" name="tel" type="tel" placeholder="+7 999 999 99 99" id="registration-tel" required>
+            </div>
+
+            <button class="form__button button" type="submit">Зарегистрироваться</button>
+
+            <div class="form__links">
+                <a class="form__link" href="#">Войти</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<main class="main">
+    <section class="hero section">
+    <span class="hero__line-double line-double" aria-hidden></span>
+
+    <div class="hero__decor">
+        <div class="container">
+            <ul class="hero__items">
+                <li class="hero__item hero__item--large">
+                    <article class="hero-card hero-card--large">
+                        <div class="hero-card__content">
+                            <span class="hero-card__title title title--medium">
+                                <span class="hero-card__title-accent title title--accent title--large">
+                                    CS: Go
+                                </span>
+                                Ставки на спорт
+                            </span>
+                            <p class="hero-card__text">
+                                Актуальные игры CS: GO с <span class="hero-card__accent">моментальные</span> выводы и на онлайн кошельки
+                            </p>
+                            <a class="hero-card__link button button--border button--icon" href="#">
+                                Смотреть матчи
+                            </a>
+                        </div>
+                        <div class="hero-card__bg" style="background-image: url('img/hero/cards/1.png');" aria-hidden> </div>
+                    </article>
+                </li>
+                <li class="hero__item">
+                    <article class="hero-card">
+                        <div class="hero-card__content">
+                            <span class="hero-card__title title title--small">
+                                поиск
+                                <span class="title__accent"> игры</span>
+                            </span>
+                            <p class="hero-card__text">
+                                Поиск матчей по названию команд
+                            </p>
+                            <form class="search" action="#">
+                                <div class="search__item">
+                                    <label class="sr-only" for="hero-search">Что найти</label>
+                                    <input class="search__field" name="search" type="search" placeholder="Поиск" id="hero-search" required>
+                                </div>
+                                <button class="search__button" type="submit">
+                                    <span class="sr-only">Найти</span>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="hero-card__bg" style="background-image: url('img/hero/cards/2.png');" aria-hidden> </div>
+                    </article>
+                </li>
+                <li class="hero__item">
+                    <article class="hero-card hero-card--small">
+                        <div class="hero-card__content">
+                            <span class="hero-card__title title title--small">
+                                Быстрая
+                                <span class="title__accent"> Ставка</span>
+                            </span>
+                            <p class="hero-card__text">
+                                Быстрый просмотр онлайн матчей по CS: GO
+                            </p>
+                            <a class="hero-card__link hero-card__link--icon" href="#">
+                                <span class="sr-only">Смотреть матчи</span>
+                            </a>
+                        </div>
+                        <div class="hero-card__bg" style="background-image: url('img/hero/cards/3.png');" aria-hidden> </div>
+                    </article>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+    <section class="top-tournament section">
+    <h2 class="sr-only">
+        Предстоящие и текущие турниры
+    </h2>
+
+    <div class="top-tournament__marquee marquee">
+        <ul class="marquee__items">
+            <li class="marquee__item">
+                <article class="marquee-team">
+    <div class="marquee-team__team">
+        <picture class="marquee-team__img">
+            <source srcset="img/team-logo/navi.avif" type="image/avif">
+            <source srcset="img/team-logo/navi.webp" type="image/webp">
+            <img src="img/team-logo/navi.png" alt="Navi" width="25" height="23" loading="lazy">
+        </picture>
+        <span class="marquee-team__title">NAVI 1</span>
+    </div>
+    <span class="marquee-team__vs">
+        <span class="sr-only">vs</span>
+    </span>
+    <div class="marquee-team__team marquee-team__team--right">
+        <picture class="marquee-team__img">
+            <source srcset="img/team-logo/virtus.avif" type="image/avif">
+            <source srcset="img/team-logo/virtus.webp" type="image/webp">
+            <img src="img/logo/virtus.png" alt="virtus" width="25" height="23" loading="lazy">
+        </picture>
+        <span class="marquee-team__title">Virtus.pro 1</span>
+    </div>
+</article>
+            </li>
+            <li class="marquee__item">
+                <article class="marquee-team">
+    <div class="marquee-team__team">
+        <picture class="marquee-team__img">
+            <source srcset="img/team-logo/navi.avif" type="image/avif">
+            <source srcset="img/team-logo/navi.webp" type="image/webp">
+            <img src="img/team-logo/navi.png" alt="Navi" width="25" height="23" loading="lazy">
+        </picture>
+        <span class="marquee-team__title">NAVI 1</span>
+    </div>
+    <span class="marquee-team__vs">
+        <span class="sr-only">vs</span>
+    </span>
+    <div class="marquee-team__team marquee-team__team--right">
+        <picture class="marquee-team__img">
+            <source srcset="img/team-logo/virtus.avif" type="image/avif">
+            <source srcset="img/team-logo/virtus.webp" type="image/webp">
+            <img src="img/logo/virtus.png" alt="virtus" width="25" height="23" loading="lazy">
+        </picture>
+        <span class="marquee-team__title">Virtus.pro 1</span>
+    </div>
+</article>
+            </li>
+            <li class="marquee__item">
+                <article class="marquee-team">
+    <div class="marquee-team__team">
+        <picture class="marquee-team__img">
+            <source srcset="img/team-logo/navi.avif" type="image/avif">
+            <source srcset="img/team-logo/navi.webp" type="image/webp">
+            <img src="img/team-logo/navi.png" alt="Navi" width="25" height="23" loading="lazy">
+        </picture>
+        <span class="marquee-team__title">NAVI 1</span>
+    </div>
+    <span class="marquee-team__vs">
+        <span class="sr-only">vs</span>
+    </span>
+    <div class="marquee-team__team marquee-team__team--right">
+        <picture class="marquee-team__img">
+            <source srcset="img/team-logo/virtus.avif" type="image/avif">
+            <source srcset="img/team-logo/virtus.webp" type="image/webp">
+            <img src="img/logo/virtus.png" alt="virtus" width="25" height="23" loading="lazy">
+        </picture>
+        <span class="marquee-team__title">Virtus.pro 1</span>
+    </div>
+</article>
+            </li>
+            <li class="marquee__item">
+                <article class="marquee-team">
+    <div class="marquee-team__team">
+        <picture class="marquee-team__img">
+            <source srcset="img/team-logo/navi.avif" type="image/avif">
+            <source srcset="img/team-logo/navi.webp" type="image/webp">
+            <img src="img/team-logo/navi.png" alt="Navi" width="25" height="23" loading="lazy">
+        </picture>
+        <span class="marquee-team__title">NAVI 1</span>
+    </div>
+    <span class="marquee-team__vs">
+        <span class="sr-only">vs</span>
+    </span>
+    <div class="marquee-team__team marquee-team__team--right">
+        <picture class="marquee-team__img">
+            <source srcset="img/team-logo/virtus.avif" type="image/avif">
+            <source srcset="img/team-logo/virtus.webp" type="image/webp">
+            <img src="img/logo/virtus.png" alt="virtus" width="25" height="23" loading="lazy">
+        </picture>
+        <span class="marquee-team__title">Virtus.pro 1</span>
+    </div>
+</article>
+            </li>
+            <li class="marquee__item">
+                <article class="marquee-team">
+    <div class="marquee-team__team">
+        <picture class="marquee-team__img">
+            <source srcset="img/team-logo/navi.avif" type="image/avif">
+            <source srcset="img/team-logo/navi.webp" type="image/webp">
+            <img src="img/team-logo/navi.png" alt="Navi" width="25" height="23" loading="lazy">
+        </picture>
+        <span class="marquee-team__title">NAVI 1</span>
+    </div>
+    <span class="marquee-team__vs">
+        <span class="sr-only">vs</span>
+    </span>
+    <div class="marquee-team__team marquee-team__team--right">
+        <picture class="marquee-team__img">
+            <source srcset="img/team-logo/virtus.avif" type="image/avif">
+            <source srcset="img/team-logo/virtus.webp" type="image/webp">
+            <img src="img/logo/virtus.png" alt="virtus" width="25" height="23" loading="lazy">
+        </picture>
+        <span class="marquee-team__title">Virtus.pro 1</span>
+    </div>
+</article>
+            </li>
+            <li class="marquee__item">
+                <article class="marquee-team">
+    <div class="marquee-team__team">
+        <picture class="marquee-team__img">
+            <source srcset="img/team-logo/navi.avif" type="image/avif">
+            <source srcset="img/team-logo/navi.webp" type="image/webp">
+            <img src="img/team-logo/navi.png" alt="Navi" width="25" height="23" loading="lazy">
+        </picture>
+        <span class="marquee-team__title">NAVI 1</span>
+    </div>
+    <span class="marquee-team__vs">
+        <span class="sr-only">vs</span>
+    </span>
+    <div class="marquee-team__team marquee-team__team--right">
+        <picture class="marquee-team__img">
+            <source srcset="img/team-logo/virtus.avif" type="image/avif">
+            <source srcset="img/team-logo/virtus.webp" type="image/webp">
+            <img src="img/logo/virtus.png" alt="virtus" width="25" height="23" loading="lazy">
+        </picture>
+        <span class="marquee-team__title">Virtus.pro 1</span>
+    </div>
+</article>
+            </li>
+            <li class="marquee__item">
+                <article class="marquee-team">
+    <div class="marquee-team__team">
+        <picture class="marquee-team__img">
+            <source srcset="img/team-logo/navi.avif" type="image/avif">
+            <source srcset="img/team-logo/navi.webp" type="image/webp">
+            <img src="img/team-logo/navi.png" alt="Navi" width="25" height="23" loading="lazy">
+        </picture>
+        <span class="marquee-team__title">NAVI 1</span>
+    </div>
+    <span class="marquee-team__vs">
+        <span class="sr-only">vs</span>
+    </span>
+    <div class="marquee-team__team marquee-team__team--right">
+        <picture class="marquee-team__img">
+            <source srcset="img/team-logo/virtus.avif" type="image/avif">
+            <source srcset="img/team-logo/virtus.webp" type="image/webp">
+            <img src="img/logo/virtus.png" alt="virtus" width="25" height="23" loading="lazy">
+        </picture>
+        <span class="marquee-team__title">Virtus.pro 1</span>
+    </div>
+</article>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="top-tournament__tabs tabs" data-tabs="top-tournament">
+            <ul class="tabs__nav">
+                <li class="tabs__nav-item">
+                    <button class="tabs__nav-btn subtitle" type="button">
+                        Ближайшие матчи
+                    </button>
+                </li>
+                <li class="tabs__nav-item">
+                    <button class="tabs__nav-btn tabs__nav-btn--live subtitle" type="button">
+                        Live
+                    </button>
+                </li>
+            </ul>
+            <div class="tabs__content">
+                <ul class="tabs__panel">
+                    <li class="tabs__item">
+                        <article class="tournament-card">
+    <div class="tournament-card__content">
+        <div class="tournament-card__info">
+            <div class="tournament-card__type" style="background-image: url('img/tournament-types/pvp-one.svg');">
+                <span class="sr-only">pvp</span>
+            </div>
+            <div class="tournament-card__descr">
+                <div class="tournament-card__score">
+                    <span>1:1</span>
+                    <span>Dust 2</span>
+                </div>
+                <div class="tournament-card__time">
+                    <span class="tournament-card__start">До начала:</span>
+                    <span class="tournament-card__timer" data-timer="March 25 2023 00:00:00">
+                        <span class="tournament-card__hours">0</span> ч.
+                        <span class="tournament-card__minutes">0</span> м.
+                    </span>
+                </div>
+                <span class="tournament-card__cost">1000 р.</span>
+            </div>
+        </div>
+        <div class="tournament-card__teams">
+            <div class="tournament-card__team">
+                <span class="tournament-card__name">NAVI</span>
+                <picture>
+                    <source srcset="img/team-logo/navi.avif" type="image/avif">
+                    <source srcset="img/team-logo/navi.webp" type="image/webp">
+                    <img class="tournament-card__img" src="img/team-logo/navi.png" alt="navi" width="50" height="50" loading="lazy">
+                </picture>
+            </div>
+            <span class="tournament-card__vs">
+                <span class="sr-only">vs</span>
+            </span>
+            <span class="tournament-card__price">1000 р.</span>
+            <div class="tournament-card__team tournament-card__team--reverse">
+                <span class="tournament-card__name">Virtus.pro</span>
+                <picture>
+                    <source srcset="img/team-logo/virtus.avif" type="image/avif">
+                    <source srcset="img/team-logo/virtus.webp" type="image/webp">
+                    <img class="tournament-card__img" src="img/team-logo/virtus.png" alt="navi" width="50" height="50" loading="lazy">
+                </picture>
+            </div>
+        </div>
+    </div>
+    <div class="tournament-card__links">
+        <a class="tournament-card__link tournament-card__link--play" href="#">
+            <span class="sr-only">Смотреть</span>
+        </a>
+        <a class="tournament-card__link tournament-card__link--edit" href="#">
+            <span class="sr-only">Редактировать ставку</span>
+        </a>
+    </div>
+</article>
+                    </li>
+                    <li class="tabs__item">
+                        <article class="tournament-card">
+    <div class="tournament-card__content">
+        <div class="tournament-card__info">
+            <div class="tournament-card__type" style="background-image: url('img/tournament-types/pvp-one.svg');">
+                <span class="sr-only">pvp</span>
+            </div>
+            <div class="tournament-card__descr">
+                <div class="tournament-card__score">
+                    <span>1:1</span>
+                    <span>Dust 2</span>
+                </div>
+                <div class="tournament-card__time">
+                    <span class="tournament-card__start">До начала:</span>
+                    <span class="tournament-card__timer" data-timer="March 25 2023 00:00:00">
+                        <span class="tournament-card__hours">0</span> ч.
+                        <span class="tournament-card__minutes">0</span> м.
+                    </span>
+                </div>
+                <span class="tournament-card__cost">1000 р.</span>
+            </div>
+        </div>
+        <div class="tournament-card__teams">
+            <div class="tournament-card__team">
+                <span class="tournament-card__name">NAVI</span>
+                <picture>
+                    <source srcset="img/team-logo/navi.avif" type="image/avif">
+                    <source srcset="img/team-logo/navi.webp" type="image/webp">
+                    <img class="tournament-card__img" src="img/team-logo/navi.png" alt="navi" width="50" height="50" loading="lazy">
+                </picture>
+            </div>
+            <span class="tournament-card__vs">
+                <span class="sr-only">vs</span>
+            </span>
+            <span class="tournament-card__price">1000 р.</span>
+            <div class="tournament-card__team tournament-card__team--reverse">
+                <span class="tournament-card__name">Virtus.pro</span>
+                <picture>
+                    <source srcset="img/team-logo/virtus.avif" type="image/avif">
+                    <source srcset="img/team-logo/virtus.webp" type="image/webp">
+                    <img class="tournament-card__img" src="img/team-logo/virtus.png" alt="navi" width="50" height="50" loading="lazy">
+                </picture>
+            </div>
+        </div>
+    </div>
+    <div class="tournament-card__links">
+        <a class="tournament-card__link tournament-card__link--play" href="#">
+            <span class="sr-only">Смотреть</span>
+        </a>
+        <a class="tournament-card__link tournament-card__link--edit" href="#">
+            <span class="sr-only">Редактировать ставку</span>
+        </a>
+    </div>
+</article>
+                    </li>
+                    <li class="tabs__item">
+                        <article class="tournament-card">
+    <div class="tournament-card__content">
+        <div class="tournament-card__info">
+            <div class="tournament-card__type" style="background-image: url('img/tournament-types/pvp-one.svg');">
+                <span class="sr-only">pvp</span>
+            </div>
+            <div class="tournament-card__descr">
+                <div class="tournament-card__score">
+                    <span>1:1</span>
+                    <span>Dust 2</span>
+                </div>
+                <div class="tournament-card__time">
+                    <span class="tournament-card__start">До начала:</span>
+                    <span class="tournament-card__timer" data-timer="March 25 2023 00:00:00">
+                        <span class="tournament-card__hours">0</span> ч.
+                        <span class="tournament-card__minutes">0</span> м.
+                    </span>
+                </div>
+                <span class="tournament-card__cost">1000 р.</span>
+            </div>
+        </div>
+        <div class="tournament-card__teams">
+            <div class="tournament-card__team">
+                <span class="tournament-card__name">NAVI</span>
+                <picture>
+                    <source srcset="img/team-logo/navi.avif" type="image/avif">
+                    <source srcset="img/team-logo/navi.webp" type="image/webp">
+                    <img class="tournament-card__img" src="img/team-logo/navi.png" alt="navi" width="50" height="50" loading="lazy">
+                </picture>
+            </div>
+            <span class="tournament-card__vs">
+                <span class="sr-only">vs</span>
+            </span>
+            <span class="tournament-card__price">1000 р.</span>
+            <div class="tournament-card__team tournament-card__team--reverse">
+                <span class="tournament-card__name">Virtus.pro</span>
+                <picture>
+                    <source srcset="img/team-logo/virtus.avif" type="image/avif">
+                    <source srcset="img/team-logo/virtus.webp" type="image/webp">
+                    <img class="tournament-card__img" src="img/team-logo/virtus.png" alt="navi" width="50" height="50" loading="lazy">
+                </picture>
+            </div>
+        </div>
+    </div>
+    <div class="tournament-card__links">
+        <a class="tournament-card__link tournament-card__link--play" href="#">
+            <span class="sr-only">Смотреть</span>
+        </a>
+        <a class="tournament-card__link tournament-card__link--edit" href="#">
+            <span class="sr-only">Редактировать ставку</span>
+        </a>
+    </div>
+</article>
+                    </li>
+                    <li class="tabs__item">
+                        <article class="tournament-card">
+    <div class="tournament-card__content">
+        <div class="tournament-card__info">
+            <div class="tournament-card__type" style="background-image: url('img/tournament-types/pvp-one.svg');">
+                <span class="sr-only">pvp</span>
+            </div>
+            <div class="tournament-card__descr">
+                <div class="tournament-card__score">
+                    <span>1:1</span>
+                    <span>Dust 2</span>
+                </div>
+                <div class="tournament-card__time">
+                    <span class="tournament-card__start">До начала:</span>
+                    <span class="tournament-card__timer" data-timer="March 25 2023 00:00:00">
+                        <span class="tournament-card__hours">0</span> ч.
+                        <span class="tournament-card__minutes">0</span> м.
+                    </span>
+                </div>
+                <span class="tournament-card__cost">1000 р.</span>
+            </div>
+        </div>
+        <div class="tournament-card__teams">
+            <div class="tournament-card__team">
+                <span class="tournament-card__name">NAVI</span>
+                <picture>
+                    <source srcset="img/team-logo/navi.avif" type="image/avif">
+                    <source srcset="img/team-logo/navi.webp" type="image/webp">
+                    <img class="tournament-card__img" src="img/team-logo/navi.png" alt="navi" width="50" height="50" loading="lazy">
+                </picture>
+            </div>
+            <span class="tournament-card__vs">
+                <span class="sr-only">vs</span>
+            </span>
+            <span class="tournament-card__price">1000 р.</span>
+            <div class="tournament-card__team tournament-card__team--reverse">
+                <span class="tournament-card__name">Virtus.pro</span>
+                <picture>
+                    <source srcset="img/team-logo/virtus.avif" type="image/avif">
+                    <source srcset="img/team-logo/virtus.webp" type="image/webp">
+                    <img class="tournament-card__img" src="img/team-logo/virtus.png" alt="navi" width="50" height="50" loading="lazy">
+                </picture>
+            </div>
+        </div>
+    </div>
+    <div class="tournament-card__links">
+        <a class="tournament-card__link tournament-card__link--play" href="#">
+            <span class="sr-only">Смотреть</span>
+        </a>
+        <a class="tournament-card__link tournament-card__link--edit" href="#">
+            <span class="sr-only">Редактировать ставку</span>
+        </a>
+    </div>
+</article>
+                    </li>
+                    <li class="tabs__item">
+                        <article class="tournament-card">
+    <div class="tournament-card__content">
+        <div class="tournament-card__info">
+            <div class="tournament-card__type" style="background-image: url('img/tournament-types/pvp-one.svg');">
+                <span class="sr-only">pvp</span>
+            </div>
+            <div class="tournament-card__descr">
+                <div class="tournament-card__score">
+                    <span>1:1</span>
+                    <span>Dust 2</span>
+                </div>
+                <div class="tournament-card__time">
+                    <span class="tournament-card__start">До начала:</span>
+                    <span class="tournament-card__timer" data-timer="March 25 2023 00:00:00">
+                        <span class="tournament-card__hours">0</span> ч.
+                        <span class="tournament-card__minutes">0</span> м.
+                    </span>
+                </div>
+                <span class="tournament-card__cost">1000 р.</span>
+            </div>
+        </div>
+        <div class="tournament-card__teams">
+            <div class="tournament-card__team">
+                <span class="tournament-card__name">NAVI</span>
+                <picture>
+                    <source srcset="img/team-logo/navi.avif" type="image/avif">
+                    <source srcset="img/team-logo/navi.webp" type="image/webp">
+                    <img class="tournament-card__img" src="img/team-logo/navi.png" alt="navi" width="50" height="50" loading="lazy">
+                </picture>
+            </div>
+            <span class="tournament-card__vs">
+                <span class="sr-only">vs</span>
+            </span>
+            <span class="tournament-card__price">1000 р.</span>
+            <div class="tournament-card__team tournament-card__team--reverse">
+                <span class="tournament-card__name">Virtus.pro</span>
+                <picture>
+                    <source srcset="img/team-logo/virtus.avif" type="image/avif">
+                    <source srcset="img/team-logo/virtus.webp" type="image/webp">
+                    <img class="tournament-card__img" src="img/team-logo/virtus.png" alt="navi" width="50" height="50" loading="lazy">
+                </picture>
+            </div>
+        </div>
+    </div>
+    <div class="tournament-card__links">
+        <a class="tournament-card__link tournament-card__link--play" href="#">
+            <span class="sr-only">Смотреть</span>
+        </a>
+        <a class="tournament-card__link tournament-card__link--edit" href="#">
+            <span class="sr-only">Редактировать ставку</span>
+        </a>
+    </div>
+</article>
+                    </li>
+                </ul>
+                <ul class="tabs__panel">
+                    <li class="tabs__item">
+                        <article class="tournament-card">
+    <div class="tournament-card__content">
+        <div class="tournament-card__info">
+            <div class="tournament-card__type" style="background-image: url('img/tournament-types/pvp-one.svg');">
+                <span class="sr-only">pvp</span>
+            </div>
+            <div class="tournament-card__descr">
+                <div class="tournament-card__score">
+                    <span>1:1</span>
+                    <span>Dust 2</span>
+                </div>
+                <div class="tournament-card__time">
+                    <span class="tournament-card__start">До начала:</span>
+                    <span class="tournament-card__timer" data-timer="March 25 2023 00:00:00">
+                        <span class="tournament-card__hours">0</span> ч.
+                        <span class="tournament-card__minutes">0</span> м.
+                    </span>
+                </div>
+                <span class="tournament-card__cost">1000 р.</span>
+            </div>
+        </div>
+        <div class="tournament-card__teams">
+            <div class="tournament-card__team">
+                <span class="tournament-card__name">NAVI</span>
+                <picture>
+                    <source srcset="img/team-logo/navi.avif" type="image/avif">
+                    <source srcset="img/team-logo/navi.webp" type="image/webp">
+                    <img class="tournament-card__img" src="img/team-logo/navi.png" alt="navi" width="50" height="50" loading="lazy">
+                </picture>
+            </div>
+            <span class="tournament-card__vs">
+                <span class="sr-only">vs</span>
+            </span>
+            <span class="tournament-card__price">1000 р.</span>
+            <div class="tournament-card__team tournament-card__team--reverse">
+                <span class="tournament-card__name">Virtus.pro</span>
+                <picture>
+                    <source srcset="img/team-logo/virtus.avif" type="image/avif">
+                    <source srcset="img/team-logo/virtus.webp" type="image/webp">
+                    <img class="tournament-card__img" src="img/team-logo/virtus.png" alt="navi" width="50" height="50" loading="lazy">
+                </picture>
+            </div>
+        </div>
+    </div>
+    <div class="tournament-card__links">
+        <a class="tournament-card__link tournament-card__link--play" href="#">
+            <span class="sr-only">Смотреть</span>
+        </a>
+        <a class="tournament-card__link tournament-card__link--edit" href="#">
+            <span class="sr-only">Редактировать ставку</span>
+        </a>
+    </div>
+</article>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button class="top-tournament__more button button--border" type="button">
+            Загрузить ещё
+        </button>
+    </div>
+
+</section>
+
+    <section class="about section">
+    <div class="container">
+        <div class="about__wrapper">
+            <h2 class="about__title title">
+                <span class="title__accent">О</span> нас
+            </h2>
+            <div class="about__content">
+                <div class="about__text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <div class="about__right">
+                    <div class="about__subtext">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    <buttton class="about__link button button--border" type="button" data-graph-path="login">
+                        Найти событие
+                    </buttton>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span class="about__line line" aria-hidden></span>
+    <!-- <span class="about__line-double line-double" aria-hidden></span> -->
+</section>
+
+    <section class="contacts section">
+    <span class="contacts__line-double line-double" aria-hidden></span>
+    <div class="contacts__container container">
+        <h2 class="contacts__title title title--accent title--medium">
+            Контакты
+        </h2>
+        <div class="contacts__wrapper">
+            <div class="contacts__emails">
+                <h3 class="contacts__subtitle title title--small">Email</h3>
+                <ul class="contacts__items">
+                    <li class="contacts__item">
+                        <a class="contacts__link" href="#">help@gmail.com</a>
+                    </li>
+                    <li class="contacts__item">
+                        <a class="contacts__link" href="#">help@gmail.com</a>
+                    </li>
+                    <li class="contacts__item">
+                        <a class="contacts__link" href="#">help@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contacts__form form">
+                <div class="form__wrapper">
+                    <div class="form__inner">
+                        <h3 class="form__title title title--small">
+                            Если
+                            <span class="title__accent">возникли вопросы</span>, будем рады на них ответить
+                        </h3>
+                        <p class="form__subtitle">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing eli.
+                        </p>
+                    </div>
+                    <div class="form__content">
+                        <div class="form__item">
+                            <label class="sr-only" for="email">Введите электронную почту</label>
+                            <input class="form__field" name="email" type="email" placeholder="Email" id="name" required>
+                        </div>
+                        <div class="form__item">
+                            <label class="sr-only" for="message">Напишите свой вопрос</label>
+                            <textarea class="form__field form__field--message" name="message" id="message" placeholder="Вопрос"></textarea>
+                        </div>
+                        <button class="form__button button" type="submit">
+                            Отправить
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="contest section">
+    <div class="container">
+        <h2 class="sr-only">
+            Конкурс
+        </h2>
+
+        <!-- Для изменения даты отсчета нужно указать эту дату в атрибуте daa-timer. Строго в указанном формате! -->
+        <div class="contest__timer" data-timer="Jan 1 2024 00:00:00">
+            <div class="contest__item contest__item--day">
+                <span class="contest__number title title--accent title--large">00</span>
+                <span class="contest__name subtitle subtitle--medium">Дней</span>
+            </div>
+            <div class="contest__item contest__item--hours">
+                <span class="contest__number title title--accent title--large">00</span>
+                <span class="contest__name subtitle subtitle--medium">Часов</span>
+            </div>
+            <div class="contest__item contest__item--minutes">
+                <span class="contest__number title title--accent title--large">00</span>
+                <span class="contest__name subtitle subtitle--medium">Минут</span>
+            </div>
+        </div>
+
+        <div class="contest__conditions">
+            <div class="contest__content">
+                <h3 class="contest__subtitle title title--small">
+                    Условия <span class="title__accent">конкурса</span>
+                </h3>
+                <div class="contest__text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <button class="contest__link button" type="button" data-graph-path="registration">Участвовать</button>
+            </div>
+            <div class="contest__bg" style="background-image: url('img/contest/bg.png');" aria-hidden="true"></div>
+        </div>
+    </div>
+
+    <span class="contest__line line" aria-hidden></span>
+</section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <a class="footer__logo logo" href="#">
+                <img class="logo__img" src="img/logos/logo-white.svg" alt="логотип" width="102" height="45" loading="lazy">
+            </a>
+            <ul class="menu">
+                <li class="menu__item">
+                    <a class="menu__link" href="#">О сервисе</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">FAQ</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Ставки</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Рефералка</a>
+                </li>
+            </ul>
+            <div class="footer__info">
+                <a class="footer__subtext" href="#">Политика конфиденциальности</a>
+                <span>Сopyright 2023</span>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--  -->
+</div>
+</body>
+
+</html>

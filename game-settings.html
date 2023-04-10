@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script defer src="js/main.js"></script>
+
+  <title>CS: GO — Ставки на спорт | Настройка игры</title>
+</head>
+
+<body class="body">
+  <div class="wrapper">
+
+<!--  -->
+<header class="header">
+
+    <div class="overlay" data-menu-overlay></div>
+    <div class="container">
+        <nav class="header__nav">
+            <a class="header__logo logo" href="#">
+                <img class="logo__img" src="img/logos/logo-blue.svg" alt="логотип" width="102" height="45" loading="lazy">
+            </a>
+            <div class="header__wrapper" data-menu>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">О сервисе</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">FAQ</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Ставки</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Рефералка</a>
+                    </li>
+                </ul>
+
+                <div class="header__language language">
+                    <label class="sr-only" for="language">выберите язык</label>
+                    <select class="language__select" name="language" id="language" data-select="true">
+                        <option value="ru">ru</option>
+                        <option value="en">en</option>
+                        <option value="fr">fr</option>
+                        <option value="jp">jp</option>
+                    </select>
+                </div>
+
+                <ul class="user-nav">
+                    <li class="user-nav__item">
+                        <a class="user-nav__link user-nav__link--applications user-nav__link--applications-true" href="#">
+                            <span class="sr-only">Заявки</span>
+                        </a>
+                    </li>
+                    <li class="user-nav__item">
+                        <a class="user-nav__link user-nav__link--favorite" href="#">
+                            <span class="sr-only">Избранное</span>
+                        </a>
+                    </li>
+                    <li class="user-nav__item">
+                        <a class="user-nav__link user-nav__link--wallet" href="#">
+                            <span class="sr-only">Баланс</span>
+                            1.000$
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="header__account">
+
+                        <picture>
+                            <source srcset="img/ava.avif" type="image/avif">
+                            <source srcset="img/ava.webp" type="image/webp">
+                            <img class="header__ava" src="img/ava.png" alt=" Алексей Плеханов" width="37" height="37" loading="lazy">
+                        </picture>
+                        <a class="header__profile" href="#">
+                            Алексей Плеханов
+                        </a>
+                        <button class="header__logout" type="button">
+                            <span class="sr-only">Выйти</span>
+                        </button>
+
+                </div>
+            </div>
+
+            <button class="burger" type="button" data-burger>
+               <span class="burger__line"></span>
+               <span class="sr-only">Меню</span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<div class="graph-modal">
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="login">
+        <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+        <form class="graph-modal__content form" action="#">
+            <a class="form__logo logo" href="#">
+                <img class="logo__img" src="img/logos/logo-blue.svg" alt="логотип" width="102" height="45" loading="lazy">
+            </a>
+
+            <div class="form__item">
+                <label class="sr-only" for="login-email">Введите логин</label>
+                <input class="form__field" name="email" type="email" placeholder="Логин" id="login-email" required>
+            </div>
+            <div class="form__item">
+                <label class="sr-only" for="login-passwors">Введите ваш пароль</label>
+                <input class="form__field" name="password" type="password" placeholder="Пароль" id="login-passwors" required>
+            </div>
+
+            <div class="form__steam">
+                <a class="form__icon" href="#">Войти через Steam</a>
+            </div>
+
+            <button class="form__button button" type="submit">Войти</button>
+
+            <div class="form__links">
+                <a class="form__link form__link--accent" href="#">Забыл пароль</a>
+                <a class="form__link" href="#">Регистрация</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="graph-modal__container graph-modal__container--registration" role="dialog" aria-modal="true" data-graph-target="registration">
+        <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+        <form class="graph-modal__content form" action="#">
+            <a class="form__logo logo" href="#">
+                <img class="logo__img" src="img/logos/logo-blue.svg" alt="логотип" width="102" height="45" loading="lazy">
+            </a>
+
+            <div class="form__item">
+                <label class="form__label" for="registration-email">Логин</label>
+                <input class="form__field" name="email" type="email" placeholder="Email" id="registration-email" required>
+            </div>
+            <div class="form__item">
+                <label class="form__label" for="registration-passwors">Пароль</label>
+                <input class="form__field" name="password" type="password" placeholder="Введите пароль" id="registration-passwors" required>
+            </div>
+            <div class="form__item">
+                <label class="form__label" for="registration-name">Имя</label>
+                <input class="form__field" name="name" type="text" placeholder="Введите ваше имя/nick" id="registration-name" required>
+            </div>
+            <div class="form__item">
+                <label class="form__label" for="registration-tel">Имя</label>
+                <input class="form__field" name="tel" type="tel" placeholder="+7 999 999 99 99" id="registration-tel" required>
+            </div>
+
+            <button class="form__button button" type="submit">Зарегистрироваться</button>
+
+            <div class="form__links">
+                <a class="form__link" href="#">Войти</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="container">
+    <div class="page-wrapper">
+        <nav class="private-menu">
+    <div class="private-menu__content">
+        <button class="private-menu__control" type="button" aria-label="Открыть" aria-expanded="false">
+            <span class="private-menu__icon" style="background-image: url('img/private-menu/control.svg');" aria-hidden></span>
+        </button>
+        <ul class="private-menu__items">
+            <li class="private-menu__item">
+                <a class="private-menu__link" href="#">
+                    <span class="private-menu__icon" style="background-image: url('img/private-menu/create-bet.svg');" aria-hidden></span>
+                    <span>Создать ставку</span>
+                </a>
+            </li>
+            <li class="private-menu__item">
+                <a class="private-menu__link" href="#">
+                    <span class="private-menu__icon" style="background-image: url('img/private-menu/history-bet.svg');" aria-hidden></span>
+                    <span>История ставок</span>
+                </a>
+            </li>
+            <li class="private-menu__item private-menu__item--active">
+                <a class="private-menu__link" href="#">
+                    <span class="private-menu__icon" style="background-image: url('img/private-menu/upcoming-tournaments.svg');" aria-hidden></span>
+                    <span>Предстоящие турниры</span>
+                </a>
+            </li>
+            <li class="private-menu__item">
+                <a class="private-menu__link" href="#">
+                    <span class="private-menu__icon" style="background-image: url('img/private-menu/my-tournaments.svg');" aria-hidden></span>
+                    <span>Мои турниры</span>
+                </a>
+            </li>
+            <li class="private-menu__item">
+                <a class="private-menu__link" href="#">
+                    <span class="private-menu__icon" style="background-image: url('img/private-menu/favorite-tournaments.svg');" aria-hidden></span>
+                    <span>Турниры с избранными</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+
+        <main class="page-content main">
+            <div class="game-settings">
+    <h1 class="game-settings__title subtitle subtitle--medium">
+        Настройка игры
+    </h1>
+
+    <form class="game-settings__wrapper management-form" action="#">
+        <label class="game-settings__item">
+            <span class="game-settings__box">
+                <span class="game-settings__name">CS: GO</span>
+            </span>
+            <input class="game-settings__hidden" type="checkbox" name="game-settings" value="CS:GO">
+            <span class="game-settings__visible" aria-hidden="true"></span>
+        </label>
+
+        <label class="game-settings__item">
+            <span class="game-settings__box">
+                <span class="game-settings__name">CS: GO</span>
+            </span>
+            <input class="game-settings__hidden" type="checkbox" name="game-settings" value="CS:GO">
+            <span class="game-settings__visible" aria-hidden="true"></span>
+        </label>
+
+        <label class="game-settings__item">
+            <span class="game-settings__box">
+                <span class="game-settings__name">CS: GO</span>
+            </span>
+            <input class="game-settings__hidden" type="checkbox" name="game-settings" value="CS:GO">
+            <span class="game-settings__visible" aria-hidden="true"></span>
+        </label>
+
+        <label class="game-settings__item">
+            <span class="game-settings__box">
+                <span class="game-settings__name">CS: GO</span>
+            </span>
+            <input class="game-settings__hidden" type="checkbox" name="game-settings" value="CS:GO">
+            <span class="game-settings__visible" aria-hidden="true"></span>
+        </label>
+    </form>
+</div>
+        </main>
+    </div>
+</div>
+
+<!--  -->
+</div>
+</body>
+
+</html>

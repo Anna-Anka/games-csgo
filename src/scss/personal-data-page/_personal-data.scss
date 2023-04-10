@@ -1,0 +1,18 @@
+.personal-data {
+    &__title {
+        font-size: 22px;
+        @include adaptiv-value('margin-bottom', 28, 20, 1);
+    }
+
+    .management-form {
+        &__item {
+            &:not(:last-child) {
+               @include adaptiv-value('margin-bottom', 25, 20, 1);
+            }
+
+            &:last-child {
+                margin-bottom: 37px;
+            }
+        }
+    }
+}

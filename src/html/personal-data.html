@@ -1,0 +1,24 @@
+@include('./components/links/_head.html',
+{ 'title' : 'CS:GO — Ставки на спорт | Пополнение баланса' }
+)
+<!--  -->
+@include('./components/_header.html', {
+'isLogin' : 'true'
+})
+
+@include('./components/_modals.html')
+
+<div class="container">
+    <div class="page-wrapper">
+        @include('./components/_private-menu.html', {
+            'additionally' : 'false'
+        })
+
+        <main class="page-content main">
+            @include('./personal-data-page/_personal-data.html')
+        </main>
+    </div>
+</div>
+
+<!--  -->
+@include('./components/links/_bottom.html')

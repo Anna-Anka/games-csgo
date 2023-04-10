@@ -1,0 +1,45 @@
+.personal-data {
+    &__title {
+        font-size: 22px;
+        @include adaptiv-value('margin-bottom', 28, 20, 1);
+    }
+
+    .management-form {
+        &__item {
+            &:not(:last-child) {
+               @include adaptiv-value('margin-bottom', 25, 15, 1);
+            }
+
+            &:last-child {
+                margin-bottom: 37px;
+            }
+
+            @include mq(sm) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        &__subtitle {
+            @include mq(sm) {
+                padding: 0;
+                background-color: transparent;
+                color: $black;
+                margin-bottom: 10px;
+                font-size: 16px;
+            }
+        }
+
+        &__field {
+            @include mq(sm) {
+                border-radius: 8px;
+            }
+        }
+    }
+
+    &__button {
+        @include mq(sm) {
+            width: 100%;
+        }
+    }
+}

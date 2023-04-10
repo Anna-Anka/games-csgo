@@ -24,6 +24,7 @@
 @import './components/play';
 @import './components/copy';
 @import './components/balance-management';
+@import './components/personal-data';
 
 // * management-form
 @import './components/management-form/management-form';
@@ -75,6 +76,3 @@
 @import './wallet-page/wallet-top';
 @import './wallet-page/wallet-conclusion';
 @import './wallet-page/wallet-tabs';
-
-// * personal-data-page
-@import './personal-data-page/personal-data';

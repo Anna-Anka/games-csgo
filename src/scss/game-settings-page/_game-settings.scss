@@ -1,0 +1,76 @@
+.game-settings {
+	&__title {
+		font-size: 22px;  
+		@include adaptiv-value('margin-bottom', 28, 20, 1);
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		width: 100%;
+		height: 70px;
+		box-shadow: 2px 10px 10px rgba($blue-600, 0.04);
+
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__box {
+		@include flex-center-sb;
+		width: 100%;
+		padding: 10px 20px;
+		background-color: $white;
+		border-radius: 10px 0 0 10px;
+	}
+
+	&__name {
+		margin-right: 10px;
+		color: $black;
+		font-size: 18px;
+	}
+
+	&__hidden {
+		@include hidden;
+
+		&:checked + .game-settings__visible {
+			&::after {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__visible {
+		position: relative;
+		display: flex;
+		width: 100%;
+		max-width: 65px;
+		background-color: $blue-400;
+		border-radius: 0 10px 10px 0;
+
+		&::before,
+		&::after {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			content: '';
+		}
+
+		&::before {
+			width: 24px;
+			height: 24px;
+			background-color: $white;
+			border-radius: 5px;
+		}
+
+		&::after {
+			@include bg-contain;
+			width: 12px;
+			height: 12px;
+			background-image: url('../img/icons/checked.svg');
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+		}
+	}
+}

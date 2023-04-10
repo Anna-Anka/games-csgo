@@ -1,5 +1,5 @@
 @include('./components/links/_head.html',
-{ 'title' : 'CS:GO — Ставки на спорт | Кошелёк' }
+{ 'title' : 'CS:GO — Ставки на спорт | Настройка игры' }
 )
 <!--  -->
 @include('./components/_header.html', {
@@ -15,9 +15,7 @@
         })
 
         <main class="page-content main">
-            @include('./wallet-page/_wallet-top.html')
-            @include('./wallet-page/_wallet-conclusion.html')
-            @include('./wallet-page/_wallet-tabs.html')
+            @include('./game-settings-page/_game-settings.html')
         </main>
     </div>
 </div>

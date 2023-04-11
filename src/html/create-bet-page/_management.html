@@ -1,0 +1,60 @@
+<form class="management-form" action="#">
+    <div class="management-form__top">
+        <h1 class="management-form__title subtitle subtitle--medium">
+            Создание ставки
+        </h1>
+    </div>
+
+    <div class="create-bet__form management-form__form">
+        <div class="management-form__items">
+            <div class="management-form__item">
+                <label class="management-form__subtitle" for="create-bet-map">
+                    Тип карты
+                </label>
+                <select class="management-form__select" name="map-type" id="create-bet-map" data-select="true">
+                    <option value="Заложники 1">Заложники 1</option>
+                    <option value="Заложники 2">Заложники 2</option>
+                    <option value="Заложники 3">Заложники 3</option>
+                    <option value="Заложники 4">Заложники 4</option>
+                </select>
+            </div>
+
+            <div class="management-form__item">
+                <label class="management-form__subtitle" for="create-bet-guns">
+                    Ограничение на оружие
+                </label>
+                <select class="management-form__select" name="guns" id="create-bet-guns" data-select="true">
+                    <option value="Нет">Нет</option>
+                    <option value="Нет">Нет</option>
+                    <option value="Нет">Нет</option>
+                    <option value="Нет">Нет</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="management-form__items">
+            <div class="management-form__item">
+                <label class="management-form__subtitle" for="create-bet-time">
+                    Время раунда
+                </label>
+                <input class="management-form__field" name="time" type="text" placeholder="00 ч. 00 м. 00 с.2" id="create-bet-time" required>
+            </div>
+
+            <div class="management-form__item">
+                <label class="management-form__subtitle" for="create-bet-formula">
+                    Формула
+                </label>
+                <select class="management-form__select" name="formula" id="create-bet-formula" data-select="true">
+                    <option value="Всё победителю">Всё победителю</option>
+                    <option value="Всё победителю">Всё победителю</option>
+                    <option value="Всё победителю">Всё победителю</option>
+                    <option value="Всё победителю">Всё победителю</option>
+                </select>
+            </div>
+        </div>
+
+        <button class="management-form__button button" type="submit">
+            Создать ставку
+        </button>
+    </div>
+</form>

@@ -8,21 +8,14 @@
 
 @include('./components/_modals.html')
 
-<div class="container">
-    <div class="page-wrapper">
-        @include('./components/_private-menu.html', {
-        'additionally' : 'true'
-        })
-
-        <main class="page-content main">
-            <!-- @include('./create-bet-page/_create-bet.html') -->
-            <div class="create-bet">
-                @include('./create-bet-page/_management.html')
-                @include('./create-bet-page/_table.html')
-            </div>
-        </main>
+<main class="page-content main">
+    <div class="create-bet">
+        <div class="container">
+            @include('./create-bet-page/_management.html')
+            @include('./create-bet-page/_table.html')
+        </div>
     </div>
-</div>
+</main>
 
 <!--  -->
 @include('./components/links/_bottom.html')

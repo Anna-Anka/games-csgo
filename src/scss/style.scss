@@ -34,6 +34,7 @@
 
 // * cards
 @import './components/cards/tournament-card';
+@import './components/cards/cb-card';
 
 // * marquee
 @import './components/marquee/marquee-team';
@@ -86,3 +87,5 @@
 
 // * create-bet-page
 @import './create-bet-page/create-bet';
+@import './create-bet-page/management-form';
+@import './create-bet-page/settings';

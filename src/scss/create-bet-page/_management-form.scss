@@ -1,0 +1,40 @@
+.create-bet {
+    .management-form {
+		@include adaptiv-value('margin-bottom', 68, 42, 1);
+
+		&__top {
+			@include mq(md) {
+				margin-bottom: 30px;
+			}
+		}
+
+		&__title {
+			margin-right: 0;
+		}
+
+		&__items {
+			margin-bottom: 24px;
+
+            @include mq(md) {
+                margin-bottom: 12px;
+            }
+		}
+
+		&__form {
+			@include mq(md) {
+				position: relative;
+				left: unset;
+				width: 100%;
+				height: auto;
+				margin-top: 0;
+				opacity: 1;
+				transition: left 0.5s ease-in-out;
+			}
+		}
+
+		&__button {
+			display: flex;
+			width: 100%;
+		}
+	}
+}

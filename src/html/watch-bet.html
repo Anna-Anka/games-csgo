@@ -1,0 +1,16 @@
+@include('./components/links/_head.html',
+{ 'title' : 'CS:GO — Ставки на спорт | Просмотр ставки' }
+)
+<!--  -->
+@include('./components/_header.html', {
+'isLogin' : 'true'
+})
+
+@include('./components/_modals.html')
+
+<main class="main">
+    @include('./watch-bet-page/_watch-bet.html')
+</main>
+
+<!--  -->
+@include('./components/links/_bottom.html')

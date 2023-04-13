@@ -1,0 +1,22 @@
+.person {
+	display: flex;
+	align-items: center;
+
+	&__name {
+		margin-right: 10px;
+	}
+
+    &__awards {
+        display: flex;
+    }
+
+    &__award {
+		width: 33px;
+		height: 33px;
+		@include bg-contain;
+
+		&:not(:last-child) {
+			margin-right: 6px;
+		}
+	}
+}

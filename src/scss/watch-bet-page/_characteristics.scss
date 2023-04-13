@@ -1,0 +1,63 @@
+.watch-bet {
+	&__characteristics {
+		width: 100%;
+		max-width: 560px;
+
+		@include mq(md) {
+			display: none;
+			max-width: 100%;
+		}
+
+		&--mobile {
+			display: none;
+
+			@include mq(md) {
+				display: block;
+				max-width: 100%;
+			}
+		}
+	}
+
+	&__characteristic {
+		display: flex;
+
+		&:not(:last-child) {
+			margin-bottom: 15px;
+
+			@include mq(md) {
+				margin-bottom: 4px;
+			}
+		}
+	}
+
+	&__statistics {
+		width: 100%;
+		max-width: 270px;
+		margin-right: 63px;
+		color: $black;
+		font-weight: $fw-700;
+		font-size: 22px;
+
+		@include mq(md) {
+			width: auto;
+			max-width: fit-content;
+			margin-right: 4px;
+			font-size: 18px;
+		}
+	}
+
+	&__value {
+		font-size: 17px;
+
+		&--accent {
+			color: $blue-400;
+		}
+	}
+
+	.person {
+		&__award {
+			width: 27px;
+			height: 27px;
+		}
+	}
+}

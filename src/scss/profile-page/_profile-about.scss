@@ -36,9 +36,7 @@
 		flex-direction: column;
 	}
 
-	&__person {
-		display: flex;
-		align-items: center;
+	.person {
 		@include adaptiv-value('margin-bottom', 25, 8, 1);
 
 		@include mq(sm) {
@@ -47,25 +45,12 @@
 		}
 	}
 
-	&__headding {
-		margin-right: 10px;
-	}
-
-	&__awards,
 	&__items,
 	&__item {
 		display: flex;
 	}
 
-	&__award {
-		width: 33px;
-		height: 33px;
-		@include bg-contain;
-
-		&:not(:last-child) {
-			margin-right: 6px;
-		}
-	}
+	
 
 	&__items {
 		margin-bottom: 22px;

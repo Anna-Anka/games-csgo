@@ -1,0 +1,76 @@
+.watch-bet {
+	&__table {
+		margin-bottom: 30px;
+		padding: 4px 12px 27px 30px;
+		background-color: $white;
+		border-radius: 10px;
+		box-shadow: 2px 10px 10px rgba($blue-600, 0.04);
+
+		@include mq(md) {
+			display: none;
+			padding: 20px 15px 30px;
+		}
+
+		&--mobile {
+			display: none;
+
+			@include mq(md) {
+				display: block;
+			}
+		}
+	}
+
+	&__line {
+		position: relative;
+		display: flex;
+		padding: 20px 0;
+		@include adaptiv-value('font-size', 16, 14, 1);
+
+		@include mq(md) {
+			padding: 0;
+		}
+
+		&:not(:last-child) {
+			@include mq(md) {
+				margin-bottom: 14px;
+			}
+
+			&::before {
+				@include mq(md) {
+					display: none;
+				}
+			}
+		}
+
+		&:last-child {
+			@include mq(md) {
+				padding-bottom: 14px;
+			}
+		}
+
+		&::before {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: $blue-200;
+			content: '';
+		}
+	}
+
+	&__name {
+		width: 100%;
+		max-width: 275px;
+		margin-right: 32px;
+		font-weight: $fw-700;
+
+		@include mq(md) {
+			width: auto;
+			max-width: fit-content;
+			margin-right: 2px;
+			color: $black;
+			font-weight: $fw-400;
+		}
+	}
+}

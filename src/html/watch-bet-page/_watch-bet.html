@@ -1,0 +1,154 @@
+<h1 class="sr-only">Просмотр ставки</h1>
+<section class="watch-bet">
+    <div class="container">
+        <div class="watch-bet__wrapper">
+            <div class="watch-bet__info">
+                <div class="watch-bet__top">
+                    <dl class="watch-bet__characteristics">
+                        <div class="watch-bet__characteristic">
+                            <dt class="watch-bet__statistics">Ставка:</dt>
+                            <dd class="watch-bet__value">ID 545454</dd>
+                        </div>
+                        <div class="watch-bet__characteristic">
+                            <dt class="watch-bet__statistics">Ник и ранг создавшего:</dt>
+                            <dd class="watch-bet__value">
+                                <div class="person">
+                                    <span class="person__name">
+                                        Алексей Плеханов
+                                    </span>
+                                    <div class="person__awards">
+                                        <span class="person__award" style="background-image: url('img/person/award-1.svg');" aria-label="Award 1"></span>
+                                        <span class="person__award" style="background-image: url('img/person/award-2.svg');" aria-label="Award 2"></span>
+                                    </div>
+                                </div>
+                            </dd>
+                        </div>
+                        <div class="watch-bet__characteristic">
+                            <dt class="watch-bet__statistics">Сумма в случае победы:</dt>
+                            <dd class="watch-bet__value watch-bet__value--accent">+ 700</dd>
+                        </div>
+                        <div class="watch-bet__characteristic">
+                            <dt class="watch-bet__statistics">Сумма вывода:</dt>
+                            <dd class="watch-bet__value watch-bet__value--accent">720</dd>
+                        </div>
+                    </dl>
+
+                    <div class="watch-bet__characteristics watch-bet__characteristics--mobile">
+                        <div class="watch-bet__characteristic">
+                            <span class="watch-bet__statistics">Вывод:</span>
+                            <span class="watch-bet__value watch-bet__value--accent">720</span>
+                        </div>
+                        <div class="watch-bet__characteristic">
+                            <span class="watch-bet__value">ID 545454</span>
+                        </div>
+                        <div class="watch-bet__characteristic">
+                            <div class="person">
+                                <span class="person__name">
+                                    Алексей Плеханов
+                                </span>
+                                <div class="person__awards">
+                                    <span class="person__award" style="background-image: url('img/person/award-1.svg');" aria-label="Award 1"></span>
+                                    <span class="person__award" style="background-image: url('img/person/award-2.svg');" aria-label="Award 2"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="watch-bet__faq faq" href="#">
+                        <span class="faq__title">FAQ</span>
+                        <span class="faq__subtitle">По типу <span>игры</span></span>
+                    </a>
+                </div>
+
+                <dl class="watch-bet__table">
+                    <div class="watch-bet__line">
+                        <dt class="watch-bet__name">Тип игры</dt>
+                        <dd class="watch-bet__meaning">Обычный</dd>
+                    </div>
+                    <div class="watch-bet__line">
+                        <dt class="watch-bet__name">Карта</dt>
+                        <dd class="watch-bet__meaning">Dust 2</dd>
+                    </div>
+                    <div class="watch-bet__line">
+                        <dt class="watch-bet__name">Режим</dt>
+                        <dd class="watch-bet__meaning">Классический</dd>
+                    </div>
+                    <div class="watch-bet__line">
+                        <dt class="watch-bet__name">Количество играков</dt>
+                        <dd class="watch-bet__meaning">1vs1</dd>
+                    </div>
+                    <div class="watch-bet__line">
+                        <dt class="watch-bet__name">Время раунда</dt>
+                        <dd class="watch-bet__meaning">3 минуты</dd>
+                    </div>
+                    <div class="watch-bet__line">
+                        <dt class="watch-bet__name">Включен нож или нет</dt>
+                        <dd class="watch-bet__meaning">Выключен</dd>
+                    </div>
+                    <div class="watch-bet__line">
+                        <dt class="watch-bet__name">Инфа с ограничением оружия</dt>
+                        <dd class="watch-bet__meaning"></dd>
+                    </div>
+                    <div class="watch-bet__line">
+                        <dt class="watch-bet__name">Включен френдли фаер или нет</dt>
+                        <dd class="watch-bet__meaning">Включен</dd>
+                    </div>
+                </dl>
+
+                <dl class="watch-bet__table watch-bet__table--mobile">
+                    <div class="watch-bet__line">
+                        <dt class="watch-bet__name">Время раунда</dt>
+                        <dd class="watch-bet__meaning">3 минуты</dd>
+                    </div>
+                    <div class="watch-bet__line">
+                        <dt class="watch-bet__name">Включен нож или нет</dt>
+                        <dd class="watch-bet__meaning">Выключен</dd>
+                    </div>
+                    <div class="watch-bet__line">
+                        <dt class="watch-bet__name">Ограничения на оружие:</dt>
+                        <dd class="watch-bet__meaning">Нет</dd>
+                    </div>
+                    <div class="watch-bet__line">
+                        <dt class="watch-bet__name">Френдли фаер:</dt>
+                        <dd class="watch-bet__meaning">Включен</dd>
+                    </div>
+                </dl>
+
+                <div class="watch-bet__bets">
+                    <span class="watch-bet__score">5:6</span>
+
+                    <ul class="watch-bet__items">
+                        <li class="watch-bet__item">
+                            @include('../components/cards/_bet-card.html')
+                        </li>
+                        <li class="watch-bet__item">
+                            @include('../components/cards/_bet-card.html')
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="watch-bet__additionally">
+                <div class="bet-win">
+                    <span class="bet-win__title">Выигрыш:</span>
+                    <ul class="bet-win__items">
+                        <li class="bet-win__item bet-win__item--yellow">
+                            <span class="bet-win__subtitle">1 место</span>
+                            <span class="bet-win__price">700₽</span>
+                        </li>
+                        <li class="bet-win__item">
+                            <span class="bet-win__subtitle">1 место</span>
+                            <span class="bet-win__price">700₽</span>
+                        </li>
+                        <li class="bet-win__item bet-win__item--grey">
+                            <span class="bet-win__subtitle">1 место</span>
+                            <span class="bet-win__price">700₽</span>
+                        </li>
+                    </ul>
+                    <button class="bet-win__button button" type="button">Принять</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

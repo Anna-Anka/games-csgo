@@ -25,6 +25,7 @@
 @import './components/copy';
 @import './components/balance-management';
 @import './components/personal-data';
+@import './components/person';
 
 // * management-form
 @import './components/management-form/management-form';
@@ -35,6 +36,7 @@
 // * cards
 @import './components/cards/tournament-card';
 @import './components/cards/cb-card';
+@import './components/cards/bet-card';
 
 // * marquee
 @import './components/marquee/marquee-team';
@@ -89,3 +91,10 @@
 @import './create-bet-page/create-bet';
 @import './create-bet-page/management-form';
 @import './create-bet-page/settings';
+
+// * watch-bet-page
+@import './watch-bet-page/watch-bet';
+@import './watch-bet-page/table';
+@import './watch-bet-page/faq';
+@import './watch-bet-page/characteristics';
+@import './watch-bet-page/bet-win';

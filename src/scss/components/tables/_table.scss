@@ -2,11 +2,11 @@
 	width: 100%;
 	padding-bottom: 20px;
 	overflow: auto;
-    border-radius: 10px;
+	border-radius: 10px;
 
-    @include mq(md) {
-        padding-bottom: 0;
-    }
+	@include mq(md) {
+		padding-bottom: 0;
+	}
 
 	&::-webkit-scrollbar {
 		width: 10px;
@@ -50,7 +50,7 @@
 
 		&--headding {
 			color: $black;
-			font-weight: $fw-800;
+			font-weight: $fw-700;
 
 			.table__item {
 				padding-bottom: 17px;
@@ -72,7 +72,7 @@
 		padding: 10px 4px;
 
 		&--bold {
-			font-weight: $fw-800;
+			font-weight: $fw-700;
 		}
 
 		&--accent {

@@ -62,6 +62,12 @@
 
                 <dl class="watch-bet__table">
                     <div class="watch-bet__line">
+                        <dt class="watch-bet__name">Дата поединка</dt>
+                        <dd class="watch-bet__meaning">
+                            <time datetime="2023-05-15">15 мая 2023</time>
+                        </dd>
+                    </div>
+                    <div class="watch-bet__line">
                         <dt class="watch-bet__name">Тип игры</dt>
                         <dd class="watch-bet__meaning">Обычный</dd>
                     </div>
@@ -96,9 +102,15 @@
                 </dl>
 
                 <dl class="watch-bet__table watch-bet__table--mobile">
-                    <div class="watch-bet__line">
+                    <!-- <div class="watch-bet__line">
                         <dt class="watch-bet__name">Время раунда</dt>
                         <dd class="watch-bet__meaning">3 минуты</dd>
+                    </div> -->
+                    <div class="watch-bet__line">
+                        <dt class="watch-bet__name">Дата поединка</dt>
+                        <dd class="watch-bet__meaning">
+                            <time datetime="2023-05-15">15 мая 2023</time>
+                        </dd>
                     </div>
                     <div class="watch-bet__line">
                         <dt class="watch-bet__name">Включен нож или нет</dt>
@@ -146,6 +158,39 @@
                         </li>
                     </ul>
                     <button class="bet-win__button button" type="button">Принять</button>
+                </div>
+
+                <div class="chat">
+                    <div class="chat__top">
+                        <span class="chat__title">Чат</span>
+                        <button class="chat__button" type="button">
+                            <span class="chat__point"></span>
+                            <span class="sr-only">Меню чата</span>
+                        </button>
+                    </div>
+                    <div class="chat__body">
+                        <div class="chat__item chat__item--my">
+                            <div class="chat__message">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+                            <span class="chat__name">Алексей Плеханов</span>
+                        </div>
+                        <div class="chat__item">
+                            <div class="chat__message">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </div>
+                            <span class="chat__name">Антон Н</span>
+                        </div>
+                    </div>
+                    <div class="chat__bottom">
+                        <label class="sr-only" for="chat-message">Введите сообщение</label>
+                        <textarea class="chat__textarea" name="message" id="chat-message" placeholder="Сообщение"></textarea>
+                        <button class="chat__send" type="button" aria-label="Отправить"></button>
+                    </div>
                 </div>
             </div>
         </div>

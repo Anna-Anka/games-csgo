@@ -56,10 +56,10 @@
         
                 <div class="header__account">
                     @if(context.isLogin === 'true') {
-                        <picture>
+                        <picture class="header__ava">
                             <source srcset="img/ava.avif" type="image/avif">
                             <source srcset="img/ava.webp" type="image/webp">
-                            <img class="header__ava" src="img/ava.png" alt=" Алексей Плеханов" width="37" height="37" loading="lazy">
+                            <img src="img/ava.png" alt=" Алексей Плеханов" width="37" height="37" loading="lazy">
                         </picture>
                         <a class="header__profile" href="#">
                             Алексей Плеханов
@@ -75,6 +75,13 @@
                 </div>
             </div>
 
+            @if(context.isLogin === 'true') {
+                <picture class="header__ava header__ava--mobile">
+                    <source srcset="img/ava.avif" type="image/avif">
+                    <source srcset="img/ava.webp" type="image/webp">
+                    <img src="img/ava.png" alt=" Алексей Плеханов" width="37" height="37" loading="lazy">
+                </picture>
+            }
             <button class="burger" type="button" data-burger>
                <span class="burger__line"></span>
                <span class="sr-only">Меню</span>

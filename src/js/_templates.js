@@ -107,9 +107,51 @@ if (document.querySelector('[data-select="true"]')) {
     selects.forEach(select => {
         const choices = new Choices(select, {
             searchEnabled: false,
+            position: 'bottom',
         });
     })
 }
+
+if (document.querySelector('[data-select-icon="true"]')) {
+    const selects = document.querySelectorAll('[data-select-icon="true"]')
+    selects.forEach(select => {
+        const choices = new Choices(select, {
+            searchEnabled: false,
+            position: 'bottom',
+            callbackOnCreateTemplates: (template) => {
+                return {
+                    item: ({ classNames }, data) => {
+                        const img = data.customProperties
+                        return template(`
+                            <div class="${classNames.item} ${data.highlighted
+                                ? classNames.highlightedState
+                                : classNames.itemSelectable
+                            } ${data.placeholder ? classNames.placeholder : ''
+                            }" data-item data-id="${data.id}" data-value="${data.value}" ${data.active ? 'aria-selected="true"' : ''
+                            } ${data.disabled ? 'aria-disabled="true"' : ''}>
+                            <span class= "management-form__icon" style="background-image: url('${img}');"></span> ${data.label}
+                            </div>
+                        `);
+                    },
+                    choice: ({ classNames }, data) => {
+                        const img = data.customProperties
+                        return template(`
+                            <div class="${classNames.item} ${classNames.itemChoice} ${data.disabled ? classNames.itemDisabled : classNames.itemSelectable
+                            }" data-select-text="" data-choice ${data.disabled
+                                ? 'data-choice-disabled aria-disabled="true"'
+                                : 'data-choice-selectable'
+                            } data-id="${data.id}" data-value="${data.value}" ${data.groupId > 0 ? 'role="treeitem"' : 'role="option"'
+                            }>
+                            <span class= "management-form__icon" style="background-image: url('${img}');"></span> ${data.label}
+                            </div>
+                        `);
+                    },
+                }
+            },
+        });
+    })
+}
+
 
 // * Подключение just-validate
 //import JustValidate from "just-validate";

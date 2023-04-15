@@ -213,6 +213,13 @@
 		}
 	}
 
+    &__icon {
+        display: block;
+		width: 30px;
+		height: 30px;
+		@include bg-contain;
+    }
+
 	&__type {
 		width: 40px;
 		height: 40px;

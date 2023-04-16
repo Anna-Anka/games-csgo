@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script defer src="js/main.js"></script>
 
-    <title>CS: GO — Ставки на спорт | Пополнение баланса</title>
+    <title>CS: GO — Ставки на спорт | Профиль</title>
 </head>
 
 <body class="body">
@@ -168,143 +168,175 @@
     </div>
 </div>
 
+<main class="main">
+    <h1 class="sr-only">Профиль</h1>
 <div class="container">
-    <div class="page-wrapper">
-        <nav class="private-menu">
-    <div class="private-menu__content">
-        <button class="private-menu__control" type="button" aria-label="Открыть" aria-expanded="false">
-            <span class="private-menu__icon" style="background-image: url('img/private-menu/control.svg');" aria-hidden></span>
-        </button>
-        <ul class="private-menu__items">
-            <li class="private-menu__item">
-                <a class="private-menu__link" href="#">
-                    <span class="private-menu__icon" style="background-image: url('img/private-menu/balance-refill.svg');" aria-hidden></span>
-                    <span>Пополнение баланса</span>
-                </a>
-            </li>
-            <li class="private-menu__item">
-                <a class="private-menu__link" href="#">
-                    <span class="private-menu__icon" style="background-image: url('img/private-menu/balance-withdraw.svg');" aria-hidden></span>
-                    <span>Запросить</span>
-                </a>
-            </li>
-            <li class="private-menu__item private-menu__item--active">
-                <a class="private-menu__link" href="#">
-                    <span class="private-menu__icon" style="background-image: url('img/private-menu/wallet.svg');" aria-hidden></span>
-                    <span>Кошелек</span>
-                </a>
-            </li>
-            <li class="private-menu__item">
-                <a class="private-menu__link" href="#">
-                    <span class="private-menu__icon" style="background-image: url('img/private-menu/history-refill.svg');" aria-hidden></span>
-                    <span>История пополнение баланса</span>
-                </a>
-            </li>
-            <li class="private-menu__item">
-                <a class="private-menu__link" href="#">
-                    <span class="private-menu__icon" style="background-image: url('img/private-menu/history-withdraw.svg');" aria-hidden></span>
-                    <span>История вывода</span>
-                </a>
+    <div class="profile-about">
+        <div class="profile-about__wrapper">
+            <picture class="profile-about__ava">
+                <source srcset="img/profile-page/ava.avif" type="image/avif">
+                <source srcset="img/profile-page/ava.webp" type="image/webp">
+                <img src="img/profile-page/ava.png" alt="Алексей Плеханов" width="150" height="150" loading="lazy">
+            </picture>
+            <div class="profile-about__content">
+                <div class="person">
+                    <span class="person__name subtitle subtitle--medium">
+                        Алексей Плеханов
+                    </span>
+                    <div class="person__awards">
+                        <span class="person__award" style="background-image: url('img/person/award-1.svg');" aria-label="Award 1"></span>
+                        <span class="person__award" style="background-image: url('img/person/award-2.svg');" aria-label="Award 2"></span>
+                    </div>
+                </div>
+
+                <dl class="profile-about__items">
+                    <div class="profile-about__item">
+                        <dt class="profile-about__name">Матчи:</dt>
+                        <dd class="profile-about__meaning"><a href="#">10</a></dd>
+                    </div>
+                    <div class="profile-about__item">
+                        <dt class="profile-about__name">Победы:</dt>
+                        <dd class="profile-about__meaning"><a href="#">5</a></dd>
+                    </div>
+                    <div class="profile-about__item">
+                        <dt class="profile-about__name">Проигрыши:</dt>
+                        <dd class="profile-about__meaning"><a href="#">5</a></dd>
+                    </div>
+                    <div class="profile-about__item">
+                        <dt class="profile-about__name">Притензии:</dt>
+                        <dd class="profile-about__meaning"><a href="#">5</a></dd>
+                    </div>
+                    <div class="profile-about__item">
+                        <dt class="profile-about__name">Заработано:</dt>
+                        <dd class="profile-about__meaning"><a href="#">1000$</a></dd>
+                    </div>
+                </dl>
+
+                <a class="profile-about__correct button button--icon button--border" href="#">Изменить профиль</a>
+            </div>
+        </div>
+
+        <dl class="profile-about__items profile-about__items--mobile">
+            <div class="profile-about__item">
+                <dt class="profile-about__name">Матчи</dt>
+                <dd class="profile-about__meaning"><a href="#">10</a></dd>
+            </div>
+            <div class="profile-about__item">
+                <dt class="profile-about__name">Побед</dt>
+                <dd class="profile-about__meaning"><a href="#">5</a></dd>
+            </div>
+            <div class="profile-about__item">
+                <dt class="profile-about__name">Пораж.</dt>
+                <dd class="profile-about__meaning"><a href="#">5</a></dd>
+            </div>
+            <div class="profile-about__item">
+                <dt class="profile-about__name">Прет.</dt>
+                <dd class="profile-about__meaning"><a href="#">5</a></dd>
+            </div>
+            <div class="profile-about__item">
+                <dt class="profile-about__name">Зар.</dt>
+                <dd class="profile-about__meaning"><a href="#">1000$</a></dd>
+            </div>
+        </dl>
+    </div>
+</div>
+    <div class="container">
+    <div class="last-activity">
+
+        <span class="last-activity__subtitle subtitle subtitle--medium">
+            Последняя активность
+        </span>
+
+        <div class="table">
+            <table class="table__wrapper">
+                <tr class="table__items table__items--headding">
+                    <th class="table__item">География</th>
+                    <th class="table__item">Килы</th>
+                    <th class="table__item">Точность</th>
+                    <th class="table__item">Конв. выстрелов</th>
+                    <th class="table__item">Частота выходов</th>
+                    <th class="table__item">% побед</th>
+                    <th class="table__item">Чистые победы</th>
+                    <th class="table__item">Кол-во претензий</th>
+                </tr>
+
+                <tr class="table__items">
+                    <td class="table__item">
+                        Саратов
+                    </td>
+                    <td class="table__item">
+                        10
+                    </td>
+                    <td class="table__item">
+                        78
+                    </td>
+                    <td class="table__item">
+                        20
+                    </td>
+                    <td class="table__item">
+                        2
+                    </td>
+                    <td class="table__item">
+                        55%
+                    </td>
+                    <td class="table__item">
+                        2
+                    </td>
+                    <td class="table__item">
+                        2
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <ul class="table-mobile">
+            <li class="table-mobile__list">
+                <span class="table-mobile__number">#1</span>
+                <dl class="table-mobile__items">
+                    <div>
+                        <dt>География:</dt>
+                        <dd>Саратов</dd>
+                    </div>
+
+                    <div>
+                        <dt>Килы:</dt>
+                        <dd>10</dd>
+                    </div>
+
+                    <div>
+                        <dt>Конв. выстрелов:</dt>
+                        <dd>78</dd>
+                    </div>
+                    <div>
+                        <dt>Частота выходов:</dt>
+                        <dd>2</dd>
+                    </div>
+                    <div>
+                        <dt>% побед:</dt>
+                        <dd>55%</dd>
+                    </div>
+                    <div>
+                        <dt>Кол- во претензий:</dt>
+                        <dd>2</dd>
+                    </div>
+                    <div>
+                        <dt>Карта:</dt>
+                        <dd>Dust</dd>
+                    </div>
+                    <div>
+                        <dt>Механика:</dt>
+                        <dd>Классический</dd>
+                    </div>
+                    <div>
+                        <dt>Дневной интервал:</dt>
+                        <dd>12-16</dd>
+                    </div>
+                </dl>
             </li>
         </ul>
     </div>
-</nav>
-
-        <main class="page-content main">
-            <div class="balance-management">
-    <h1 class="balance-management__title subtitle subtitle--medium">
-        Запросить
-    </h1>
-
-    <form class="balance-management__wrapper management-form" action="#">
-        <fieldset class="balance-management__items">
-            <legend class="balance-management__subtitle">Выберите способ вывода</legend>
-            <label class="balance-management__item">
-                <span class="balance-management__box">
-                    <span class="balance-management__name">Юмани</span>
-                    <picture aria-hidden="true">
-                        <source srcset="img/balance-management/youmoney.avif" type="image/avif">
-                        <source srcset="img/balance-management/youmoney.webp" type="image/webp">
-                        <img class="balance-management__img" src="img/balance-management/youmoney.png" alt="Юмани" loading="lazy">
-                    </picture>
-                </span>
-                <input class="balance-management__hidden" type="radio" name="way-get" value="Юмани">
-                <span class="balance-management__visible" aria-hidden="true"></span>
-            </label>
-
-            <label class="balance-management__item">
-                <span class="balance-management__box">
-                    <span class="balance-management__name">Банковская карта</span>
-                    <picture aria-hidden="true">
-                        <source srcset="img/balance-management/cards.avif" type="image/avif">
-                        <source srcset="img/balance-management/cards.webp" type="image/webp">
-                        <img class="balance-management__img" src="img/balance-management/cards.png" alt="Банковская карта" loading="lazy">
-                    </picture>
-                </span>
-                <input class="balance-management__hidden" type="radio" name="way-get" value="Банковская карта" checked>
-                <span class="balance-management__visible" aria-hidden="true"></span>
-            </label>
-
-            <label class="balance-management__item">
-                <span class="balance-management__box">
-                    <span class="balance-management__name">Яндекс Касса</span>
-                    <picture aria-hidden="true">
-                        <source srcset="img/balance-management/yandex.avif" type="image/avif">
-                        <source srcset="img/balance-management/yandex.webp" type="image/webp">
-                        <img class="balance-management__img" src="img/balance-management/yandex.png" alt="Яндекс Касса" loading="lazy">
-                    </picture>
-                </span>
-                <input class="balance-management__hidden" type="radio" name="way-get" value="Яндекс Касса">
-                <span class="balance-management__visible" aria-hidden="true"></span>
-            </label>
-
-            <label class="balance-management__item">
-                <span class="balance-management__box">
-                    <span class="balance-management__name">Qiwi</span>
-                    <picture>
-                        <source srcset="img/balance-management/qiwi.avif" type="image/avif">
-                        <source srcset="img/balance-management/qiwi.webp" type="image/webp">
-                        <img class="balance-management__img" src="img/balance-management/qiwi.png" alt="Qiwi" loading="lazy">
-                    </picture>
-                </span>
-                <input class="balance-management__hidden" type="radio" name="way-get" value="Qiwi">
-                <span class="balance-management__visible" aria-hidden="true"></span>
-            </label>
-        </fieldset>
-
-        <fieldset class="balance-management__items balance-management__items--mobile">
-            <legend class="balance-management__subtitle">Выберите способ вывода</legend>
-            <label class="sr-only" for="way-get">
-               Выберите Выберите способ вывода
-            </label>
-            <select class="management-form__select" name="way-get" id="way-get" data-select="true">
-                <option value="Юмани">Юмани</option>
-                <option value="Банковская карта">Банковская карта</option>
-                <option value="Яндекс Касса">Яндекс Касса</option>
-                <option value="Qiwi">Qiwi</option>
-            </select>
-        </fieldset>
-
-        <fieldset class="balance-management__sum">
-            <legend class="balance-management__subtitle">Сумма вывода</legend>
-            <label class="sr-only" for="balance-management-sum">
-                Введите сумму
-            </label>
-            <div class="balance-management__item balance-management__item--sum">
-                <span class="balance-management__decor" aria-hidden="true"></span>
-                <input class="balance-management__field" name="sum" type="number" id="balance-management-sum" required>
-                <span class="balance-management__rest">.00</span>
-            </div>
-
-            <button class="balance-management__button button" type="submit">
-                Вывести
-            </button>
-        </fieldset>
-    </form>
 </div>
-        </main>
-    </div>
-</div>
+</main>
 
 <!--  -->
 </div>

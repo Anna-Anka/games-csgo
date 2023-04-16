@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script defer src="js/main.js"></script>
 
-    <title>CS: GO — Ставки на спорт | История ставок</title>
+    <title>CS: GO — Ставки на спорт | Создать ставку</title>
 </head>
 
 <body class="body">
@@ -168,165 +168,211 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="page-wrapper">
-        <nav class="private-menu">
-    <div class="private-menu__content">
-        <button class="private-menu__control" type="button" aria-label="Открыть" aria-expanded="false">
-            <span class="private-menu__icon" style="background-image: url('img/private-menu/control.svg');" aria-hidden></span>
-        </button>
-        <ul class="private-menu__items">
-            <li class="private-menu__item">
-                <a class="private-menu__link" href="#">
-                    <span class="private-menu__icon" style="background-image: url('img/private-menu/create-bet.svg');" aria-hidden></span>
-                    <span>Создать ставку</span>
-                </a>
-            </li>
-            <li class="private-menu__item">
-                <a class="private-menu__link" href="#">
-                    <span class="private-menu__icon" style="background-image: url('img/private-menu/history-bet.svg');" aria-hidden></span>
-                    <span>История ставок</span>
-                </a>
-            </li>
-            <li class="private-menu__item private-menu__item--active">
-                <a class="private-menu__link" href="#">
-                    <span class="private-menu__icon" style="background-image: url('img/private-menu/upcoming-tournaments.svg');" aria-hidden></span>
-                    <span>Предстоящие турниры</span>
-                </a>
-            </li>
-            <li class="private-menu__item">
-                <a class="private-menu__link" href="#">
-                    <span class="private-menu__icon" style="background-image: url('img/private-menu/my-tournaments.svg');" aria-hidden></span>
-                    <span>Мои турниры</span>
-                </a>
-            </li>
-            <li class="private-menu__item">
-                <a class="private-menu__link" href="#">
-                    <span class="private-menu__icon" style="background-image: url('img/private-menu/favorite-tournaments.svg');" aria-hidden></span>
-                    <span>Турниры с избранными</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-</nav>
-
-        <main class="page-content main">
+<main class="main">
+    <div class="create-bet">
+        <div class="container">
             <form class="management-form" action="#">
     <div class="management-form__top">
         <h1 class="management-form__title subtitle subtitle--medium">
-            История ставок
+            Создание ставки
         </h1>
-        <button class="management-form__open" type="button" aria-expanded="false" aria-label="Открыть фильтры">Фильтры</button>
     </div>
 
-    <div class="upcoming-tournaments__form management-form__form">
-        <fieldset class="management-form__fieldes">
-            <span>
-                <legend class="management-form__subtitle">Результат от до</legend>
-            </span>
-            <div class="management-form__input management-form__input--first">
-                <label class="sr-only" for="history-bet-result-from">
-                    Результат от
-                </label>
-                <input class="management-form__field" name="bet-from" type="numbet" placeholder="100" id="history-bet-result-from">
+    <div class="create-bet__top">
+        <div class="create-bet__wrapper">
+            <span class="create-bet__headding">Режим</span>
+            <div class="create-bet__swiper swiper">
+                <ul class="create-bet__items swiper-wrapper">
+                    <li class="create-bet__item swiper-slide">
+                        <article class="cb-card" style="background-image: url('img/create-bet-page/mode-slider/1.png');">
+                            <div class="cb-card__box">
+                                <span class="cb-card__type" style="background-image: url('img/match-mode/pvp.svg');" aria-label="pvp"></span>
+                                <span class="cb-card__subtitle subtitle subtitle--medium">
+                                    Классический
+                                </span>
+                                <p class="cb-card__subtext">
+                                    Lorem ipsum dolor sit amet.
+                                </p>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="create-bet__item swiper-slide">
+                        <article class="cb-card" style="background-image: url('img/create-bet-page/mode-slider/1.png');">
+                            <div class="cb-card__box">
+                                <span class="cb-card__type" style="background-image: url('img/match-mode/pvp.svg');" aria-label="pvp"></span>
+                                <span class="cb-card__subtitle subtitle subtitle--medium">
+                                    Классический
+                                </span>
+                                <p class="cb-card__subtext">
+                                    Lorem ipsum dolor sit amet.
+                                </p>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+                <div class="create-bet__pagination swiper-pagination"></div>
+                <button class="create-bet__button create-bet__button--prev swiper-button-prev" type="button"></button>
+                <button class="create-bet__button create-bet__button--next swiper-button-next" type="button"></button>
             </div>
-            <div class="management-form__input management-form__input--second">
-                <label class="sr-only" for="history-bet-result-to">
-                    Результат до
-                </label>
-                <input class="management-form__field" name="bet-to" type="numbet" placeholder="100" id="history-bet-result-to">
+        </div>
+        <div class="create-bet__wrapper">
+            <span class="create-bet__headding">Режим</span>
+            <div class="create-bet__swiper swiper">
+                <ul class="create-bet__items swiper-wrapper">
+                    <li class="create-bet__item swiper-slide">
+                        <article class="cb-card" style="background-image: url('img/create-bet-page/mode-slider/1.png');">
+                            <div class="cb-card__box">
+                                <span class="cb-card__type" style="background-image: url('img/match-mode/pvp.svg');" aria-label="pvp"></span>
+                                <span class="cb-card__subtitle subtitle subtitle--medium">
+                                    Классический
+                                </span>
+                                <p class="cb-card__subtext">
+                                    Lorem ipsum dolor sit amet.
+                                </p>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="create-bet__item swiper-slide">
+                        <article class="cb-card" style="background-image: url('img/create-bet-page/mode-slider/1.png');">
+                            <div class="cb-card__box">
+                                <span class="cb-card__type" style="background-image: url('img/match-mode/pvp.svg');" aria-label="pvp"></span>
+                                <span class="cb-card__subtitle subtitle subtitle--medium">
+                                    Классический
+                                </span>
+                                <p class="cb-card__subtext">
+                                    Lorem ipsum dolor sit amet.
+                                </p>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+                <div class="create-bet__pagination swiper-pagination"></div>
+                <button class="create-bet__button create-bet__button--prev swiper-button-prev" type="button"></button>
+                <button class="create-bet__button create-bet__button--next swiper-button-next" type="button"></button>
             </div>
-        </fieldset>
+        </div>
 
+        <div class="create-bet__settings">
+            <div class="management-form__item management-form__item--column">
+                <label class="management-form__headding" for="create-bet-visibility">
+                    Видимость
+                </label>
+                <select class="management-form__select" name="visibility" id="create-bet-visibility" data-select="true">
+                    <option value="Lorem ipsum">Lorem ipsum</option>
+                    <option value="Lorem ipsum">Lorem ipsum</option>
+                    <option value="Lorem ipsum">Lorem ipsum</option>
+                    <option value="Lorem ipsum">Lorem ipsum</option>
+                </select>
+            </div>
+
+            <div class="management-form__items">
+                <label class="management-form__headding" for="create-bet-sum">
+                    Сумма
+                </label>
+                <div class="management-form__item">
+                    <span class="management-form__subtitle" aria-label="true" style="background-image: url('img/icons/dollar-coins.svg');"></span>
+                    <input class="management-form__field" name="sum" type="text" placeholder="1000" id="create-bet-sum" required>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="create-bet__form management-form__form">
         <div class="management-form__items">
             <div class="management-form__item">
-                <label class="management-form__subtitle" for="history-bet-map">Карта</label>
-                <select class="management-form__select" name="map" id="history-bet-map" data-select="true">
-                    <option value="Dast 1">Dast 1</option>
-                    <option value="Dast 2">Dast 2</option>
-                    <option value="Dast 3">Dast 3</option>
-                    <option value="Dast 4">Dast 4</option>
+                <label class="management-form__subtitle" for="create-bet-map">
+                    Тип карты
+                </label>
+                <select class="management-form__select" name="map-type" id="create-bet-map" data-select="true">
+                    <option value="Заложники 1">Заложники 1</option>
+                    <option value="Заложники 2">Заложники 2</option>
+                    <option value="Заложники 3">Заложники 3</option>
+                    <option value="Заложники 4">Заложники 4</option>
                 </select>
             </div>
 
             <div class="management-form__item">
-                <label class="management-form__subtitle" for="history-bet-date">Дата</label>
-                <input class="management-form__field" name="datetime" type="datetime" placeholder="10.10.2022" id="history-bet-date" required>
+                <label class="management-form__subtitle" for="create-bet-guns">
+                    Ограничение на оружие
+                </label>
+                <select class="management-form__select" name="guns" id="create-bet-guns" data-select="true">
+                    <option value="Нет">Нет</option>
+                    <option value="Нет">Нет</option>
+                    <option value="Нет">Нет</option>
+                    <option value="Нет">Нет</option>
+                </select>
             </div>
         </div>
 
-        <div class="management-form__item management-form__item--checkbox management-form__item--no-shadow">
-            <input class="management-form__checkbox" name="claim" type="checkbox" id="history-bet-claim" required>
-            <label for="history-bet-claim">Претензия</label>
+        <div class="management-form__items">
+            <div class="management-form__item">
+                <label class="management-form__subtitle" for="create-bet-time">
+                    Время раунда
+                </label>
+                <input class="management-form__field" name="time" type="text" placeholder="00 ч. 00 м. 00 с." id="create-bet-time" required>
+            </div>
+
+            <div class="management-form__item">
+                <label class="management-form__subtitle" for="create-bet-formula">
+                    Формула
+                </label>
+                <select class="management-form__select" name="formula" id="create-bet-formula" data-select="true">
+                    <option value="Всё победителю">Всё победителю</option>
+                    <option value="Всё победителю">Всё победителю</option>
+                    <option value="Всё победителю">Всё победителю</option>
+                    <option value="Всё победителю">Всё победителю</option>
+                </select>
+            </div>
         </div>
 
         <button class="management-form__button button" type="submit">
-            Применить
+            Создать ставку
         </button>
     </div>
 </form>
             <div class="table">
     <table class="table__wrapper">
         <tr class="table__items table__items--headding">
-            <th class="table__item">ID</th>
-            <th class="table__item">Результат</th>
-            <th class="table__item">Карта</th>
-            <th class="table__item">Дата</th>
-            <th class="table__item">Претензия</th>
+            <th class="table__item">Тип игры</th>
+            <th class="table__item">Тип карты</th>
+            <th class="table__item">Ограничение на оружие</th>
+            <th class="table__item">Время раунда</th>
+            <th class="table__item">Формула</th>
         </tr>
 
         <tr class="table__items">
-            <td class="table__item table__item--bold">
-                18998872
+            <td class="table__item">
+                Обычный
             </td>
             <td class="table__item">
-                от 10 до 10.000
+                Заложники
             </td>
             <td class="table__item">
-                Dast 2
+                Нет
             </td>
             <td class="table__item">
-                <time datetime="2023-10-10">10.10.2023</time>
-            </td>
-            <td class="table__item table__item--accent">
-                <a href="#">Есть</a>
-            </td>
-        </tr>
-
-        <tr class="table__items">
-            <td class="table__item table__item--bold">
-                221112
+                1ч 40 м
             </td>
             <td class="table__item">
-                от 10 до 10.000
-            </td>
-            <td class="table__item">
-                Dast 2
-            </td>
-            <td class="table__item">
-                <time datetime="2023-10-10">10.10.2023</time>
-            </td>
-            <td class="table__item table__item--accent">
-                <a href="#">Есть</a>
+                Всё победителю
             </td>
         </tr>
 
         <tr class="table__items">
-            <td class="table__item table__item--bold">
-                23323
+            <td class="table__item">
+                Обычный
             </td>
             <td class="table__item">
-                от 10 до 10.000
+                Заложники
             </td>
             <td class="table__item">
-                Dast 2
+                Нет
             </td>
             <td class="table__item">
-                <time datetime="2023-10-10">10.10.2023</time>
+                1ч 40 м
             </td>
             <td class="table__item">
-                Нету
+                Всё победителю
             </td>
         </tr>
     </table>
@@ -335,77 +381,37 @@
 <ul class="table-mobile">
     <li class="table-mobile__list">
         <span class="table-mobile__number">#1</span>
-        <span class="table-mobile__icon table-mobile__icon--game">Dust 2</span>
-        <time class="table-mobile__icon table-mobile__icon--time" datetime="2023-10-10">
-            10.10.2023
-        </time>
-        <span class="table-mobile__icon table-mobile__icon--id">
-            188233844
-        </span>
         <dl class="table-mobile__items">
             <div>
-                <dt>Претензия:</dt>
-                <dd>
-                    <a href="#">Есть</a>
-                </dd>
+                <dt>Тип игры:</dt>
+                <dd>Обычный</dd>
             </div>
 
             <div>
-                <dt>Результат:</dt>
-                <dd>от 10 до 10.000</dd>
-            </div>
-        </dl>
-    </li>
-    <li class="table-mobile__list">
-        <span class="table-mobile__number">#2</span>
-        <span class="table-mobile__icon table-mobile__icon--game">Dust 2</span>
-        <time class="table-mobile__icon table-mobile__icon--time" datetime="2023-10-10">
-            10.10.2023
-        </time>
-        <span class="table-mobile__icon table-mobile__icon--id">
-            188233844
-        </span>
-        <dl class="table-mobile__items">
-            <div>
-                <dt>Претензия:</dt>
-                <dd>
-                    <a href="#">Есть</a>
-                </dd>
+                <dt>Тип карты:</dt>
+                <dd>Заложники</dd>
             </div>
 
             <div>
-                <dt>Результат:</dt>
-                <dd>от 10 до 10.000</dd>
-            </div>
-        </dl>
-    </li>
-    <li class="table-mobile__list">
-        <span class="table-mobile__number">#3</span>
-        <span class="table-mobile__icon table-mobile__icon--game">Dust 2</span>
-        <time class="table-mobile__icon table-mobile__icon--time" datetime="2023-10-10">
-            10.10.2023
-        </time>
-        <span class="table-mobile__icon table-mobile__icon--id">
-            188233844
-        </span>
-        <dl class="table-mobile__items">
-            <div>
-                <dt>Претензия:</dt>
-                <dd>
-                    <a href="#">Есть</a>
-                </dd>
+                <dt>Ограничения на оружие:</dt>
+                <dd><a href="#">Нет</a></dd>
             </div>
 
             <div>
-                <dt>Результат:</dt>
-                <dd>от 10 до 10.000</dd>
+                <dt>Время раунда:</dt>
+                <dd>1ч 40 м</dd>
+            </div>
+
+            <div>
+                <dt>Формула:</dt>
+                <dd>Всё победителю</dd>
             </div>
         </dl>
     </li>
 </ul>
-        </main>
+        </div>
     </div>
-</div>
+</main>
 
 <!--  -->
 </div>

@@ -68,9 +68,12 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _swipers_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./swipers/_slider */ "./src/js/swipers/_slider.js");
+/* harmony import */ var _swipers_create_bet_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./swipers/_create-bet-slider */ "./src/js/swipers/_create-bet-slider.js");
+/* harmony import */ var _swipers_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./swipers/_slider */ "./src/js/swipers/_slider.js");
 
-(0,_swipers_slider__WEBPACK_IMPORTED_MODULE_0__.privateMenuSwiper)();
+
+(0,_swipers_slider__WEBPACK_IMPORTED_MODULE_1__.privateMenuSwiper)();
+(0,_swipers_create_bet_slider__WEBPACK_IMPORTED_MODULE_0__.createBetSwiper)();
 
 /***/ }),
 
@@ -193,7 +196,43 @@ if (document.querySelector('[data-select="true"]')) {
   const selects = document.querySelectorAll('[data-select="true"]');
   selects.forEach(select => {
     const choices = new (choices_js__WEBPACK_IMPORTED_MODULE_3___default())(select, {
-      searchEnabled: false
+      searchEnabled: false,
+      position: 'bottom'
+    });
+  });
+}
+if (document.querySelector('[data-select-icon="true"]')) {
+  const selects = document.querySelectorAll('[data-select-icon="true"]');
+  selects.forEach(select => {
+    const choices = new (choices_js__WEBPACK_IMPORTED_MODULE_3___default())(select, {
+      searchEnabled: false,
+      position: 'bottom',
+      callbackOnCreateTemplates: template => {
+        return {
+          item: (_ref, data) => {
+            let {
+              classNames
+            } = _ref;
+            const img = data.customProperties;
+            return template(`
+                            <div class="${classNames.item} ${data.highlighted ? classNames.highlightedState : classNames.itemSelectable} ${data.placeholder ? classNames.placeholder : ''}" data-item data-id="${data.id}" data-value="${data.value}" ${data.active ? 'aria-selected="true"' : ''} ${data.disabled ? 'aria-disabled="true"' : ''}>
+                            <span class= "management-form__icon" style="background-image: url('${img}');"></span> ${data.label}
+                            </div>
+                        `);
+          },
+          choice: (_ref2, data) => {
+            let {
+              classNames
+            } = _ref2;
+            const img = data.customProperties;
+            return template(`
+                            <div class="${classNames.item} ${classNames.itemChoice} ${data.disabled ? classNames.itemDisabled : classNames.itemSelectable}" data-select-text="" data-choice ${data.disabled ? 'data-choice-disabled aria-disabled="true"' : 'data-choice-selectable'} data-id="${data.id}" data-value="${data.value}" ${data.groupId > 0 ? 'role="treeitem"' : 'role="option"'}>
+                            <span class= "management-form__icon" style="background-image: url('${img}');"></span> ${data.label}
+                            </div>
+                        `);
+          }
+        };
+      }
     });
   });
 }
@@ -494,6 +533,43 @@ const tournamentTimer = () => {
       };
       timeCount();
       setInterval(timeCount, 1000);
+    });
+  }
+};
+
+/***/ }),
+
+/***/ "./src/js/swipers/_create-bet-slider.js":
+/*!**********************************************!*\
+  !*** ./src/js/swipers/_create-bet-slider.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createBetSwiper": () => (/* binding */ createBetSwiper)
+/* harmony export */ });
+/* harmony import */ var _libs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_libs */ "./src/js/_libs.js");
+
+const createBetSwiper = () => {
+  if (document.querySelector('.create-bet__swiper')) {
+    const allSwipers = document.querySelectorAll('.create-bet__swiper');
+    allSwipers.forEach(swiper => {
+      const slider = new Swiper(swiper, {
+        loop: true,
+        speed: 800,
+        slidesPerGroup: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: swiper.querySelector('.create-bet__pagination'),
+          clickable: true
+        },
+        navigation: {
+          nextEl: swiper.querySelector('.create-bet__button--next'),
+          prevEl: swiper.querySelector('.create-bet__button--prev')
+        }
+      });
     });
   }
 };

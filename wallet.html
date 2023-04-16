@@ -2,18 +2,20 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css">
-  <script defer src="js/main.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script defer src="js/main.js"></script>
 
-  <title>CS: GO — Ставки на спорт | Кошелёк</title>
+    <title>CS: GO — Ставки на спорт | Кошелёк</title>
 </head>
 
 <body class="body">
-  <div class="wrapper">
-
+    <div class="wrapper">
 <!--  -->
 <header class="header">
 
@@ -70,13 +72,15 @@
 
                 <div class="header__account">
 
-                        <picture>
-                            <source srcset="img/ava.avif" type="image/avif">
-                            <source srcset="img/ava.webp" type="image/webp">
-                            <img class="header__ava" src="img/ava.png" alt=" Алексей Плеханов" width="37" height="37" loading="lazy">
-                        </picture>
                         <a class="header__profile" href="#">
-                            Алексей Плеханов
+                            <picture class="header__ava">
+                                <source srcset="img/ava.avif" type="image/avif">
+                                <source srcset="img/ava.webp" type="image/webp">
+                                <img src="img/ava.png" alt=" Алексей Плеханов" width="37" height="37" loading="lazy">
+                            </picture>
+                            <span>
+                                Алексей Плеханов
+                            </span>
                         </a>
                         <button class="header__logout" type="button">
                             <span class="sr-only">Выйти</span>
@@ -84,6 +88,14 @@
 
                 </div>
             </div>
+
+                <a class="header__profile header__profile--mobile" href="#">
+                    <picture class="header__ava">
+                        <source srcset="img/ava.avif" type="image/avif">
+                        <source srcset="img/ava.webp" type="image/webp">
+                        <img src="img/ava.png" alt=" Алексей Плеханов" width="37" height="37" loading="lazy">
+                    </picture>
+                </a>
 
             <button class="burger" type="button" data-burger>
                <span class="burger__line"></span>
@@ -166,37 +178,36 @@
         <ul class="private-menu__items">
             <li class="private-menu__item">
                 <a class="private-menu__link" href="#">
-                    <span class="private-menu__icon" style="background-image: url('img/private-menu/create-bet.svg');" aria-hidden></span>
-                    <span>Создать ставку</span>
+                    <span class="private-menu__icon" style="background-image: url('img/private-menu/balance-refill.svg');" aria-hidden></span>
+                    <span>Пополнение баланса</span>
                 </a>
             </li>
             <li class="private-menu__item">
                 <a class="private-menu__link" href="#">
-                    <span class="private-menu__icon" style="background-image: url('img/private-menu/history-bet.svg');" aria-hidden></span>
-                    <span>История ставок</span>
+                    <span class="private-menu__icon" style="background-image: url('img/private-menu/balance-withdraw.svg');" aria-hidden></span>
+                    <span>Запросить</span>
                 </a>
             </li>
             <li class="private-menu__item private-menu__item--active">
                 <a class="private-menu__link" href="#">
-                    <span class="private-menu__icon" style="background-image: url('img/private-menu/upcoming-tournaments.svg');" aria-hidden></span>
-                    <span>Предстоящие турниры</span>
+                    <span class="private-menu__icon" style="background-image: url('img/private-menu/wallet.svg');" aria-hidden></span>
+                    <span>Кошелек</span>
                 </a>
             </li>
             <li class="private-menu__item">
                 <a class="private-menu__link" href="#">
-                    <span class="private-menu__icon" style="background-image: url('img/private-menu/my-tournaments.svg');" aria-hidden></span>
-                    <span>Мои турниры</span>
+                    <span class="private-menu__icon" style="background-image: url('img/private-menu/history-refill.svg');" aria-hidden></span>
+                    <span>История пополнение баланса</span>
                 </a>
             </li>
             <li class="private-menu__item">
                 <a class="private-menu__link" href="#">
-                    <span class="private-menu__icon" style="background-image: url('img/private-menu/favorite-tournaments.svg');" aria-hidden></span>
-                    <span>Турниры с избранными</span>
+                    <span class="private-menu__icon" style="background-image: url('img/private-menu/history-withdraw.svg');" aria-hidden></span>
+                    <span>История вывода</span>
                 </a>
             </li>
         </ul>
     </div>
-
 </nav>
 
         <main class="page-content main">

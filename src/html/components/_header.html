@@ -56,13 +56,15 @@
         
                 <div class="header__account">
                     @if(context.isLogin === 'true') {
-                        <picture class="header__ava">
-                            <source srcset="img/ava.avif" type="image/avif">
-                            <source srcset="img/ava.webp" type="image/webp">
-                            <img src="img/ava.png" alt=" Алексей Плеханов" width="37" height="37" loading="lazy">
-                        </picture>
                         <a class="header__profile" href="#">
-                            Алексей Плеханов
+                            <picture class="header__ava">
+                                <source srcset="img/ava.avif" type="image/avif">
+                                <source srcset="img/ava.webp" type="image/webp">
+                                <img src="img/ava.png" alt=" Алексей Плеханов" width="37" height="37" loading="lazy">
+                            </picture>
+                            <span>
+                                Алексей Плеханов
+                            </span>
                         </a>
                         <button class="header__logout" type="button">
                             <span class="sr-only">Выйти</span>
@@ -76,11 +78,13 @@
             </div>
 
             @if(context.isLogin === 'true') {
-                <picture class="header__ava header__ava--mobile">
-                    <source srcset="img/ava.avif" type="image/avif">
-                    <source srcset="img/ava.webp" type="image/webp">
-                    <img src="img/ava.png" alt=" Алексей Плеханов" width="37" height="37" loading="lazy">
-                </picture>
+                <a class="header__profile header__profile--mobile" href="#">
+                    <picture class="header__ava">
+                        <source srcset="img/ava.avif" type="image/avif">
+                        <source srcset="img/ava.webp" type="image/webp">
+                        <img src="img/ava.png" alt=" Алексей Плеханов" width="37" height="37" loading="lazy">
+                    </picture>
+                </a>
             }
             <button class="burger" type="button" data-burger>
                <span class="burger__line"></span>

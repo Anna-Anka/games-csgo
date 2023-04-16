@@ -3,19 +3,16 @@
         <h1 class="sr-only">Претензия</h1>
         <a class="claim-page__back" href="#">Назад</a>
 
-        <form class="claim-page__form management-form" action="#">
-            <div class="claim-page__box">
-                <div class="management-form__item">
-                    <select class="management-form__select" name="map" data-select="true">
-                        <option value="Выберите тип претензии">Выберите тип претензии</option>
-                        <option value="Dast 2">Dast 2</option>
-                        <option value="Dast 3">Dast 3</option>
-                        <option value="Dast 4">Dast 4</option>
-                    </select>
-                    <button class="management-form__subtitle" type="button">Приложить файл</button>
-                </div>
-                <label class="sr-only" for="claim-file">Загрузите файлы</label>
-                <input class="claim-page__file" name="file" type="file" placeholder="Загрузите файлы" id="claim-file" required>
+        <form class="claim-page__form" action="#">
+            <div class="claim-page__items input-group mb-3">
+                <select class="claim-page__select form-select" id="inputGroupSelect02">
+                    <option selected>Choose...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+                <input class="claim-page__file form-control hide-btn" type="file" id="inputGroupFile01">
+                <label class="claim-page__label button input-group-text" for="inputGroupFile01">Обзор...</label>
             </div>
             
             <span class="claim-page__subtitle">

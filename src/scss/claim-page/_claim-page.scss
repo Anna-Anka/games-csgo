@@ -26,6 +26,25 @@
 		@include adaptiv-value('margin-bottom', 22, 12, 1);
 		display: inline-block;
 		font-weight: $fw-700;
+        @include adaptiv-value('font-size', 20, 18, 1);
+	}
+
+	&__items {
+		box-shadow: 2px 10px 10px rgba($blue-600, 0.04);
+	}
+
+	&__select {
+		border: 0;
+		border-radius: 10px 0 0 10px;
+	}
+
+	&__file {
+		height: 100%;
+		border-color: transparent;
+	}
+
+	&__label {
+		padding: 9px 20px;
 	}
 
 	&__text {
@@ -40,55 +59,7 @@
 		}
 	}
 
-	&__file {
-		display: none;
-
-		&--active {
-			display: block;
-		}
-	}
-
-	&__box {
-		margin-bottom: 30px;
-	}
-
 	&__button {
 		width: 100%;
-	}
-
-	.management-form {
-		&__item {
-			margin-bottom: 20px;
-
-			@include mq(sm) {
-				flex-direction: column;
-				box-shadow: none;
-			}
-		}
-
-		&__subtitle {
-			border-radius: 0 10px 10px 0;
-
-			@include mq(sm) {
-				border-radius: 5px;
-			}
-		}
-
-		.choices {
-			margin-bottom: 0;
-
-			@include mq(sm) {
-				margin-bottom: 12px;
-			}
-
-			&__inner {
-				border-radius: 10px 0 0 10px;
-
-				@include mq(sm) {
-					border-radius: 7px;
-					box-shadow: 1px 7px 7px rgba($blue-600, 0.04);
-				}
-			}
-		}
 	}
 }

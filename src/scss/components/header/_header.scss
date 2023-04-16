@@ -104,18 +104,15 @@
 	}
 
 	&__profile {
+		display: flex;
+		align-items: center;
+
 		&:not(:last-child) {
 			@include adaptiv-value('margin-right', 15, 10, 1);
 		}
-	}
-
-	&__ava {
-		width: 35px;
-		height: 35px;
-		margin-right: 8px;
-        border-radius: 50%;
 
 		&--mobile {
+			z-index: 4;
 			display: none;
 
 			@include mq(xl) {
@@ -124,6 +121,13 @@
 				margin-left: auto;
 			}
 		}
+	}
+
+	&__ava {
+		width: 35px;
+		height: 35px;
+		margin-right: 8px;
+		border-radius: 50%;
 
 		img {
 			width: 100%;

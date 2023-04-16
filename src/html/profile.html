@@ -9,8 +9,11 @@
 @include('./components/_modals.html')
 
 <main class="main">
-    @include('./profile-page/_profile-about.html')
-    @include('./profile-page/_last-activity.html')
+    <div class="container">
+        <h1 class="sr-only">Профиль</h1>
+        @include('./profile-page/_profile-about.html')
+        @include('./profile-page/_last-activity.html')
+    </div>
 </main>
 
 <!--  -->

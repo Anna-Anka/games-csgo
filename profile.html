@@ -169,173 +169,170 @@
 </div>
 
 <main class="main">
-    <h1 class="sr-only">Профиль</h1>
-<div class="container">
-    <div class="profile-about">
-        <div class="profile-about__wrapper">
-            <picture class="profile-about__ava">
-                <source srcset="img/profile-page/ava.avif" type="image/avif">
-                <source srcset="img/profile-page/ava.webp" type="image/webp">
-                <img src="img/profile-page/ava.png" alt="Алексей Плеханов" width="150" height="150" loading="lazy">
-            </picture>
-            <div class="profile-about__content">
-                <div class="person">
-                    <span class="person__name subtitle subtitle--medium">
-                        Алексей Плеханов
-                    </span>
-                    <div class="person__awards">
-                        <span class="person__award" style="background-image: url('img/person/award-1.svg');" aria-label="Award 1"></span>
-                        <span class="person__award" style="background-image: url('img/person/award-2.svg');" aria-label="Award 2"></span>
-                    </div>
+    <div class="container">
+        <h1 class="sr-only">Профиль</h1>
+        <div class="profile-about">
+    <div class="profile-about__wrapper">
+        <picture class="profile-about__ava">
+            <source srcset="img/profile-page/ava.avif" type="image/avif">
+            <source srcset="img/profile-page/ava.webp" type="image/webp">
+            <img src="img/profile-page/ava.png" alt="Алексей Плеханов" width="150" height="150" loading="lazy">
+        </picture>
+        <div class="profile-about__content">
+            <div class="person">
+                <span class="person__name subtitle subtitle--medium">
+                    Алексей Плеханов
+                </span>
+                <div class="person__awards">
+                    <span class="person__award" style="background-image: url('img/person/award-1.svg');" aria-label="Award 1"></span>
+                    <span class="person__award" style="background-image: url('img/person/award-2.svg');" aria-label="Award 2"></span>
+                </div>
+            </div>
+
+            <dl class="profile-about__items">
+                <div class="profile-about__item">
+                    <dt class="profile-about__name">Матчи:</dt>
+                    <dd class="profile-about__meaning"><a href="#">10</a></dd>
+                </div>
+                <div class="profile-about__item">
+                    <dt class="profile-about__name">Победы:</dt>
+                    <dd class="profile-about__meaning"><a href="#">5</a></dd>
+                </div>
+                <div class="profile-about__item">
+                    <dt class="profile-about__name">Проигрыши:</dt>
+                    <dd class="profile-about__meaning"><a href="#">5</a></dd>
+                </div>
+                <div class="profile-about__item">
+                    <dt class="profile-about__name">Притензии:</dt>
+                    <dd class="profile-about__meaning"><a href="#">5</a></dd>
+                </div>
+                <div class="profile-about__item">
+                    <dt class="profile-about__name">Заработано:</dt>
+                    <dd class="profile-about__meaning"><a href="#">1000$</a></dd>
+                </div>
+            </dl>
+
+            <a class="profile-about__correct button button--icon button--border" href="#">Изменить профиль</a>
+        </div>
+    </div>
+
+    <dl class="profile-about__items profile-about__items--mobile">
+        <div class="profile-about__item">
+            <dt class="profile-about__name">Матчи</dt>
+            <dd class="profile-about__meaning"><a href="#">10</a></dd>
+        </div>
+        <div class="profile-about__item">
+            <dt class="profile-about__name">Побед</dt>
+            <dd class="profile-about__meaning"><a href="#">5</a></dd>
+        </div>
+        <div class="profile-about__item">
+            <dt class="profile-about__name">Пораж.</dt>
+            <dd class="profile-about__meaning"><a href="#">5</a></dd>
+        </div>
+        <div class="profile-about__item">
+            <dt class="profile-about__name">Прет.</dt>
+            <dd class="profile-about__meaning"><a href="#">5</a></dd>
+        </div>
+        <div class="profile-about__item">
+            <dt class="profile-about__name">Зар.</dt>
+            <dd class="profile-about__meaning"><a href="#">1000$</a></dd>
+        </div>
+    </dl>
+</div>
+        <div class="last-activity">
+    <span class="last-activity__subtitle subtitle subtitle--medium">
+        Последняя активность
+    </span>
+
+    <div class="table">
+        <table class="table__wrapper">
+            <tr class="table__items table__items--headding">
+                <th class="table__item">География</th>
+                <th class="table__item">Килы</th>
+                <th class="table__item">Точность</th>
+                <th class="table__item">Конв. выстрелов</th>
+                <th class="table__item">Частота выходов</th>
+                <th class="table__item">% побед</th>
+                <th class="table__item">Чистые победы</th>
+                <th class="table__item">Кол-во претензий</th>
+            </tr>
+
+            <tr class="table__items">
+                <td class="table__item">
+                    Саратов
+                </td>
+                <td class="table__item">
+                    10
+                </td>
+                <td class="table__item">
+                    78
+                </td>
+                <td class="table__item">
+                    20
+                </td>
+                <td class="table__item">
+                    2
+                </td>
+                <td class="table__item">
+                    55%
+                </td>
+                <td class="table__item">
+                    2
+                </td>
+                <td class="table__item">
+                    2
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <ul class="table-mobile">
+        <li class="table-mobile__list">
+            <span class="table-mobile__number">#1</span>
+            <dl class="table-mobile__items">
+                <div>
+                    <dt>География:</dt>
+                    <dd>Саратов</dd>
                 </div>
 
-                <dl class="profile-about__items">
-                    <div class="profile-about__item">
-                        <dt class="profile-about__name">Матчи:</dt>
-                        <dd class="profile-about__meaning"><a href="#">10</a></dd>
-                    </div>
-                    <div class="profile-about__item">
-                        <dt class="profile-about__name">Победы:</dt>
-                        <dd class="profile-about__meaning"><a href="#">5</a></dd>
-                    </div>
-                    <div class="profile-about__item">
-                        <dt class="profile-about__name">Проигрыши:</dt>
-                        <dd class="profile-about__meaning"><a href="#">5</a></dd>
-                    </div>
-                    <div class="profile-about__item">
-                        <dt class="profile-about__name">Притензии:</dt>
-                        <dd class="profile-about__meaning"><a href="#">5</a></dd>
-                    </div>
-                    <div class="profile-about__item">
-                        <dt class="profile-about__name">Заработано:</dt>
-                        <dd class="profile-about__meaning"><a href="#">1000$</a></dd>
-                    </div>
-                </dl>
+                <div>
+                    <dt>Килы:</dt>
+                    <dd>10</dd>
+                </div>
 
-                <a class="profile-about__correct button button--icon button--border" href="#">Изменить профиль</a>
-            </div>
-        </div>
-
-        <dl class="profile-about__items profile-about__items--mobile">
-            <div class="profile-about__item">
-                <dt class="profile-about__name">Матчи</dt>
-                <dd class="profile-about__meaning"><a href="#">10</a></dd>
-            </div>
-            <div class="profile-about__item">
-                <dt class="profile-about__name">Побед</dt>
-                <dd class="profile-about__meaning"><a href="#">5</a></dd>
-            </div>
-            <div class="profile-about__item">
-                <dt class="profile-about__name">Пораж.</dt>
-                <dd class="profile-about__meaning"><a href="#">5</a></dd>
-            </div>
-            <div class="profile-about__item">
-                <dt class="profile-about__name">Прет.</dt>
-                <dd class="profile-about__meaning"><a href="#">5</a></dd>
-            </div>
-            <div class="profile-about__item">
-                <dt class="profile-about__name">Зар.</dt>
-                <dd class="profile-about__meaning"><a href="#">1000$</a></dd>
-            </div>
-        </dl>
-    </div>
+                <div>
+                    <dt>Конв. выстрелов:</dt>
+                    <dd>78</dd>
+                </div>
+                <div>
+                    <dt>Частота выходов:</dt>
+                    <dd>2</dd>
+                </div>
+                <div>
+                    <dt>% побед:</dt>
+                    <dd>55%</dd>
+                </div>
+                <div>
+                    <dt>Кол- во претензий:</dt>
+                    <dd>2</dd>
+                </div>
+                <div>
+                    <dt>Карта:</dt>
+                    <dd>Dust</dd>
+                </div>
+                <div>
+                    <dt>Механика:</dt>
+                    <dd>Классический</dd>
+                </div>
+                <div>
+                    <dt>Дневной интервал:</dt>
+                    <dd>12-16</dd>
+                </div>
+            </dl>
+        </li>
+    </ul>
 </div>
-    <div class="container">
-    <div class="last-activity">
-
-        <span class="last-activity__subtitle subtitle subtitle--medium">
-            Последняя активность
-        </span>
-
-        <div class="table">
-            <table class="table__wrapper">
-                <tr class="table__items table__items--headding">
-                    <th class="table__item">География</th>
-                    <th class="table__item">Килы</th>
-                    <th class="table__item">Точность</th>
-                    <th class="table__item">Конв. выстрелов</th>
-                    <th class="table__item">Частота выходов</th>
-                    <th class="table__item">% побед</th>
-                    <th class="table__item">Чистые победы</th>
-                    <th class="table__item">Кол-во претензий</th>
-                </tr>
-
-                <tr class="table__items">
-                    <td class="table__item">
-                        Саратов
-                    </td>
-                    <td class="table__item">
-                        10
-                    </td>
-                    <td class="table__item">
-                        78
-                    </td>
-                    <td class="table__item">
-                        20
-                    </td>
-                    <td class="table__item">
-                        2
-                    </td>
-                    <td class="table__item">
-                        55%
-                    </td>
-                    <td class="table__item">
-                        2
-                    </td>
-                    <td class="table__item">
-                        2
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-        <ul class="table-mobile">
-            <li class="table-mobile__list">
-                <span class="table-mobile__number">#1</span>
-                <dl class="table-mobile__items">
-                    <div>
-                        <dt>География:</dt>
-                        <dd>Саратов</dd>
-                    </div>
-
-                    <div>
-                        <dt>Килы:</dt>
-                        <dd>10</dd>
-                    </div>
-
-                    <div>
-                        <dt>Конв. выстрелов:</dt>
-                        <dd>78</dd>
-                    </div>
-                    <div>
-                        <dt>Частота выходов:</dt>
-                        <dd>2</dd>
-                    </div>
-                    <div>
-                        <dt>% побед:</dt>
-                        <dd>55%</dd>
-                    </div>
-                    <div>
-                        <dt>Кол- во претензий:</dt>
-                        <dd>2</dd>
-                    </div>
-                    <div>
-                        <dt>Карта:</dt>
-                        <dd>Dust</dd>
-                    </div>
-                    <div>
-                        <dt>Механика:</dt>
-                        <dd>Классический</dd>
-                    </div>
-                    <div>
-                        <dt>Дневной интервал:</dt>
-                        <dd>12-16</dd>
-                    </div>
-                </dl>
-            </li>
-        </ul>
     </div>
-</div>
 </main>
 
 <!--  -->

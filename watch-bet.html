@@ -374,10 +374,21 @@
                 <div class="chat">
                     <div class="chat__top">
                         <span class="chat__title">Чат</span>
-                        <button class="chat__button" type="button">
+                        <button class="chat__button" type="button" data-drop-menu="chat-menu" aria-label="Открыть меню" aria-expanded="false">
                             <span class="chat__point"></span>
                             <span class="sr-only">Меню чата</span>
                         </button>
+                        <ul class="chat__drop-menu drop-menu" id="chat-menu">
+                            <li class="drop-menu__item">
+                                <a class="drop-menu__link" href="#">Ссылка 1</a>
+                            </li>
+                            <li class="drop-menu__item">
+                                <a class="drop-menu__link" href="#">Ссылка 2</a>
+                            </li>
+                            <li class="drop-menu__item">
+                                <a class="drop-menu__link" href="#">Ссылка 3</a>
+                            </li>
+                        </ul>
                     </div>
                     <div class="chat__body">
                         <div class="chat__item chat__item--my">

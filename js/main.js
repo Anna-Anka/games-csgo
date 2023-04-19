@@ -45,6 +45,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _project_management_form_open__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./project/_management-form-open */ "./src/js/project/_management-form-open.js");
 /* harmony import */ var _project_copy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./project/_copy */ "./src/js/project/_copy.js");
 /* harmony import */ var _project_claim__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./project/_claim */ "./src/js/project/_claim.js");
+/* harmony import */ var _project_drop_menu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./project/_drop-menu */ "./src/js/project/_drop-menu.js");
+
 
 
 
@@ -57,6 +59,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_project_management_form_open__WEBPACK_IMPORTED_MODULE_3__.openManagementform)();
 (0,_project_copy__WEBPACK_IMPORTED_MODULE_4__.copy)();
 (0,_project_claim__WEBPACK_IMPORTED_MODULE_5__.claimInput)();
+(0,_project_drop_menu__WEBPACK_IMPORTED_MODULE_6__.dropMenu)();
 
 /***/ }),
 
@@ -375,6 +378,39 @@ const copy = () => {
       button.addEventListener('click', () => {
         meaning.select();
         document.execCommand('copy');
+      });
+    });
+  }
+};
+
+/***/ }),
+
+/***/ "./src/js/project/_drop-menu.js":
+/*!**************************************!*\
+  !*** ./src/js/project/_drop-menu.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "dropMenu": () => (/* binding */ dropMenu)
+/* harmony export */ });
+const dropMenu = () => {
+  if (document.querySelector('[data-drop-menu]')) {
+    const buttons = document.querySelectorAll('[data-drop-menu]');
+    buttons.forEach(button => {
+      const value = button.getAttribute('data-drop-menu');
+      const menu = document.getElementById(value);
+      button.addEventListener('click', () => {
+        menu.classList.toggle('drop-menu--active');
+        if (menu.classList.contains('drop-menu--active')) {
+          button.setAttribute('aria-label', 'Закрыть меню');
+          button.setAttribute('aria-expanded', 'false');
+        } else {
+          button.setAttribute('aria-label', 'Открыть меню');
+          button.setAttribute('aria-expanded', 'true');
+        }
       });
     });
   }

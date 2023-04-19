@@ -7,6 +7,7 @@
 
 	&__top {
 		@include flex-center-sb;
+        position: relative;
 	}
 
 	&__title {
@@ -126,5 +127,20 @@
 			content: '';
 			@include bg-contain;
 		}
+	}
+
+	&__drop-menu {
+		position: absolute;
+		right: 0;
+        bottom: 0;
+        transform: translateY(100%);
+        
+
+        &__item {
+            &:not(:last-child) {
+               margin-bottom: 4px;
+               font-weight: $fw-600;
+            }
+        }
 	}
 }

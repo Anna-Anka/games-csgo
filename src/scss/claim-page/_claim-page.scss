@@ -26,11 +26,19 @@
 		@include adaptiv-value('margin-bottom', 22, 12, 1);
 		display: inline-block;
 		font-weight: $fw-700;
-        @include adaptiv-value('font-size', 20, 18, 1);
+		@include adaptiv-value('font-size', 20, 18, 1);
 	}
 
 	&__items {
 		box-shadow: 2px 10px 10px rgba($blue-600, 0.04);
+
+		#inputGroupFile01::file-selector-button {
+			display: none;
+		}
+
+		#inputGroupFile01 {
+			border-left: 1px solid;
+		}
 	}
 
 	&__select {

@@ -1,4 +1,9 @@
 .form {
+	padding: 25px;
+	background-color: $white;
+	border-radius: 10px;
+	box-shadow: 2px 10px 10px rgba($blue-400, 0.04);
+
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
@@ -26,11 +31,13 @@
 	}
 
 	&__title {
-		margin-bottom: 16px;
+		display: block;
+		margin-bottom: 25px;
+		text-align: center;
 	}
 
 	&__subtitle {
-		font-weight: $fw-700;
+		font-weight: $fw-600;
 		line-height: 1.4;
 	}
 
@@ -38,7 +45,7 @@
 		display: flex;
 		justify-content: center;
 		margin-bottom: 15px;
-		font-weight: $fw-700;
+		font-weight: $fw-600;
 	}
 
 	&__icon {
@@ -63,7 +70,7 @@
 	}
 
 	&__link {
-		font-weight: $fw-700;
+		font-weight: $fw-600;
 		line-height: 1.2;
 
 		&:not(:last-child) {
@@ -97,7 +104,7 @@
 		display: block;
 		margin-bottom: 7px;
 		color: $blue-400;
-		font-weight: $fw-700;
+		font-weight: $fw-600;
 		line-height: 1.2;
 	}
 
@@ -105,7 +112,7 @@
 		width: 100%;
 		padding: 12px 20px;
 		color: rgba($blue-400, 0.5);
-		font-weight: $fw-700;
+		font-weight: $fw-600;
 		font-size: 16px;
 		line-height: 1.1;
 		background-color: $blue-100;
@@ -124,5 +131,9 @@
 
 	&__button {
 		width: 100%;
+
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
 	}
 }

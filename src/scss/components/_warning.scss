@@ -1,0 +1,30 @@
+
+.warning {
+    padding: 20px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+
+    &--blue {
+        color: $blue-400;
+        background-color: $blue-300;
+    }
+
+    &--grey {
+        background-color: $grey-300;
+    }
+    
+    &--green {
+        color: $green-400;
+        background-color: $green-200;
+    }
+
+    &--red {
+        color: $red-400;
+        background-color: $red-200;
+    }
+
+    &--yellow {
+        color: $yellow-500;
+        background-color: $yellow-200;
+    }
+}

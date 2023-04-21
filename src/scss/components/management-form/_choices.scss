@@ -9,6 +9,7 @@
 			@include adaptiv-value('right', 18, 16, 1);
 			@include adaptiv-value('width', 20, 14, 1);
 			@include adaptiv-value('height', 11, 8, 1);
+            transition: transform 0.3s ease-in-out;
 		}
 
 		&__inner {
@@ -69,6 +70,12 @@
 			}
 		}
 
+		&[data-type*='select-one'].is-open::after {
+			margin-top: 0;
+			border-color: transparent transparent #333 transparent;
+			transform: rotate(180deg);
+		}
+
 		.choices__list--dropdown .choices__item--selectable.is-highlighted,
 		.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
 			color: $white;
@@ -90,8 +97,4 @@
 			}
 		}
 	}
-}
-
-.test {
-    font-family: fontello;
 }

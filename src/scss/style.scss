@@ -29,6 +29,8 @@
 @import './components/person';
 @import './components/chat';
 @import './components/drop-menu';
+@import './components/warning';
+@import './components/card';
 
 // * management-form
 @import './components/management-form/management-form';
@@ -100,3 +102,6 @@
 @import './watch-bet-page/faq';
 @import './watch-bet-page/characteristics';
 @import './watch-bet-page/bet-win';
+
+// * layout-page
+@import './layout-page/layout';

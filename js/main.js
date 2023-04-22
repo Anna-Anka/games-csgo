@@ -46,6 +46,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _project_copy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./project/_copy */ "./src/js/project/_copy.js");
 /* harmony import */ var _project_claim__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./project/_claim */ "./src/js/project/_claim.js");
 /* harmony import */ var _project_drop_menu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./project/_drop-menu */ "./src/js/project/_drop-menu.js");
+/* harmony import */ var _project_popup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./project/_popup */ "./src/js/project/_popup.js");
+
 
 
 
@@ -60,6 +62,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_project_copy__WEBPACK_IMPORTED_MODULE_4__.copy)();
 (0,_project_claim__WEBPACK_IMPORTED_MODULE_5__.claimInput)();
 (0,_project_drop_menu__WEBPACK_IMPORTED_MODULE_6__.dropMenu)();
+(0,_project_popup__WEBPACK_IMPORTED_MODULE_7__.closePopup)();
 
 /***/ }),
 
@@ -458,6 +461,33 @@ const openManagementform = () => {
 
 /***/ }),
 
+/***/ "./src/js/project/_popup.js":
+/*!**********************************!*\
+  !*** ./src/js/project/_popup.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "closePopup": () => (/* binding */ closePopup)
+/* harmony export */ });
+const closePopup = () => {
+  if (document.querySelector('.popup')) {
+    const popups = document.querySelectorAll('.popup');
+    popups.forEach(popup => {
+      const buttonsClose = popup.querySelectorAll('.popup__close');
+      buttonsClose.forEach(buttonClose => {
+        buttonClose.addEventListener('click', () => {
+          popup.classList.add('popup--hidden');
+        });
+      });
+    });
+  }
+};
+
+/***/ }),
+
 /***/ "./src/js/project/_private-menu.js":
 /*!*****************************************!*\
   !*** ./src/js/project/_private-menu.js ***!
@@ -480,11 +510,11 @@ const privateMenu = () => {
       if (button.classList.contains('private-menu__control--open')) {
         button.setAttribute('aria-expanded', 'true');
         button.setAttribute('aria-label', 'Закрыть меню');
-        swiper.setAttribute('aria-hidden', 'true');
+        swiper?.setAttribute('aria-hidden', 'true');
       } else {
         button.setAttribute('aria-expanded', 'false');
         button.setAttribute('aria-label', 'Открыть меню');
-        swiper.setAttribute('aria-hidden', 'false');
+        swiper?.setAttribute('aria-hidden', 'false');
       }
     });
   }

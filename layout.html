@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script defer src="js/main.js"></script>
+
+    <title>CS: GO — Ставки на спорт</title>
+</head>
+
+<body class="body">
+    <div class="wrapper">
+
+<div class="layout-page">
+    <div class="container">
+        <div class="layout-page__item">
+            <div class="table">
+                <table class="table__wrapper">
+                    <tr class="table__items table__items--headding">
+                        <th class="table__item">#</th>
+                        <th class="table__item">Lorem ipsum</th>
+                        <th class="table__item">Lorem ipsum</th>
+                        <th class="table__item">Lorem ipsum</th>
+                    </tr>
+
+                    <tr class="table__items">
+                        <td class="table__item table__item--bold">1</td>
+                        <td class="table__item">Lorem ipsum</td>
+                        <td class="table__item">Lorem ipsum</td>
+                        <td class="table__item">Lorem ipsum</td>
+                    </tr>
+
+                    <tr class="table__items">
+                        <td class="table__item table__item--bold">2</td>
+                        <td class="table__item">Lorem ipsum</td>
+                        <td class="table__item">Lorem ipsum</td>
+                        <td class="table__item">Lorem ipsum</td>
+                    </tr>
+
+                    <tr class="table__items">
+                        <td class="table__item table__item--bold">3</td>
+                        <td class="table__item">Lorem ipsum</td>
+                        <td class="table__item">Lorem ipsum</td>
+                        <td class="table__item">Lorem ipsum</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="layout-page__item layout-page__item--forms">
+            <form class="form" action="#">
+                <a class="form__logo logo" href="#">
+                    <img class="logo__img" src="img/logos/logo-blue.svg" alt="логотип" width="102" height="45" loading="lazy">
+                </a>
+
+                <div class="form__item">
+                    <label class="sr-only" for="login-email">Введите логин</label>
+                    <input class="form__field" name="email" type="email" placeholder="Логин" id="login-email" required>
+                </div>
+                <div class="form__item">
+                    <label class="sr-only" for="login-passwors">Введите ваш пароль</label>
+                    <input class="form__field" name="password" type="password" placeholder="Пароль" id="login-passwors" required>
+                </div>
+
+                <div class="form__steam">
+                    <a class="form__icon" href="#">Войти через Steam</a>
+                </div>
+
+                <button class="form__button button" type="submit">Войти</button>
+
+                <div class="form__links">
+                    <a class="form__link form__link--accent" href="#">Забыл пароль</a>
+                    <a class="form__link" href="#">Регистрация</a>
+                </div>
+            </form>
+
+            <form class="form" action="#">
+                <a class="form__logo logo" href="#">
+                    <img class="logo__img" src="img/logos/logo-blue.svg" alt="логотип" width="102" height="45" loading="lazy">
+                </a>
+
+                <div class="form__item">
+                    <label class="form__label" for="registration-email">Логин</label>
+                    <input class="form__field" name="email" type="email" placeholder="Email" id="registration-email" required>
+                </div>
+                <div class="form__item">
+                    <label class="form__label" for="registration-passwors">Пароль</label>
+                    <input class="form__field" name="password" type="password" placeholder="Введите пароль" id="registration-passwors" required>
+                </div>
+                <div class="form__item">
+                    <label class="form__label" for="registration-name">Имя</label>
+                    <input class="form__field" name="name" type="text" placeholder="Введите ваше имя/nick" id="registration-name" required>
+                </div>
+                <div class="form__item">
+                    <label class="form__label" for="registration-tel">Имя</label>
+                    <input class="form__field" name="tel" type="tel" placeholder="+7 999 999 99 99" id="registration-tel" required>
+                </div>
+
+                <button class="form__button button" type="submit">Зарегистрироваться</button>
+
+                <div class="form__links">
+                    <a class="form__link" href="#">Войти</a>
+                </div>
+            </form>
+
+            <form class="form" action="#">
+                <span class="form__title title title--small">Вход</span>
+
+                <div class="form__item">
+                    <label class="form__label" for="registration-email">Логин</label>
+                    <input class="form__field" name="email" type="email" placeholder="Email" id="registration-email" required>
+                </div>
+                <div class="form__item">
+                    <label class="form__label" for="registration-passwors">Пароль</label>
+                    <input class="form__field" name="password" type="password" placeholder="Введите пароль" id="registration-passwors" required>
+                </div>
+                <div class="form__item">
+                    <label class="form__label" for="registration-name">Имя</label>
+                    <input class="form__field" name="name" type="text" placeholder="Введите ваше имя/nick" id="registration-name" required>
+                </div>
+                <div class="form__item">
+                    <label class="form__label" for="registration-tel">Номер телефона</label>
+                    <input class="form__field" name="tel" type="tel" placeholder="+7 999 999 99 99" id="registration-tel" required>
+                </div>
+
+                <button class="form__button button" type="submit">Зарегистрироваться</button>
+
+                <div class="form__links">
+                    <a class="form__link" href="#">Войти</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="layout-page__item">
+            <div class="management-form">
+                <div class="management-form__form management-form__form--display">
+                    <div class="management-form__item management-form__item--select-radius">
+                        <label class="sr-only" for="layout-page-select-1">Lorem ipsum</label>
+                        <select class="management-form__select" name="map" id="layout-page-select-1" data-select="true">
+                            <option value="Lorem ipsum">Lorem ipsum</option>
+                            <option value="Lorem ipsum">Lorem ipsum</option>
+                            <option value="Lorem ipsum">Lorem ipsum</option>
+                            <option value="Lorem ipsum">Lorem ipsum</option>
+                        </select>
+                    </div>
+
+                    <div class="management-form__item">
+                        <label class="management-form__subtitle" for="layout-input-1">Дата</label>
+                        <input class="management-form__field" name="datetime" type="datetime" placeholder="10.10.2022" id="layout-input-1" required>
+                    </div>
+
+                    <div class="management-form__item">
+                        <label class="management-form__subtitle" for="upcoming-tournaments-map">Карта</label>
+                        <select class="management-form__select" name="map" id="upcoming-tournaments-map" data-select="true">
+                            <option value="Dast 1">Dast 1</option>
+                            <option value="Dast 2">Dast 2</option>
+                            <option value="Dast 3">Dast 3</option>
+                            <option value="Dast 4">Dast 4</option>
+                        </select>
+                    </div>
+
+                    <fieldset class="management-form__fieldes">
+                        <span>
+                            <legend class="management-form__subtitle">Ставка от до</legend>
+                        </span>
+                        <div class="management-form__input management-form__input--first">
+                            <label class="sr-only" for="upcoming-tournaments-bet-from">
+                                Ставка от
+                            </label>
+                            <input class="management-form__field" name="bet-from" type="number" placeholder="100" id="upcoming-tournaments-bet-from">
+                        </div>
+                        <div class="management-form__input management-form__input--second">
+                            <label class="sr-only" for="upcoming-tournaments-bet-to">
+                                Ставка до
+                            </label>
+                            <input class="management-form__field" name="bet-to" type="number" placeholder="100" id="upcoming-tournaments-bet-to">
+                        </div>
+                    </fieldset>
+
+                    <div class="game-settings">
+                        <label class="game-settings__item">
+                            <span class="game-settings__box">
+                                <span class="game-settings__name">CS: GO</span>
+                            </span>
+                            <input class="game-settings__hidden" type="checkbox" name="game-settings" value="CS:GO">
+                            <span class="game-settings__visible" aria-hidden="true"></span>
+                        </label>
+                    </div>
+                    <div class="balance-management">
+                        <label class="balance-management__item">
+                            <span class="balance-management__box">
+                                <span class="balance-management__name">Банковская карта</span>
+                            </span>
+                            <input class="balance-management__hidden" type="radio" name="way-get" value="Банковская карта" checked>
+                            <span class="balance-management__visible" aria-hidden="true"></span>
+                        </label>
+
+                        <label class="sr-only" for="balance-management-sum">
+                            Введите сумму
+                        </label>
+                        <div class="balance-management__item balance-management__item--sum">
+                            <span class="balance-management__decor" aria-hidden="true"></span>
+                            <input class="balance-management__field" name="sum" type="number" id="balance-management-sum" required>
+                            <span class="balance-management__rest">.00</span>
+                        </div>
+
+                        <label class="balance-management__item">
+                            <span class="balance-management__box">
+                                <span class="balance-management__name">Банковская карта</span>
+                            </span>
+                            <input class="balance-management__hidden" type="radio" name="way-get" value="Банковская карта" checked>
+                            <span class="balance-management__visible" aria-hidden="true"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layout-page__item">
+            <div class="management-form">
+                <div class="management-form__form management-form__form--display">
+                    <div class="management-form__item management-form__item--checkbox management-form__item--no-shadow">
+                        <input class="management-form__checkbox" name="claim" type="checkbox" id="history-bet-claim" required>
+                        <label for="history-bet-claim">Lorem ipsum</label>
+                    </div>
+                    <div class="management-form__item management-form__item--checkbox management-form__item--no-shadow">
+                        <input class="management-form__checkbox" name="layout-radio" type="radio" id="layout-radio-1">
+                        <label for="layout-radio-1">Lorem ipsum</label>
+                    </div>
+                    <div class="management-form__item management-form__item--checkbox management-form__item--no-shadow">
+                        <input class="management-form__checkbox" name="layout-radio" type="radio" id="layout-radio-2">
+                        <label for="layout-radio-2">Lorem ipsum</label>
+                    </div>
+                    <div class="management-form__item management-form__item--checkbox management-form__item--no-shadow">
+                        <label class="management-form__switch">
+                            <span class="sr-only">Lorem ipsum</span>
+                            <input class="management-form__hidden" type="checkbox" name="switch">
+                            <span class="management-form__slider" aria-label="true"></span>
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layout-page__item">
+            <div class="popup">
+                <div class="popup__top">
+                    <span class="popup__title subtitle subtitle--medium">Lorem ipsum</span>
+                    <button class="popup__close popup__close--icon" type="button">
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="popup__text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="popup__buttons">
+                    <button class="popup__close button-medium" type="button">Закрыть</button>
+                    <button class="popup__link button" href="#">Войти</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layout-page__item">
+            <form class="search" action="#">
+                <div class="search__item">
+                    <label class="sr-only" for="hero-search">Что найти</label>
+                    <input class="search__field" name="search" type="search" placeholder="Поиск" id="hero-search" required>
+                </div>
+                <button class="search__button" type="submit">
+                    <span class="sr-only">Найти</span>
+                </button>
+            </form>
+
+            <ul class="menu">
+                <li class="menu__item">
+                    <a class="menu__link" href="#">О сервисе</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">FAQ</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Ставки</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Рефералка</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="layout-page__item layout-page__item--buttons">
+            <button class="button button--border button--icon" type="button">Смотреть матчи</button>
+            <button class="button button--icon" type="button">Смотреть матчи</button>
+            <button class="button" type="button">Войти</button>
+            <button class="button button--border" type="button">Войти</button>
+            <button class="button-medium" type="button">Закрыть</button>
+            <button class="button-medium button-medium--border" type="button">Закрыть</button>
+            <button class="button button--small" type="button">button 3</button>
+            <button class="button button--small button--border" type="button">button 3</button>
+        </div>
+
+        <div class="layout-page__item layout-page__item--warning">
+            <p class="warning warning--blue">Lorem ipsum</p>
+            <p class="warning warning--grey">Lorem ipsum</p>
+            <p class="warning warning--green">Lorem ipsum</p>
+            <p class="warning warning--red">Lorem ipsum</p>
+            <p class="warning warning--yellow">Lorem ipsum</p>
+        </div>
+
+        <div class="layout-page__item layout-page__item--cards">
+            <article class="card">
+                <picture>
+                    <source srcset="img/team-logo/navi.avif" type="image/avif">
+                    <source srcset="img/team-logo/navi.webp" type="image/webp">
+                    <img class="card__img" src="img/team-logo/navi.png" alt="navi" width="50" height="50" loading="lazy">
+                </picture>
+                <div class="card__content">
+                    <h3 class="card__title subtitle subtitle--medium">Lorem ipsum</h3>
+                    <div class="card__text">
+                        <p>Lorem ipsum dolor sit amet, consr adipiscing elit, sed do eiusmod tempor incididunt .</p>
+                    </div>
+                    <a class="card__link button button--small" href="#">Lorem ipsum</a>
+                </div>
+            </article>
+            <article class="card">
+                <picture>
+                    <source srcset="img/team-logo/navi.avif" type="image/avif">
+                    <source srcset="img/team-logo/navi.webp" type="image/webp">
+                    <img class="card__img" src="img/team-logo/navi.png" alt="navi" width="50" height="50" loading="lazy">
+                </picture>
+                <div class="card__content">
+                    <h3 class="card__title subtitle subtitle--medium">Lorem ipsum</h3>
+                    <div class="card__text">
+                        <p>Lorem ipsum dolor sit amet, consr adipiscing elit, sed do eiusmod tempor incididunt .</p>
+                    </div>
+                    <a class="card__link button button--small" href="#">Lorem ipsum</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="layout-page__item">
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul class="breadcrumbs__items">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">Lorem ipsum </a>
+                        </li>
+
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">Lorem ipsum </a>
+                        </li>
+
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link breadcrumbs__link--current" aria-current="page">Lorem ipsum </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="layout-page__item layout-page__item--icons">
+            <div class="user-nav">
+                <a class="user-nav__link user-nav__link--applications user-nav__link--applications-true" href="#">
+                    <span class="sr-only">Заявки</span>
+                </a>
+                <a class="user-nav__link user-nav__link--applications" href="#">
+                    <span class="sr-only">Заявки</span>
+                </a>
+            </div>
+            <span class="label-new button-medium">new</span>
+            <button class="button" type="button">
+                <span>Lorem ipsum</span>
+                <span class="button__notification">10</span>
+            </button>
+            <button class="button button--notification-number" type="button">
+                Lorem ipsum
+                <span class="button__notification">99+</span>
+            </button>
+            <button class="button button--notification" type="button">
+                Lorem ipsum
+            </button>
+        </div>
+
+        <div class="layout-page__item layout-page__item--lists">
+            <ul class="list">
+                <li>Lorem ipsum</li>
+                <li>Lorem ipsum</li>
+                <li>Lorem ipsum</li>
+                <li>Lorem ipsum</li>
+            </ul>
+
+            <ul class="list list--background">
+                <li><b>Lorem ipsum</b></li>
+                <li>Lorem ipsum</li>
+                <li>Lorem ipsum</li>
+                <li>Lorem ipsum</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+</div>
+</body>
+
+</html>

@@ -42,34 +42,21 @@
 			}
 		}
 
-		&--cards {
+		&--cards,
+		&--lists,
+		&--icons {
 			display: flex;
 
 			& > * {
 				margin-right: 20px;
 			}
 		}
+
+		&--lists,
+		&--icons {
+			& > * {
+				align-self: flex-start;
+			}
+		}
 	}
-}
-
-.list {
-	&--background {
-        padding: 27px 30px;
-		background-color: $white;
-		border-radius: 10px;
-		box-shadow: 2px 10px 10px rgba($blue-400, 0.04);
-	}
-
-    li {
-        position: relative;
-        padding: 20px 0;
-
-        &::before {
-            position: absolute;
-        }
-
-        &:not(:last-child) {
-           margin-bottom: 20px;
-        }
-    }
 }

@@ -5,6 +5,7 @@ import { openManagementform } from "./project/_management-form-open";
 import { copy } from "./project/_copy";
 import { claimInput } from "./project/_claim";
 import { dropMenu } from "./project/_drop-menu";
+import { closePopup } from "./project/_popup";
 
 timer();
 tournamentTimer();
@@ -18,3 +19,5 @@ copy();
 claimInput();
 
 dropMenu();
+
+closePopup();

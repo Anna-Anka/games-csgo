@@ -9,7 +9,7 @@
 	padding-top: 14px;
 	padding-bottom: 14px;
 	color: $white;
-	font-weight: $fw-600;
+	font-weight: $fw-500;
 	background-color: $blue-400;
 	@include adaptiv-value('padding-right', 65, 35, 1);
 	@include adaptiv-value('padding-left', 65, 35, 1);
@@ -38,12 +38,50 @@
 			@include bg-contain;
 		}
 	}
+
+	&--notification {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 26px;
+			height: 26px;
+			background-color: $blue-400;
+			border: 5px solid $blue-100;
+			border-radius: 50%;
+			transform: translate(50%, -50%);
+			content: '';
+		}
+	}
+
+	&--notification-number {
+		position: relative;
+
+		.button__notification {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin-left: 0;
+			padding: 2px 6px;
+			border-radius: 1000px;
+			transform: translate(50%, -50%);
+		}
+	}
+
+	&__notification {
+		margin-left: 4px;
+		padding: 2px;
+		background-color: $dark-800;
+		border-radius: 5px;
+	}
 }
 
 .button-medium {
 	padding: 12px 35px;
+	color: $white;
 	background-color: $dark-800;
-    color: $white;
 
 	&--border {
 		color: $dark-800;

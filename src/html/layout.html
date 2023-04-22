@@ -124,21 +124,17 @@
 
         <div class="layout-page__item">
             <div class="management-form">
-                <div class="management-form__item management-form__item--select-radius">
-                    <label class="sr-only" for="layout-page-select-1">Lorem ipsum</label>
-                    <select class="management-form__select" name="map" id="layout-page-select-1" data-select="true">
-                        <option value="Lorem ipsum">Lorem ipsum</option>
-                        <option value="Lorem ipsum">Lorem ipsum</option>
-                        <option value="Lorem ipsum">Lorem ipsum</option>
-                        <option value="Lorem ipsum">Lorem ipsum</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        <div class="layout-page__item">
-            <div class="management-form">
                 <div class="management-form__form management-form__form--display">
+                    <div class="management-form__item management-form__item--select-radius">
+                        <label class="sr-only" for="layout-page-select-1">Lorem ipsum</label>
+                        <select class="management-form__select" name="map" id="layout-page-select-1" data-select="true">
+                            <option value="Lorem ipsum">Lorem ipsum</option>
+                            <option value="Lorem ipsum">Lorem ipsum</option>
+                            <option value="Lorem ipsum">Lorem ipsum</option>
+                            <option value="Lorem ipsum">Lorem ipsum</option>
+                        </select>
+                    </div>
+                    
                     <div class="management-form__item">
                         <label class="management-form__subtitle" for="layout-input-1">Дата</label>
                         <input class="management-form__field" name="datetime" type="datetime" placeholder="10.10.2022" id="layout-input-1" required>
@@ -211,6 +207,80 @@
             </div>
         </div>
 
+        <div class="layout-page__item">
+            <div class="management-form">
+                <div class="management-form__form management-form__form--display">
+                    <div class="management-form__item management-form__item--checkbox management-form__item--no-shadow">
+                        <input class="management-form__checkbox" name="claim" type="checkbox" id="history-bet-claim" required>
+                        <label for="history-bet-claim">Lorem ipsum</label>
+                    </div>
+                    <div class="management-form__item management-form__item--checkbox management-form__item--no-shadow">
+                        <input class="management-form__checkbox" name="layout-radio" type="radio" id="layout-radio-1">
+                        <label for="layout-radio-1">Lorem ipsum</label>
+                    </div>
+                    <div class="management-form__item management-form__item--checkbox management-form__item--no-shadow">
+                        <input class="management-form__checkbox" name="layout-radio" type="radio" id="layout-radio-2">
+                        <label for="layout-radio-2">Lorem ipsum</label>
+                    </div>
+                    <div class="management-form__item management-form__item--checkbox management-form__item--no-shadow">
+                        <label class="management-form__switch">
+                            <span class="sr-only">Lorem ipsum</span>
+                            <input class="management-form__hidden" type="checkbox" name="switch">
+                            <span class="management-form__slider" aria-label="true"></span>
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layout-page__item">
+            <div class="popup">
+                <div class="popup__top">
+                    <span class="popup__title subtitle subtitle--medium">Lorem ipsum</span>
+                    <button class="popup__close popup__close--icon" type="button">
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="popup__text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="popup__buttons">
+                    <button class="popup__close button-medium" type="button">Закрыть</button>
+                    <button class="popup__link button" href="#">Войти</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layout-page__item">
+            <form class="search" action="#">
+                <div class="search__item">
+                    <label class="sr-only" for="hero-search">Что найти</label>
+                    <input class="search__field" name="search" type="search" placeholder="Поиск" id="hero-search" required>
+                </div>
+                <button class="search__button" type="submit">
+                    <span class="sr-only">Найти</span>
+                </button>
+            </form>
+
+            <ul class="menu">
+                <li class="menu__item">
+                    <a class="menu__link" href="#">О сервисе</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">FAQ</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Ставки</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Рефералка</a>
+                </li>
+            </ul>
+        </div>
+
         <div class="layout-page__item layout-page__item--buttons">
             <button class="button button--border button--icon" type="button">Смотреть матчи</button>
             <button class="button button--icon" type="button">Смотреть матчи</button>
@@ -261,6 +331,49 @@
             </article>
         </div>
 
+        <div class="layout-page__item">
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul class="breadcrumbs__items">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">Lorem ipsum </a>
+                        </li>
+        
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">Lorem ipsum </a>
+                        </li>
+        
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link breadcrumbs__link--current" aria-current="page">Lorem ipsum </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="layout-page__item layout-page__item--icons">
+            <div class="user-nav">
+                <a class="user-nav__link user-nav__link--applications user-nav__link--applications-true" href="#">
+                    <span class="sr-only">Заявки</span>
+                </a>
+                <a class="user-nav__link user-nav__link--applications" href="#">
+                    <span class="sr-only">Заявки</span>
+                </a>
+            </div>
+            <span class="label-new button-medium">new</span>
+            <button class="button" type="button">
+                <span>Lorem ipsum</span>
+                <span class="button__notification">10</span>
+            </button>
+            <button class="button button--notification-number" type="button">
+                Lorem ipsum
+                <span class="button__notification">99+</span>
+            </button>
+            <button class="button button--notification" type="button">
+                Lorem ipsum
+            </button>
+        </div>
+
         <div class="layout-page__item layout-page__item--lists">
             <ul class="list">
                 <li>Lorem ipsum</li>
@@ -276,6 +389,10 @@
                 <li>Lorem ipsum</li>
             </ul>
         </div>
+
+
+        
+        
     </div>
 </div>
 

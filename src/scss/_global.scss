@@ -103,14 +103,7 @@ body {
 	@include adaptiv-value('margin-bottom', 25, 20, 1);
 }
 
-table {
-	caption-side: unset;
-	border-collapse: unset;
-}
-
-legend {
-	margin-bottom: 0;
-	padding: 0;
-	font-size: unset;
-	line-height: inherit;
+.label-new {
+	padding: 2px 7px;
+	text-transform: uppercase;
 }

@@ -47,6 +47,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _project_claim__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./project/_claim */ "./src/js/project/_claim.js");
 /* harmony import */ var _project_drop_menu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./project/_drop-menu */ "./src/js/project/_drop-menu.js");
 /* harmony import */ var _project_popup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./project/_popup */ "./src/js/project/_popup.js");
+/* harmony import */ var _project_watch_bet_square__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./project/_watch-bet-square */ "./src/js/project/_watch-bet-square.js");
+
 
 
 
@@ -63,6 +65,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_project_claim__WEBPACK_IMPORTED_MODULE_5__.claimInput)();
 (0,_project_drop_menu__WEBPACK_IMPORTED_MODULE_6__.dropMenu)();
 (0,_project_popup__WEBPACK_IMPORTED_MODULE_7__.closePopup)();
+(0,_project_watch_bet_square__WEBPACK_IMPORTED_MODULE_8__.openSquare)();
 
 /***/ }),
 
@@ -601,6 +604,51 @@ const tournamentTimer = () => {
       setInterval(timeCount, 1000);
     });
   }
+};
+
+/***/ }),
+
+/***/ "./src/js/project/_watch-bet-square.js":
+/*!*********************************************!*\
+  !*** ./src/js/project/_watch-bet-square.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "openSquare": () => (/* binding */ openSquare)
+/* harmony export */ });
+const openSquare = () => {
+  if (document.querySelector('.watch-bet__square')) {
+    const squares = document.querySelectorAll('.watch-bet__square');
+    const parrentSquares = document.querySelector('.watch-bet__squares');
+    squares.forEach(square => {
+      // const clickWindow = (event) => {
+      //     if (!document.querySelector('.watch-bet__square--active').contains(event.target)) {
+      //         square.classList.remove('watch-bet__square--active');
+      //         parrentSquares.classList.remove('watch-bet__squares--active');
+      //         window.removeEventListener('click', clickWindow);
+      //     };
+      // };
+
+      square.addEventListener('click', () => {
+        square.classList.toggle('watch-bet__square--active');
+        parrentSquares.classList.toggle('watch-bet__squares--active');
+        // window.addEventListener('click', clickWindow);
+
+        // if (square.classList.contains('watch-bet__square--active')) {
+        //     square.setAttribute('aria-expanded', 'true');
+        //     square.setAttribute('aria-label', 'Скрыть детали');
+        // } else {
+        //     square.setAttribute('aria-expanded', 'false');
+        //     square.setAttribute('aria-label', 'Открыть детали');
+        // };
+      });
+    });
+  }
+
+  ;
 };
 
 /***/ }),

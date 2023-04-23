@@ -67,7 +67,6 @@
 			.watch-bet__square {
 				width: 0;
 				padding: 0;
-				visibility: hidden;
 				opacity: 0;
 
 				&:not(:last-child) {
@@ -77,7 +76,6 @@
 				&--active {
 					width: 100%;
 					padding: 5px;
-					visibility: visible;
 					opacity: 1;
 
 					.watch-bet__name {
@@ -87,7 +85,7 @@
 			}
 		}
 
-		@include mq(lg) {
+		@include mq(md) {
 			display: flex;
 		}
 	}

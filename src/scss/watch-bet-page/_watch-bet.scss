@@ -58,4 +58,64 @@
 			max-width: 100%;
 		}
 	}
+
+	&__squares {
+		display: none;
+		margin-bottom: 24px;
+
+		&--active {
+			.watch-bet__square {
+				width: 0;
+				padding: 0;
+				visibility: hidden;
+				opacity: 0;
+
+				&:not(:last-child) {
+					margin-right: 0px;
+				}
+
+				&--active {
+					width: 100%;
+					padding: 5px;
+					visibility: visible;
+					opacity: 1;
+
+					.watch-bet__name {
+						display: inline-block;
+					}
+				}
+			}
+		}
+
+		@include mq(lg) {
+			display: flex;
+		}
+	}
+
+	&__square {
+		@include flex-all-center;
+		width: 100%;
+		min-height: 50px;
+		padding: 5px;
+		font-weight: $fw-500;
+		font-size: 16px;
+		background-color: $white;
+		border-radius: 8px;
+		transition: width 0.2s, padding 0.2s, opacity 0.2s;
+
+		&:not(:last-child) {
+			margin-right: 9px;
+		}
+
+		.watch-bet__name {
+			display: none;
+			margin-right: 20px;
+		}
+	}
+
+	&__type {
+		width: 40px;
+		height: 40px;
+		@include bg-contain;
+	}
 }

@@ -6,6 +6,7 @@ import { copy } from "./project/_copy";
 import { claimInput } from "./project/_claim";
 import { dropMenu } from "./project/_drop-menu";
 import { closePopup } from "./project/_popup";
+import { openSquare } from "./project/_watch-bet-square";
 
 timer();
 tournamentTimer();
@@ -21,3 +22,5 @@ claimInput();
 dropMenu();
 
 closePopup();
+
+openSquare();

@@ -39,6 +39,23 @@
 		}
 	}
 
+	&--menu {
+		position: relative;
+		padding: 17px 53px 17px 33px;
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			right: 20px;
+			width: 15px;
+			height: 15px;
+			background-image: url('../img/icons/drop-menu.svg');
+			transform: translateY(-60%);
+			content: '';
+			@include bg-contain;
+		}
+	}
+
 	&--notification {
 		position: relative;
 

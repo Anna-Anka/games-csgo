@@ -1,5 +1,5 @@
 .layout-page {
-	padding: 100px 0;
+	padding: 150px 0;
 
 	&__item {
 		&:not(:last-child) {
@@ -44,7 +44,8 @@
 
 		&--cards,
 		&--lists,
-		&--icons {
+		&--icons,
+        &--menus {
 			display: flex;
 
 			& > * {

@@ -69,6 +69,7 @@
 
 	&__number {
 		position: relative;
+        @include adaptiv-value('font-size', 78, 48, 1);
 
 		&::before {
 			position: absolute;
@@ -78,13 +79,13 @@
 			font-size: inherit;
 			transform: translateY(-50%);
 			content: ':';
-			@include adaptiv-value('right', -40, -30, 1);
+			@include adaptiv-value('right', -40, -25, 1);
 		}
 	}
 
 	&__name {
 		font-weight: $fw-700;
-		font-size: 22px;
+		@include adaptiv-value('font-size', 22, 16, 1);
 	}
 
 	&__conditions {

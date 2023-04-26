@@ -1,10 +1,9 @@
 .create-bet {
-    	&__settings {
-		width: 33.33%;
+	&__settings {
 		width: 100%;
 
 		@include mq(xl) {
-			display: none;
+			display: block;
 		}
 
 		.management-form {
@@ -22,6 +21,10 @@
 
 				&:not(:last-child) {
 					margin-bottom: 20px;
+
+					@include mq(xl) {
+						margin-bottom: 16px;
+					}
 				}
 			}
 

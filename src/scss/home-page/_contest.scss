@@ -69,7 +69,11 @@
 
 	&__number {
 		position: relative;
-        @include adaptiv-value('font-size', 78, 48, 1);
+        font-size: 78px;
+
+        @include mq(lg) {
+            font-size: 53px;
+        }
 
 		&::before {
 			position: absolute;
